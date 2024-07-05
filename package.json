@@ -1,0 +1,37 @@
+{
+	"name": "@somethings/eslint-config",
+	"version": "0.0.0",
+	"description": "ESLint configuration.",
+	"author": {
+		"name": "Anton Galtsev",
+		"email": "avgaltsev@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/avgaltsev/eslint-config"
+	},
+	"license": "MIT",
+	"main": "./lib/index.js",
+	"directories": {
+		"bin": "./bin/",
+		"lib": "./lib/"
+	},
+	"devDependencies": {
+		"typescript": "^5.5.2"
+	},
+	"dependencies": {
+		"@stylistic/eslint-plugin": "^2.3.0",
+		"eslint": "^8.57.0",
+		"typescript-eslint": "^7.15.0"
+	},
+	"scripts": {
+		"build": "tsc --skipLibCheck",
+		"watch": "tsc --skipLibCheck --watch",
+		"lint": "eslint .",
+		"prepare": "npm run build && npm run lint"
+	},
+	"type": "module",
+	"exports": {
+		".": "./lib/index.js"
+	}
+}
