@@ -1,0 +1,1295 @@
+Rules from eslint:
+
+[2m// [suggestion] Enforce getter and setter pairs in objects and classes[0m
+[2m// "accessor-pairs": "off",[0m
+
+[2m// [suggestion] Require braces around arrow function bodies[0m
+[2m// "arrow-body-style": "off",[0m
+
+[2m// [suggestion] Enforce the use of variables within the scope they are defined[0m
+[2m// "block-scoped-var": "off",[0m
+
+[2m// [suggestion] Enforce camelcase naming convention[0m
+[32m"camelcase": ["error", ...],[0m
+
+[2m// [suggestion] Enforce or disallow capitalization of the first letter of a comment[0m
+[2m// "capitalized-comments": "off",[0m
+
+[2m// [suggestion] Enforce that class methods utilize `this`[0m
+[2m// "class-methods-use-this": "off",[0m
+
+[2m// [suggestion] Enforce a maximum cyclomatic complexity allowed in a program[0m
+[2m// "complexity": "off",[0m
+
+[2m// [suggestion] Require `return` statements to either always or never specify values[0m
+[2m// "consistent-return": "off",[0m
+
+[2m// [suggestion] Enforce consistent naming when capturing the current execution context[0m
+[2m// "consistent-this": "off",[0m
+
+[2m// [suggestion] Enforce consistent brace style for all control statements[0m
+[2m// "curly": "off",[0m
+
+[2m// [suggestion] Require `default` cases in `switch` statements[0m
+[2m// "default-case": "off",[0m
+
+[2m// [suggestion] Enforce default clauses in switch statements to be last[0m
+[2m// "default-case-last": "off",[0m
+
+[2m// [suggestion] Enforce default parameters to be last[0m
+[2m// "default-param-last": "off",[0m
+
+[2m// [suggestion] Enforce dot notation whenever possible[0m
+[2m// "dot-notation": "off",[0m
+
+[2m// [suggestion] Require the use of `===` and `!==`[0m
+[2m// "eqeqeq": "off",[0m
+
+[2m// [suggestion] Require function names to match the name of the variable or property to which they are assigned[0m
+[2m// "func-name-matching": "off",[0m
+
+[2m// [suggestion] Require or disallow named `function` expressions[0m
+[2m// "func-names": "off",[0m
+
+[2m// [suggestion] Enforce the consistent use of either `function` declarations or expressions[0m
+[2m// "func-style": "off",[0m
+
+[2m// [suggestion] Require grouped accessor pairs in object literals and classes[0m
+[2m// "grouped-accessor-pairs": "off",[0m
+
+[2m// [suggestion] Require `for-in` loops to include an `if` statement[0m
+[2m// "guard-for-in": "off",[0m
+
+[2m// [suggestion] Disallow specified identifiers[0m
+[2m// "id-denylist": "off",[0m
+
+[2m// [suggestion] Enforce minimum and maximum identifier lengths[0m
+[2m// "id-length": "off",[0m
+
+[2m// [suggestion] Require identifiers to match a specified regular expression[0m
+[2m// "id-match": "off",[0m
+
+[2m// [suggestion] Require or disallow initialization in variable declarations[0m
+[2m// "init-declarations": "off",[0m
+
+[2m// [suggestion] Require or disallow logical assignment operator shorthand[0m
+[2m// "logical-assignment-operators": "off",[0m
+
+[2m// [suggestion] Enforce a maximum number of classes per file[0m
+[2m// "max-classes-per-file": "off",[0m
+
+[2m// [suggestion] Enforce a maximum depth that blocks can be nested[0m
+[2m// "max-depth": "off",[0m
+
+[2m// [suggestion] Enforce a maximum number of lines per file[0m
+[2m// "max-lines": "off",[0m
+
+[2m// [suggestion] Enforce a maximum number of lines of code in a function[0m
+[2m// "max-lines-per-function": "off",[0m
+
+[2m// [suggestion] Enforce a maximum depth that callbacks can be nested[0m
+[2m// "max-nested-callbacks": "off",[0m
+
+[2m// [suggestion] Enforce a maximum number of parameters in function definitions[0m
+[2m// "max-params": "off",[0m
+
+[2m// [suggestion] Enforce a maximum number of statements allowed in function blocks[0m
+[2m// "max-statements": "off",[0m
+
+[2m// [suggestion] Enforce a particular style for multiline comments[0m
+[2m// "multiline-comment-style": "off",[0m
+
+[2m// [suggestion] Require constructor names to begin with a capital letter[0m
+[2m// "new-cap": "off",[0m
+
+[2m// [suggestion] Disallow the use of `alert`, `confirm`, and `prompt`[0m
+[2m// "no-alert": "off",[0m
+
+[2m// [suggestion] Disallow `Array` constructors[0m
+[2m// "no-array-constructor": "off",[0m
+
+[2m// [suggestion] Disallow bitwise operators[0m
+[2m// "no-bitwise": "off",[0m
+
+[2m// [suggestion] Disallow the use of `arguments.caller` or `arguments.callee`[0m
+[2m// "no-caller": "off",[0m
+
+[2m// [suggestion] Disallow lexical declarations in case clauses[0m
+[32m"no-case-declarations": "error",[0m
+
+[2m// [suggestion] Disallow the use of `console`[0m
+[2m// "no-console": "off",[0m
+
+[2m// [suggestion] Disallow `continue` statements[0m
+[2m// "no-continue": "off",[0m
+
+[2m// [suggestion] Disallow deleting variables[0m
+[32m"no-delete-var": "error",[0m
+
+[2m// [suggestion] Disallow equal signs explicitly at the beginning of regular expressions[0m
+[2m// "no-div-regex": "off",[0m
+
+[2m// [suggestion] Disallow `else` blocks after `return` statements in `if` statements[0m
+[2m// "no-else-return": "off",[0m
+
+[2m// [suggestion] Disallow empty block statements[0m
+[32m"no-empty": "error",[0m
+
+[2m// [suggestion] Disallow empty functions[0m
+[2m// "no-empty-function": "off",[0m
+
+[2m// [suggestion] Disallow empty static blocks[0m
+[2m// "no-empty-static-block": "off",[0m
+
+[2m// [suggestion] Disallow `null` comparisons without type-checking operators[0m
+[2m// "no-eq-null": "off",[0m
+
+[2m// [suggestion] Disallow the use of `eval()`[0m
+[2m// "no-eval": "off",[0m
+
+[2m// [suggestion] Disallow extending native types[0m
+[2m// "no-extend-native": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary calls to `.bind()`[0m
+[2m// "no-extra-bind": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary boolean casts[0m
+[32m"no-extra-boolean-cast": "error",[0m
+
+[2m// [suggestion] Disallow unnecessary labels[0m
+[2m// "no-extra-label": "off",[0m
+
+[2m// [suggestion] Disallow assignments to native objects or read-only global variables[0m
+[32m"no-global-assign": "error",[0m
+
+[2m// [suggestion] Disallow shorthand type conversions[0m
+[2m// "no-implicit-coercion": "off",[0m
+
+[2m// [suggestion] Disallow declarations in the global scope[0m
+[2m// "no-implicit-globals": "off",[0m
+
+[2m// [suggestion] Disallow the use of `eval()`-like methods[0m
+[2m// "no-implied-eval": "off",[0m
+
+[2m// [suggestion] Disallow inline comments after code[0m
+[2m// "no-inline-comments": "off",[0m
+
+[2m// [suggestion] Disallow use of `this` in contexts where the value of `this` is `undefined`[0m
+[2m// "no-invalid-this": "off",[0m
+
+[2m// [suggestion] Disallow the use of the `__iterator__` property[0m
+[2m// "no-iterator": "off",[0m
+
+[2m// [suggestion] Disallow labels that share a name with a variable[0m
+[2m// "no-label-var": "off",[0m
+
+[2m// [suggestion] Disallow labeled statements[0m
+[2m// "no-labels": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary nested blocks[0m
+[2m// "no-lone-blocks": "off",[0m
+
+[2m// [suggestion] Disallow `if` statements as the only statement in `else` blocks[0m
+[2m// "no-lonely-if": "off",[0m
+
+[2m// [suggestion] Disallow function declarations that contain unsafe references inside loop statements[0m
+[2m// "no-loop-func": "off",[0m
+
+[2m// [suggestion] Disallow magic numbers[0m
+[2m// "no-magic-numbers": "off",[0m
+
+[2m// [suggestion] Disallow use of chained assignment expressions[0m
+[2m// "no-multi-assign": "off",[0m
+
+[2m// [suggestion] Disallow multiline strings[0m
+[2m// "no-multi-str": "off",[0m
+
+[2m// [suggestion] Disallow negated conditions[0m
+[2m// "no-negated-condition": "off",[0m
+
+[2m// [suggestion] Disallow nested ternary expressions[0m
+[2m// "no-nested-ternary": "off",[0m
+
+[2m// [suggestion] Disallow `new` operators outside of assignments or comparisons[0m
+[2m// "no-new": "off",[0m
+
+[2m// [suggestion] Disallow `new` operators with the `Function` object[0m
+[2m// "no-new-func": "off",[0m
+
+[2m// [suggestion] Disallow `new` operators with the `String`, `Number`, and `Boolean` objects[0m
+[2m// "no-new-wrappers": "off",[0m
+
+[2m// [suggestion] Disallow `\8` and `\9` escape sequences in string literals[0m
+[2m// "no-nonoctal-decimal-escape": "off",[0m
+
+[2m// [suggestion] Disallow calls to the `Object` constructor without an argument[0m
+[2m// "no-object-constructor": "off",[0m
+
+[2m// [suggestion] Disallow octal literals[0m
+[32m"no-octal": "error",[0m
+
+[2m// [suggestion] Disallow octal escape sequences in string literals[0m
+[2m// "no-octal-escape": "off",[0m
+
+[2m// [suggestion] Disallow reassigning `function` parameters[0m
+[2m// "no-param-reassign": "off",[0m
+
+[2m// [suggestion] Disallow the unary operators `++` and `--`[0m
+[2m// "no-plusplus": "off",[0m
+
+[2m// [suggestion] Disallow the use of the `__proto__` property[0m
+[2m// "no-proto": "off",[0m
+
+[2m// [suggestion] Disallow variable redeclaration[0m
+[32m"no-redeclare": "error",[0m
+
+[2m// [suggestion] Disallow multiple spaces in regular expressions[0m
+[32m"no-regex-spaces": "error",[0m
+
+[2m// [suggestion] Disallow specified names in exports[0m
+[2m// "no-restricted-exports": "off",[0m
+
+[2m// [suggestion] Disallow specified global variables[0m
+[2m// "no-restricted-globals": "off",[0m
+
+[2m// [suggestion] Disallow specified modules when loaded by `import`[0m
+[2m// "no-restricted-imports": "off",[0m
+
+[2m// [suggestion] Disallow certain properties on certain objects[0m
+[2m// "no-restricted-properties": "off",[0m
+
+[2m// [suggestion] Disallow specified syntax[0m
+[2m// "no-restricted-syntax": "off",[0m
+
+[2m// [suggestion] Disallow assignment operators in `return` statements[0m
+[2m// "no-return-assign": "off",[0m
+
+[2m// [suggestion] Disallow `javascript:` urls[0m
+[2m// "no-script-url": "off",[0m
+
+[2m// [suggestion] Disallow comma operators[0m
+[2m// "no-sequences": "off",[0m
+
+[2m// [suggestion] Disallow variable declarations from shadowing variables declared in the outer scope[0m
+[2m// "no-shadow": "off",[0m
+
+[2m// [suggestion] Disallow identifiers from shadowing restricted names[0m
+[32m"no-shadow-restricted-names": "error",[0m
+
+[2m// [suggestion] Disallow ternary operators[0m
+[2m// "no-ternary": "off",[0m
+
+[2m// [suggestion] Disallow throwing literals as exceptions[0m
+[2m// "no-throw-literal": "off",[0m
+
+[2m// [suggestion] Disallow initializing variables to `undefined`[0m
+[2m// "no-undef-init": "off",[0m
+
+[2m// [suggestion] Disallow the use of `undefined` as an identifier[0m
+[2m// "no-undefined": "off",[0m
+
+[2m// [suggestion] Disallow dangling underscores in identifiers[0m
+[2m// "no-underscore-dangle": "off",[0m
+
+[2m// [suggestion] Disallow ternary operators when simpler alternatives exist[0m
+[2m// "no-unneeded-ternary": "off",[0m
+
+[2m// [suggestion] Disallow unused expressions[0m
+[2m// "no-unused-expressions": "off",[0m
+
+[2m// [suggestion] Disallow unused labels[0m
+[32m"no-unused-labels": "error",[0m
+
+[2m// [suggestion] Disallow unnecessary calls to `.call()` and `.apply()`[0m
+[2m// "no-useless-call": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary `catch` clauses[0m
+[32m"no-useless-catch": "error",[0m
+
+[2m// [suggestion] Disallow unnecessary computed property keys in objects and classes[0m
+[2m// "no-useless-computed-key": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary concatenation of literals or template literals[0m
+[2m// "no-useless-concat": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary constructors[0m
+[2m// "no-useless-constructor": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary escape characters[0m
+[32m"no-useless-escape": "error",[0m
+
+[2m// [suggestion] Disallow renaming import, export, and destructured assignments to the same name[0m
+[2m// "no-useless-rename": "off",[0m
+
+[2m// [suggestion] Disallow redundant return statements[0m
+[2m// "no-useless-return": "off",[0m
+
+[2m// [suggestion] Require `let` or `const` instead of `var`[0m
+[2m// "no-var": "off",[0m
+
+[2m// [suggestion] Disallow `void` operators[0m
+[2m// "no-void": "off",[0m
+
+[2m// [suggestion] Disallow specified warning terms in comments[0m
+[2m// "no-warning-comments": "off",[0m
+
+[2m// [suggestion] Disallow `with` statements[0m
+[32m"no-with": "error",[0m
+
+[2m// [suggestion] Require or disallow method and property shorthand syntax for object literals[0m
+[2m// "object-shorthand": "off",[0m
+
+[2m// [suggestion] Enforce variables to be declared either together or separately in functions[0m
+[2m// "one-var": "off",[0m
+
+[2m// [suggestion] Require or disallow assignment operator shorthand where possible[0m
+[2m// "operator-assignment": "off",[0m
+
+[2m// [suggestion] Require using arrow functions for callbacks[0m
+[2m// "prefer-arrow-callback": "off",[0m
+
+[2m// [suggestion] Require `const` declarations for variables that are never reassigned after declared[0m
+[32m"prefer-const": ["error", ...],[0m
+
+[2m// [suggestion] Require destructuring from arrays and/or objects[0m
+[2m// "prefer-destructuring": "off",[0m
+
+[2m// [suggestion] Disallow the use of `Math.pow` in favor of the `**` operator[0m
+[2m// "prefer-exponentiation-operator": "off",[0m
+
+[2m// [suggestion] Enforce using named capture group in regular expression[0m
+[2m// "prefer-named-capture-group": "off",[0m
+
+[2m// [suggestion] Disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals[0m
+[2m// "prefer-numeric-literals": "off",[0m
+
+[2m// [suggestion] Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`[0m
+[2m// "prefer-object-has-own": "off",[0m
+
+[2m// [suggestion] Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead[0m
+[2m// "prefer-object-spread": "off",[0m
+
+[2m// [suggestion] Require using Error objects as Promise rejection reasons[0m
+[2m// "prefer-promise-reject-errors": "off",[0m
+
+[2m// [suggestion] Disallow use of the `RegExp` constructor in favor of regular expression literals[0m
+[2m// "prefer-regex-literals": "off",[0m
+
+[2m// [suggestion] Require rest parameters instead of `arguments`[0m
+[2m// "prefer-rest-params": "off",[0m
+
+[2m// [suggestion] Require spread operators instead of `.apply()`[0m
+[2m// "prefer-spread": "off",[0m
+
+[2m// [suggestion] Require template literals instead of string concatenation[0m
+[2m// "prefer-template": "off",[0m
+
+[2m// [suggestion] Enforce the consistent use of the radix argument when using `parseInt()`[0m
+[2m// "radix": "off",[0m
+
+[2m// [suggestion] Disallow async functions which have no `await` expression[0m
+[2m// "require-await": "off",[0m
+
+[2m// [suggestion] Enforce the use of `u` or `v` flag on RegExp[0m
+[2m// "require-unicode-regexp": "off",[0m
+
+[2m// [suggestion] Require generator functions to contain `yield`[0m
+[32m"require-yield": "error",[0m
+
+[2m// [suggestion] Enforce sorted import declarations within modules[0m
+[2m// "sort-imports": "off",[0m
+
+[2m// [suggestion] Require object keys to be sorted[0m
+[2m// "sort-keys": "off",[0m
+
+[2m// [suggestion] Require variables within the same declaration block to be sorted[0m
+[2m// "sort-vars": "off",[0m
+
+[2m// [suggestion] Require or disallow strict mode directives[0m
+[2m// "strict": "off",[0m
+
+[2m// [suggestion] Require symbol descriptions[0m
+[2m// "symbol-description": "off",[0m
+
+[2m// [suggestion] Require `var` declarations be placed at the top of their containing scope[0m
+[2m// "vars-on-top": "off",[0m
+
+[2m// [suggestion] Require or disallow "Yoda" conditions[0m
+[2m// "yoda": "off",[0m
+
+[2m// [problem] Enforce `return` statements in callbacks of array methods[0m
+[2m// "array-callback-return": "off",[0m
+
+[2m// [problem] Require `super()` calls in constructors[0m
+[32m"constructor-super": "error",[0m
+
+[2m// [problem] Enforce "for" loop update clause moving the counter in the right direction[0m
+[32m"for-direction": "error",[0m
+
+[2m// [problem] Enforce `return` statements in getters[0m
+[32m"getter-return": "error",[0m
+
+[2m// [problem] Disallow using an async function as a Promise executor[0m
+[32m"no-async-promise-executor": "error",[0m
+
+[2m// [problem] Disallow `await` inside of loops[0m
+[2m// "no-await-in-loop": "off",[0m
+
+[2m// [problem] Disallow reassigning class members[0m
+[32m"no-class-assign": "error",[0m
+
+[2m// [problem] Disallow comparing against -0[0m
+[32m"no-compare-neg-zero": "error",[0m
+
+[2m// [problem] Disallow assignment operators in conditional expressions[0m
+[32m"no-cond-assign": "error",[0m
+
+[2m// [problem] Disallow reassigning `const` variables[0m
+[32m"no-const-assign": "error",[0m
+
+[2m// [problem] Disallow expressions where the operation doesn't affect the value[0m
+[2m// "no-constant-binary-expression": "off",[0m
+
+[2m// [problem] Disallow constant expressions in conditions[0m
+[32m"no-constant-condition": "error",[0m
+
+[2m// [problem] Disallow returning value from constructor[0m
+[2m// "no-constructor-return": "off",[0m
+
+[2m// [problem] Disallow control characters in regular expressions[0m
+[32m"no-control-regex": "error",[0m
+
+[2m// [problem] Disallow the use of `debugger`[0m
+[32m"no-debugger": "error",[0m
+
+[2m// [problem] Disallow duplicate arguments in `function` definitions[0m
+[32m"no-dupe-args": "error",[0m
+
+[2m// [problem] Disallow duplicate class members[0m
+[32m"no-dupe-class-members": "error",[0m
+
+[2m// [problem] Disallow duplicate conditions in if-else-if chains[0m
+[32m"no-dupe-else-if": "error",[0m
+
+[2m// [problem] Disallow duplicate keys in object literals[0m
+[32m"no-dupe-keys": "error",[0m
+
+[2m// [problem] Disallow duplicate case labels[0m
+[32m"no-duplicate-case": "error",[0m
+
+[2m// [problem] Disallow duplicate module imports[0m
+[2m// "no-duplicate-imports": "off",[0m
+
+[2m// [problem] Disallow empty character classes in regular expressions[0m
+[32m"no-empty-character-class": "error",[0m
+
+[2m// [problem] Disallow empty destructuring patterns[0m
+[32m"no-empty-pattern": "error",[0m
+
+[2m// [problem] Disallow reassigning exceptions in `catch` clauses[0m
+[32m"no-ex-assign": "error",[0m
+
+[2m// [problem] Disallow fallthrough of `case` statements[0m
+[32m"no-fallthrough": "error",[0m
+
+[2m// [problem] Disallow reassigning `function` declarations[0m
+[32m"no-func-assign": "error",[0m
+
+[2m// [problem] Disallow assigning to imported bindings[0m
+[32m"no-import-assign": "error",[0m
+
+[2m// [problem] Disallow variable or `function` declarations in nested blocks[0m
+[32m"no-inner-declarations": "error",[0m
+
+[2m// [problem] Disallow invalid regular expression strings in `RegExp` constructors[0m
+[32m"no-invalid-regexp": "error",[0m
+
+[2m// [problem] Disallow irregular whitespace[0m
+[32m"no-irregular-whitespace": "error",[0m
+
+[2m// [problem] Disallow literal numbers that lose precision[0m
+[2m// "no-loss-of-precision": "off",[0m
+
+[2m// [problem] Disallow characters which are made with multiple code points in character class syntax[0m
+[32m"no-misleading-character-class": "error",[0m
+
+[2m// [problem] Disallow `new` operators with global non-constructor functions[0m
+[2m// "no-new-native-nonconstructor": "off",[0m
+
+[2m// [problem] Disallow `new` operators with the `Symbol` object[0m
+[32m"no-new-symbol": "error",[0m
+
+[2m// [problem] Disallow calling global object properties as functions[0m
+[32m"no-obj-calls": "error",[0m
+
+[2m// [problem] Disallow returning values from Promise executor functions[0m
+[2m// "no-promise-executor-return": "off",[0m
+
+[2m// [problem] Disallow calling some `Object.prototype` methods directly on objects[0m
+[32m"no-prototype-builtins": "error",[0m
+
+[2m// [problem] Disallow assignments where both sides are exactly the same[0m
+[32m"no-self-assign": "error",[0m
+
+[2m// [problem] Disallow comparisons where both sides are exactly the same[0m
+[2m// "no-self-compare": "off",[0m
+
+[2m// [problem] Disallow returning values from setters[0m
+[32m"no-setter-return": "error",[0m
+
+[2m// [problem] Disallow sparse arrays[0m
+[32m"no-sparse-arrays": "error",[0m
+
+[2m// [problem] Disallow template literal placeholder syntax in regular strings[0m
+[2m// "no-template-curly-in-string": "off",[0m
+
+[2m// [problem] Disallow `this`/`super` before calling `super()` in constructors[0m
+[32m"no-this-before-super": "error",[0m
+
+[2m// [problem] Disallow the use of undeclared variables unless mentioned in `/*global */` comments[0m
+[32m"no-undef": "error",[0m
+
+[2m// [problem] Disallow confusing multiline expressions[0m
+[32m"no-unexpected-multiline": "error",[0m
+
+[2m// [problem] Disallow unmodified loop conditions[0m
+[2m// "no-unmodified-loop-condition": "off",[0m
+
+[2m// [problem] Disallow unreachable code after `return`, `throw`, `continue`, and `break` statements[0m
+[32m"no-unreachable": "error",[0m
+
+[2m// [problem] Disallow loops with a body that allows only one iteration[0m
+[2m// "no-unreachable-loop": "off",[0m
+
+[2m// [problem] Disallow control flow statements in `finally` blocks[0m
+[32m"no-unsafe-finally": "error",[0m
+
+[2m// [problem] Disallow negating the left operand of relational operators[0m
+[32m"no-unsafe-negation": "error",[0m
+
+[2m// [problem] Disallow use of optional chaining in contexts where the `undefined` value is not allowed[0m
+[2m// "no-unsafe-optional-chaining": "off",[0m
+
+[2m// [problem] Disallow unused private class members[0m
+[2m// "no-unused-private-class-members": "off",[0m
+
+[2m// [problem] Disallow unused variables[0m
+[32m"no-unused-vars": ["error", ...],[0m
+
+[2m// [problem] Disallow the use of variables before they are defined[0m
+[32m"no-use-before-define": ["error", ...],[0m
+
+[2m// [problem] Disallow useless backreferences in regular expressions[0m
+[2m// "no-useless-backreference": "off",[0m
+
+[2m// [problem] Disallow assignments that can lead to race conditions due to usage of `await` or `yield`[0m
+[2m// "require-atomic-updates": "off",[0m
+
+[2m// [problem] Require calls to `isNaN()` when checking for `NaN`[0m
+[32m"use-isnan": "error",[0m
+
+[2m// [problem] Enforce comparing `typeof` expressions against valid strings[0m
+[32m"valid-typeof": "error",[0m
+
+[2m// [layout] Enforce position of line comments[0m
+[2m// "line-comment-position": "off",[0m
+
+[2m// [layout] Require or disallow Unicode byte order mark (BOM)[0m
+[2m// "unicode-bom": "off",[0m
+
+Deprecated rules detected:
+
+[2m// [layout] Enforce consistent spacing inside array brackets[0m
+[31m"array-bracket-spacing": ["error", ...],[0m
+
+[2m// [layout] Require or disallow trailing commas[0m
+[31m"comma-dangle": ["error", ...],[0m
+
+[2m// [layout] Enforce consistent spacing before and after commas[0m
+[31m"comma-spacing": ["error", ...],[0m
+
+[2m// [layout] Enforce consistent indentation[0m
+[31m"indent": ["error", ...],[0m
+
+[2m// [suggestion] Disallow unnecessary semicolons[0m
+[31m"no-extra-semi": "error",[0m
+
+[2m// [layout] Disallow mixed spaces and tabs for indentation[0m
+[31m"no-mixed-spaces-and-tabs": "error",[0m
+
+[2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
+[31m"object-curly-newline": ["error", ...],[0m
+
+[2m// [layout] Enforce consistent spacing inside braces[0m
+[31m"object-curly-spacing": ["error", ...],[0m
+
+[2m// [layout] Enforce the consistent use of either backticks, double, or single quotes[0m
+[31m"quotes": ["error", ...],[0m
+
+[2m// [layout] Require or disallow semicolons instead of ASI[0m
+[31m"semi": ["error", ...],[0m
+
+[2m// [layout] Enforce consistent spacing inside parentheses[0m
+[31m"space-in-parens": ["error", ...],[0m
+
+Rules from typescript-eslint:
+
+[2m// [suggestion] Require that function overload signatures be consecutive[0m
+[32m"@typescript-eslint/adjacent-overload-signatures": "error",[0m
+
+[2m// [suggestion] Require consistently using either `T[]` or `Array<T>` for arrays[0m
+[32m"@typescript-eslint/array-type": ["error", ...],[0m
+
+[2m// [suggestion] Disallow `// tslint:<rule-flag>` comments[0m
+[2m// "@typescript-eslint/ban-tslint-comment": "off",[0m
+
+[2m// [suggestion] Disallow certain types[0m
+[32m"@typescript-eslint/ban-types": "error",[0m
+
+[2m// [suggestion] Enforce that class methods utilize `this`[0m
+[2m// "@typescript-eslint/class-methods-use-this": "off",[0m
+
+[2m// [suggestion] Enforce specifying generic type arguments on type annotation or constructor name of a constructor call[0m
+[2m// "@typescript-eslint/consistent-generic-constructors": "off",[0m
+
+[2m// [suggestion] Require or disallow the `Record` type[0m
+[2m// "@typescript-eslint/consistent-indexed-object-style": "off",[0m
+
+[2m// [suggestion] Require `return` statements to either always or never specify values[0m
+[2m// "@typescript-eslint/consistent-return": "off",[0m
+
+[2m// [suggestion] Enforce consistent usage of type assertions[0m
+[2m// "@typescript-eslint/consistent-type-assertions": "off",[0m
+
+[2m// [suggestion] Enforce type definitions to consistently use either `interface` or `type`[0m
+[2m// "@typescript-eslint/consistent-type-definitions": "off",[0m
+
+[2m// [suggestion] Enforce consistent usage of type exports[0m
+[2m// "@typescript-eslint/consistent-type-exports": "off",[0m
+
+[2m// [suggestion] Enforce consistent usage of type imports[0m
+[2m// "@typescript-eslint/consistent-type-imports": "off",[0m
+
+[2m// [suggestion] Enforce default parameters to be last[0m
+[2m// "@typescript-eslint/default-param-last": "off",[0m
+
+[2m// [suggestion] Enforce dot notation whenever possible[0m
+[2m// "@typescript-eslint/dot-notation": "off",[0m
+
+[2m// [suggestion] Require or disallow initialization in variable declarations[0m
+[2m// "@typescript-eslint/init-declarations": "off",[0m
+
+[2m// [suggestion] Enforce a maximum number of parameters in function definitions[0m
+[2m// "@typescript-eslint/max-params": "off",[0m
+
+[2m// [suggestion] Require a consistent member declaration order[0m
+[2m// "@typescript-eslint/member-ordering": "off",[0m
+
+[2m// [suggestion] Enforce using a particular method signature syntax[0m
+[2m// "@typescript-eslint/method-signature-style": "off",[0m
+
+[2m// [suggestion] Enforce naming conventions for everything across a codebase[0m
+[32m"@typescript-eslint/naming-convention": ["error", ...],[0m
+
+[2m// [suggestion] Disallow generic `Array` constructors[0m
+[32m"@typescript-eslint/no-array-constructor": "error",[0m
+
+[2m// [suggestion] Require `.toString()` to only be called on objects which provide useful information when stringified[0m
+[2m// "@typescript-eslint/no-base-to-string": "off",[0m
+
+[2m// [suggestion] Disallow duplicate constituents of union or intersection types[0m
+[2m// "@typescript-eslint/no-duplicate-type-constituents": "off",[0m
+
+[2m// [suggestion] Disallow using the `delete` operator on computed key expressions[0m
+[2m// "@typescript-eslint/no-dynamic-delete": "off",[0m
+
+[2m// [suggestion] Disallow empty functions[0m
+[32m"@typescript-eslint/no-empty-function": "error",[0m
+
+[2m// [suggestion] Disallow the declaration of empty interfaces[0m
+[32m"@typescript-eslint/no-empty-interface": "error",[0m
+
+[2m// [suggestion] Disallow accidentally using the "empty object" type[0m
+[2m// "@typescript-eslint/no-empty-object-type": "off",[0m
+
+[2m// [suggestion] Disallow the `any` type[0m
+[32m"@typescript-eslint/no-explicit-any": "warn",[0m
+
+[2m// [suggestion] Disallow classes used as namespaces[0m
+[2m// "@typescript-eslint/no-extraneous-class": "off",[0m
+
+[2m// [suggestion] Disallow the use of `eval()`-like methods[0m
+[2m// "@typescript-eslint/no-implied-eval": "off",[0m
+
+[2m// [suggestion] Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean[0m
+[32m"@typescript-eslint/no-inferrable-types": "error",[0m
+
+[2m// [suggestion] Disallow `this` keywords outside of classes or class-like objects[0m
+[2m// "@typescript-eslint/no-invalid-this": "off",[0m
+
+[2m// [suggestion] Disallow function declarations that contain unsafe references inside loop statements[0m
+[2m// "@typescript-eslint/no-loop-func": "off",[0m
+
+[2m// [suggestion] Disallow magic numbers[0m
+[2m// "@typescript-eslint/no-magic-numbers": "off",[0m
+
+[2m// [suggestion] Disallow the `void` operator except when used to discard a value[0m
+[2m// "@typescript-eslint/no-meaningless-void-operator": "off",[0m
+
+[2m// [suggestion] Disallow TypeScript namespaces[0m
+[32m"@typescript-eslint/no-namespace": "error",[0m
+
+[2m// [suggestion] Disallow variable redeclaration[0m
+[2m// "@typescript-eslint/no-redeclare": "off",[0m
+
+[2m// [suggestion] Disallow members of unions and intersections that do nothing or override type information[0m
+[2m// "@typescript-eslint/no-redundant-type-constituents": "off",[0m
+
+[2m// [suggestion] Disallow specified modules when loaded by `import`[0m
+[2m// "@typescript-eslint/no-restricted-imports": "off",[0m
+
+[2m// [suggestion] Disallow variable declarations from shadowing variables declared in the outer scope[0m
+[2m// "@typescript-eslint/no-shadow": "off",[0m
+
+[2m// [suggestion] Disallow aliasing `this`[0m
+[32m"@typescript-eslint/no-this-alias": "error",[0m
+
+[2m// [suggestion] Disallow unnecessary equality comparisons against boolean literals[0m
+[2m// "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",[0m
+
+[2m// [suggestion] Disallow conditionals where the type is always truthy or always falsy[0m
+[32m"@typescript-eslint/no-unnecessary-condition": ["error", ...],[0m
+
+[2m// [suggestion] Disallow unnecessary namespace qualifiers[0m
+[2m// "@typescript-eslint/no-unnecessary-qualifier": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary template expressions[0m
+[2m// "@typescript-eslint/no-unnecessary-template-expression": "off",[0m
+
+[2m// [suggestion] Disallow type arguments that are equal to the default[0m
+[2m// "@typescript-eslint/no-unnecessary-type-arguments": "off",[0m
+
+[2m// [suggestion] Disallow type assertions that do not change the type of an expression[0m
+[2m// "@typescript-eslint/no-unnecessary-type-assertion": "off",[0m
+
+[2m// [suggestion] Disallow unnecessary constraints on generic types[0m
+[2m// "@typescript-eslint/no-unnecessary-type-constraint": "off",[0m
+
+[2m// [suggestion] Disallow comparing an enum value with a non-enum value[0m
+[2m// "@typescript-eslint/no-unsafe-enum-comparison": "off",[0m
+
+[2m// [suggestion] Disallow unused expressions[0m
+[2m// "@typescript-eslint/no-unused-expressions": "off",[0m
+
+[2m// [suggestion] Disallow empty exports that don't change anything in a module file[0m
+[2m// "@typescript-eslint/no-useless-empty-export": "off",[0m
+
+[2m// [suggestion] Enforce non-null assertions over explicit type casts[0m
+[2m// "@typescript-eslint/non-nullable-type-assertion-style": "off",[0m
+
+[2m// [suggestion] Enforce the use of `as const` over literal type[0m
+[32m"@typescript-eslint/prefer-as-const": "error",[0m
+
+[2m// [suggestion] Require destructuring from arrays and/or objects[0m
+[2m// "@typescript-eslint/prefer-destructuring": "off",[0m
+
+[2m// [suggestion] Require each enum member value to be explicitly initialized[0m
+[2m// "@typescript-eslint/prefer-enum-initializers": "off",[0m
+
+[2m// [suggestion] Enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result[0m
+[2m// "@typescript-eslint/prefer-find": "off",[0m
+
+[2m// [suggestion] Enforce the use of `for-of` loop over the standard `for` loop where possible[0m
+[2m// "@typescript-eslint/prefer-for-of": "off",[0m
+
+[2m// [suggestion] Enforce using function types instead of interfaces with call signatures[0m
+[32m"@typescript-eslint/prefer-function-type": "error",[0m
+
+[2m// [suggestion] Enforce `includes` method over `indexOf` method[0m
+[2m// "@typescript-eslint/prefer-includes": "off",[0m
+
+[2m// [suggestion] Require all enum members to be literal values[0m
+[2m// "@typescript-eslint/prefer-literal-enum-member": "off",[0m
+
+[2m// [suggestion] Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules[0m
+[32m"@typescript-eslint/prefer-namespace-keyword": "error",[0m
+
+[2m// [suggestion] Enforce using the nullish coalescing operator instead of logical assignments or chaining[0m
+[2m// "@typescript-eslint/prefer-nullish-coalescing": "off",[0m
+
+[2m// [suggestion] Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects[0m
+[2m// "@typescript-eslint/prefer-optional-chain": "off",[0m
+
+[2m// [suggestion] Require using Error objects as Promise rejection reasons[0m
+[2m// "@typescript-eslint/prefer-promise-reject-errors": "off",[0m
+
+[2m// [suggestion] Require private members to be marked as `readonly` if they're never modified outside of the constructor[0m
+[2m// "@typescript-eslint/prefer-readonly": "off",[0m
+
+[2m// [suggestion] Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs[0m
+[2m// "@typescript-eslint/prefer-readonly-parameter-types": "off",[0m
+
+[2m// [suggestion] Enforce `RegExp#exec` over `String#match` if no global flag is provided[0m
+[2m// "@typescript-eslint/prefer-regexp-exec": "off",[0m
+
+[2m// [suggestion] Enforce that `this` is used when only `this` type is returned[0m
+[2m// "@typescript-eslint/prefer-return-this-type": "off",[0m
+
+[2m// [suggestion] Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings[0m
+[2m// "@typescript-eslint/prefer-string-starts-ends-with": "off",[0m
+
+[2m// [suggestion] Require any function or method that returns a Promise to be marked async[0m
+[2m// "@typescript-eslint/promise-function-async": "off",[0m
+
+[2m// [suggestion] Disallow async functions which do not return promises and have no `await` expression[0m
+[2m// "@typescript-eslint/require-await": "off",[0m
+
+[2m// [suggestion] Disallow certain types in boolean expressions[0m
+[32m"@typescript-eslint/strict-boolean-expressions": ["error", ...],[0m
+
+[2m// [suggestion] Require switch-case statements to be exhaustive[0m
+[2m// "@typescript-eslint/switch-exhaustiveness-check": "off",[0m
+
+[2m// [suggestion] Disallow certain triple slash directives in favor of ES6-style import declarations[0m
+[32m"@typescript-eslint/triple-slash-reference": "error",[0m
+
+[2m// [suggestion] Require type annotations in certain places[0m
+[2m// "@typescript-eslint/typedef": "off",[0m
+
+[2m// [suggestion] Disallow two overloads that could be unified into one with a union or an optional/rest parameter[0m
+[2m// "@typescript-eslint/unified-signatures": "off",[0m
+
+[2m// [suggestion] Enforce typing arguments in `.catch()` callbacks as `unknown`[0m
+[2m// "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",[0m
+
+[2m// [problem] Disallow awaiting a value that is not a Thenable[0m
+[2m// "@typescript-eslint/await-thenable": "off",[0m
+
+[2m// [problem] Disallow `@ts-<directive>` comments or require descriptions after directives[0m
+[32m"@typescript-eslint/ban-ts-comment": "error",[0m
+
+[2m// [problem] Enforce that literals on classes are exposed in a consistent style[0m
+[2m// "@typescript-eslint/class-literal-property-style": "off",[0m
+
+[2m// [problem] Require explicit return types on functions and class methods[0m
+[32m"@typescript-eslint/explicit-function-return-type": ["error", ...],[0m
+
+[2m// [problem] Require explicit accessibility modifiers on class properties and methods[0m
+[32m"@typescript-eslint/explicit-member-accessibility": ["error", ...],[0m
+
+[2m// [problem] Require explicit return and argument types on exported functions' and classes' public class methods[0m
+[32m"@typescript-eslint/explicit-module-boundary-types": "warn",[0m
+
+[2m// [problem] Disallow using the `delete` operator on array values[0m
+[2m// "@typescript-eslint/no-array-delete": "off",[0m
+
+[2m// [problem] Disallow non-null assertion in locations that may be confusing[0m
+[2m// "@typescript-eslint/no-confusing-non-null-assertion": "off",[0m
+
+[2m// [problem] Require expressions of type void to appear in statement position[0m
+[2m// "@typescript-eslint/no-confusing-void-expression": "off",[0m
+
+[2m// [problem] Disallow duplicate class members[0m
+[2m// "@typescript-eslint/no-dupe-class-members": "off",[0m
+
+[2m// [problem] Disallow duplicate enum member values[0m
+[2m// "@typescript-eslint/no-duplicate-enum-values": "off",[0m
+
+[2m// [problem] Disallow extra non-null assertions[0m
+[32m"@typescript-eslint/no-extra-non-null-assertion": "error",[0m
+
+[2m// [problem] Require Promise-like statements to be handled appropriately[0m
+[2m// "@typescript-eslint/no-floating-promises": "off",[0m
+
+[2m// [problem] Disallow iterating over an array with a for-in loop[0m
+[2m// "@typescript-eslint/no-for-in-array": "off",[0m
+
+[2m// [problem] Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers[0m
+[2m// "@typescript-eslint/no-import-type-side-effects": "off",[0m
+
+[2m// [problem] Disallow `void` type outside of generic or return types[0m
+[2m// "@typescript-eslint/no-invalid-void-type": "off",[0m
+
+[2m// [problem] Disallow literal numbers that lose precision[0m
+[2m// "@typescript-eslint/no-loss-of-precision": "off",[0m
+
+[2m// [problem] Enforce valid definition of `new` and `constructor`[0m
+[32m"@typescript-eslint/no-misused-new": "error",[0m
+
+[2m// [problem] Disallow Promises in places not designed to handle them[0m
+[2m// "@typescript-eslint/no-misused-promises": "off",[0m
+
+[2m// [problem] Disallow enums from having both number and string members[0m
+[2m// "@typescript-eslint/no-mixed-enums": "off",[0m
+
+[2m// [problem] Disallow non-null assertions in the left operand of a nullish coalescing operator[0m
+[2m// "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "off",[0m
+
+[2m// [problem] Disallow non-null assertions after an optional chain expression[0m
+[32m"@typescript-eslint/no-non-null-asserted-optional-chain": "error",[0m
+
+[2m// [problem] Disallow non-null assertions using the `!` postfix operator[0m
+[32m"@typescript-eslint/no-non-null-assertion": "warn",[0m
+
+[2m// [problem] Disallow invocation of `require()`[0m
+[2m// "@typescript-eslint/no-require-imports": "off",[0m
+
+[2m// [problem] Disallow calling a function with a value with type `any`[0m
+[2m// "@typescript-eslint/no-unsafe-argument": "off",[0m
+
+[2m// [problem] Disallow assigning a value with type `any` to variables and properties[0m
+[2m// "@typescript-eslint/no-unsafe-assignment": "off",[0m
+
+[2m// [problem] Disallow calling a value with type `any`[0m
+[2m// "@typescript-eslint/no-unsafe-call": "off",[0m
+
+[2m// [problem] Disallow unsafe declaration merging[0m
+[2m// "@typescript-eslint/no-unsafe-declaration-merging": "off",[0m
+
+[2m// [problem] Disallow member access on a value with type `any`[0m
+[2m// "@typescript-eslint/no-unsafe-member-access": "off",[0m
+
+[2m// [problem] Disallow returning a value with type `any` from a function[0m
+[2m// "@typescript-eslint/no-unsafe-return": "off",[0m
+
+[2m// [problem] Require unary negation to take a number[0m
+[2m// "@typescript-eslint/no-unsafe-unary-minus": "off",[0m
+
+[2m// [problem] Disallow unused variables[0m
+[32m"@typescript-eslint/no-unused-vars": ["error", ...],[0m
+
+[2m// [problem] Disallow the use of variables before they are defined[0m
+[2m// "@typescript-eslint/no-use-before-define": "off",[0m
+
+[2m// [problem] Disallow unnecessary constructors[0m
+[2m// "@typescript-eslint/no-useless-constructor": "off",[0m
+
+[2m// [problem] Disallow `require` statements except in import statements[0m
+[32m"@typescript-eslint/no-var-requires": "error",[0m
+
+[2m// [problem] Disallow throwing non-`Error` values as exceptions[0m
+[2m// "@typescript-eslint/only-throw-error": "off",[0m
+
+[2m// [problem] Require or disallow parameter properties in class constructors[0m
+[2m// "@typescript-eslint/parameter-properties": "off",[0m
+
+[2m// [problem] Enforce using type parameter when calling `Array#reduce` instead of casting[0m
+[2m// "@typescript-eslint/prefer-reduce-type-parameter": "off",[0m
+
+[2m// [problem] Require `Array#sort` and `Array#toSorted` calls to always provide a `compareFunction`[0m
+[2m// "@typescript-eslint/require-array-sort-compare": "off",[0m
+
+[2m// [problem] Require both operands of addition to be the same type and be `bigint`, `number`, or `string`[0m
+[2m// "@typescript-eslint/restrict-plus-operands": "off",[0m
+
+[2m// [problem] Enforce template literal expressions to be of `string` type[0m
+[2m// "@typescript-eslint/restrict-template-expressions": "off",[0m
+
+[2m// [problem] Enforce consistent awaiting of returned promises[0m
+[2m// "@typescript-eslint/return-await": "off",[0m
+
+[2m// [problem] Enforce unbound methods are called with their expected scope[0m
+[2m// "@typescript-eslint/unbound-method": "off",[0m
+
+Deprecated rules detected:
+
+[2m// [layout] Require or disallow trailing commas[0m
+[31m"@typescript-eslint/comma-dangle": ["error", ...],[0m
+
+[2m// [layout] Enforce consistent spacing before and after commas[0m
+[31m"@typescript-eslint/comma-spacing": ["error", ...],[0m
+
+[2m// [layout] Enforce consistent indentation[0m
+[31m"@typescript-eslint/indent": ["error", ...],[0m
+
+[2m// [suggestion] Disallow unnecessary semicolons[0m
+[31m"@typescript-eslint/no-extra-semi": "error",[0m
+
+Rules from stylistic/ts:
+
+[2m// [layout] Enforce linebreaks after opening and before closing array brackets[0m
+[2m// "@stylistic/array-bracket-newline": "off",[0m
+
+[2m// [layout] Enforce consistent spacing inside array brackets[0m
+[2m// "@stylistic/array-bracket-spacing": "off",[0m
+
+[2m// [layout] Enforce line breaks after each array element[0m
+[2m// "@stylistic/array-element-newline": "off",[0m
+
+[2m// [layout] Require parentheses around arrow function arguments[0m
+[2m// "@stylistic/arrow-parens": "off",[0m
+
+[2m// [layout] Enforce consistent spacing before and after the arrow in arrow functions[0m
+[2m// "@stylistic/arrow-spacing": "off",[0m
+
+[2m// [layout] Disallow or enforce spaces inside of blocks after opening block and before closing block[0m
+[2m// "@stylistic/block-spacing": "off",[0m
+
+[2m// [layout] Enforce consistent brace style for blocks[0m
+[2m// "@stylistic/brace-style": "off",[0m
+
+[2m// [layout] Require or disallow trailing commas[0m
+[2m// "@stylistic/comma-dangle": "off",[0m
+
+[2m// [layout] Enforce consistent spacing before and after commas[0m
+[2m// "@stylistic/comma-spacing": "off",[0m
+
+[2m// [layout] Enforce consistent comma style[0m
+[2m// "@stylistic/comma-style": "off",[0m
+
+[2m// [layout] Enforce consistent spacing inside computed property brackets[0m
+[2m// "@stylistic/computed-property-spacing": "off",[0m
+
+[2m// [layout] Enforce consistent newlines before and after dots[0m
+[2m// "@stylistic/dot-location": "off",[0m
+
+[2m// [layout] Require or disallow newline at the end of files[0m
+[2m// "@stylistic/eol-last": "off",[0m
+
+[2m// [layout] Require or disallow spacing between function identifiers and their invocations[0m
+[2m// "@stylistic/func-call-spacing": "off",[0m
+
+[2m// [layout] Enforce line breaks between arguments of a function call[0m
+[2m// "@stylistic/function-call-argument-newline": "off",[0m
+
+[2m// [layout] Require or disallow spacing between function identifiers and their invocations[0m
+[2m// "@stylistic/function-call-spacing": "off",[0m
+
+[2m// [layout] Enforce consistent line breaks inside function parentheses[0m
+[2m// "@stylistic/function-paren-newline": "off",[0m
+
+[2m// [layout] Enforce consistent spacing around `*` operators in generator functions[0m
+[2m// "@stylistic/generator-star-spacing": "off",[0m
+
+[2m// [layout] Enforce the location of arrow function bodies[0m
+[2m// "@stylistic/implicit-arrow-linebreak": "off",[0m
+
+[2m// [layout] Enforce consistent indentation[0m
+[2m// "@stylistic/indent": "off",[0m
+
+[2m// [layout] Enforce the consistent use of either double or single quotes in JSX attributes[0m
+[2m// "@stylistic/jsx-quotes": "off",[0m
+
+[2m// [layout] Enforce consistent spacing between property names and type annotations in types and interfaces[0m
+[2m// "@stylistic/key-spacing": "off",[0m
+
+[2m// [layout] Enforce consistent spacing before and after keywords[0m
+[2m// "@stylistic/keyword-spacing": "off",[0m
+
+[2m// [layout] Enforce position of line comments[0m
+[2m// "@stylistic/line-comment-position": "off",[0m
+
+[2m// [layout] Enforce consistent linebreak style[0m
+[2m// "@stylistic/linebreak-style": "off",[0m
+
+[2m// [layout] Require empty lines around comments[0m
+[2m// "@stylistic/lines-around-comment": "off",[0m
+
+[2m// [layout] Require or disallow an empty line between class members[0m
+[2m// "@stylistic/lines-between-class-members": "off",[0m
+
+[2m// [layout] Enforce a maximum line length[0m
+[2m// "@stylistic/max-len": "off",[0m
+
+[2m// [layout] Enforce a maximum number of statements allowed per line[0m
+[2m// "@stylistic/max-statements-per-line": "off",[0m
+
+[2m// [layout] Enforce newlines between operands of ternary expressions[0m
+[2m// "@stylistic/multiline-ternary": "off",[0m
+
+[2m// [layout] Enforce or disallow parentheses when invoking a constructor with no arguments[0m
+[2m// "@stylistic/new-parens": "off",[0m
+
+[2m// [layout] Require a newline after each call in a method chain[0m
+[2m// "@stylistic/newline-per-chained-call": "off",[0m
+
+[2m// [layout] Disallow arrow functions where they could be confused with comparisons[0m
+[2m// "@stylistic/no-confusing-arrow": "off",[0m
+
+[2m// [layout] Disallow unnecessary parentheses[0m
+[2m// "@stylistic/no-extra-parens": "off",[0m
+
+[2m// [layout] Disallow unnecessary semicolons[0m
+[2m// "@stylistic/no-extra-semi": "off",[0m
+
+[2m// [layout] Disallow leading or trailing decimal points in numeric literals[0m
+[2m// "@stylistic/no-floating-decimal": "off",[0m
+
+[2m// [layout] Disallow mixed binary operators[0m
+[2m// "@stylistic/no-mixed-operators": "off",[0m
+
+[2m// [layout] Disallow mixed spaces and tabs for indentation[0m
+[2m// "@stylistic/no-mixed-spaces-and-tabs": "off",[0m
+
+[2m// [layout] Disallow multiple spaces[0m
+[2m// "@stylistic/no-multi-spaces": "off",[0m
+
+[2m// [layout] Disallow multiple empty lines[0m
+[2m// "@stylistic/no-multiple-empty-lines": "off",[0m
+
+[2m// [layout] Disallow all tabs[0m
+[2m// "@stylistic/no-tabs": "off",[0m
+
+[2m// [layout] Disallow trailing whitespace at the end of lines[0m
+[2m// "@stylistic/no-trailing-spaces": "off",[0m
+
+[2m// [layout] Disallow whitespace before properties[0m
+[2m// "@stylistic/no-whitespace-before-property": "off",[0m
+
+[2m// [layout] Enforce the location of single-line statements[0m
+[2m// "@stylistic/nonblock-statement-body-position": "off",[0m
+
+[2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
+[2m// "@stylistic/object-curly-newline": "off",[0m
+
+[2m// [layout] Enforce consistent spacing inside braces[0m
+[2m// "@stylistic/object-curly-spacing": "off",[0m
+
+[2m// [layout] Enforce placing object properties on separate lines[0m
+[2m// "@stylistic/object-property-newline": "off",[0m
+
+[2m// [layout] Require or disallow newlines around variable declarations[0m
+[2m// "@stylistic/one-var-declaration-per-line": "off",[0m
+
+[2m// [layout] Enforce consistent linebreak style for operators[0m
+[2m// "@stylistic/operator-linebreak": "off",[0m
+
+[2m// [layout] Require or disallow padding within blocks[0m
+[2m// "@stylistic/padded-blocks": "off",[0m
+
+[2m// [layout] Require or disallow padding lines between statements[0m
+[2m// "@stylistic/padding-line-between-statements": "off",[0m
+
+[2m// [layout] Require quotes around object literal, type literal, interfaces and enums property names[0m
+[2m// "@stylistic/quote-props": "off",[0m
+
+[2m// [layout] Enforce the consistent use of either backticks, double, or single quotes[0m
+[2m// "@stylistic/quotes": "off",[0m
+
+[2m// [layout] Enforce spacing between rest and spread operators and their expressions[0m
+[2m// "@stylistic/rest-spread-spacing": "off",[0m
+
+[2m// [layout] Require or disallow semicolons instead of ASI[0m
+[2m// "@stylistic/semi": "off",[0m
+
+[2m// [layout] Enforce consistent spacing before and after semicolons[0m
+[2m// "@stylistic/semi-spacing": "off",[0m
+
+[2m// [layout] Enforce location of semicolons[0m
+[2m// "@stylistic/semi-style": "off",[0m
+
+[2m// [layout] Enforce consistent spacing before blocks[0m
+[2m// "@stylistic/space-before-blocks": "off",[0m
+
+[2m// [layout] Enforce consistent spacing before function parenthesis[0m
+[2m// "@stylistic/space-before-function-paren": "off",[0m
+
+[2m// [layout] Enforce consistent spacing inside parentheses[0m
+[2m// "@stylistic/space-in-parens": "off",[0m
+
+[2m// [layout] Require spacing around infix operators[0m
+[2m// "@stylistic/space-infix-ops": "off",[0m
+
+[2m// [layout] Enforce consistent spacing before or after unary operators[0m
+[2m// "@stylistic/space-unary-ops": "off",[0m
+
+[2m// [layout] Enforce consistent spacing after the `//` or `/*` in a comment[0m
+[2m// "@stylistic/spaced-comment": "off",[0m
+
+[2m// [layout] Enforce spacing around colons of switch statements[0m
+[2m// "@stylistic/switch-colon-spacing": "off",[0m
+
+[2m// [layout] Require or disallow spacing around embedded expressions of template strings[0m
+[2m// "@stylistic/template-curly-spacing": "off",[0m
+
+[2m// [layout] Require or disallow spacing between template tags and their literals[0m
+[2m// "@stylistic/template-tag-spacing": "off",[0m
+
+[2m// [layout] Require parentheses around immediate `function` invocations[0m
+[2m// "@stylistic/wrap-iife": "off",[0m
+
+[2m// [layout] Require parenthesis around regex literals[0m
+[2m// "@stylistic/wrap-regex": "off",[0m
+
+[2m// [layout] Require or disallow spacing around the `*` in `yield*` expressions[0m
+[2m// "@stylistic/yield-star-spacing": "off",[0m
+
+[2m// [layout] Require a specific member delimiter style for interfaces and type literals[0m
+[2m// "@stylistic/member-delimiter-style": "off",[0m
+
+[2m// [layout] Require consistent spacing around type annotations[0m
+[2m// "@stylistic/type-annotation-spacing": "off",[0m
+
+[2m// [suggestion] Enforce a particular style for multiline comments[0m
+[2m// "@stylistic/multiline-comment-style": "off",[0m
+
+Rules from stylistic/jsx:
+
+[2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
+[2m// "@stylistic/jsx-child-element-spacing": "off",[0m
+
+[2m// [layout] Enforce closing bracket location in JSX[0m
+[2m// "@stylistic/jsx-closing-bracket-location": "off",[0m
+
+[2m// [layout] Enforce closing tag location for multiline JSX[0m
+[2m// "@stylistic/jsx-closing-tag-location": "off",[0m
+
+[2m// [layout] Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes[0m
+[2m// "@stylistic/jsx-curly-brace-presence": "off",[0m
+
+[2m// [layout] Enforce consistent linebreaks in curly braces in JSX attributes and expressions[0m
+[2m// "@stylistic/jsx-curly-newline": "off",[0m
+
+[2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
+[2m// "@stylistic/jsx-curly-spacing": "off",[0m
+
+[2m// [layout] Enforce or disallow spaces around equal signs in JSX attributes[0m
+[2m// "@stylistic/jsx-equals-spacing": "off",[0m
+
+[2m// [layout] Enforce proper position of the first property in JSX[0m
+[2m// "@stylistic/jsx-first-prop-new-line": "off",[0m
+
+[2m// [layout] Enforce line breaks before and after JSX elements when they are used as arguments to a function.[0m
+[2m// "@stylistic/jsx-function-call-newline": "off",[0m
+
+[2m// [layout] Enforce props indentation in JSX[0m
+[2m// "@stylistic/jsx-indent-props": "off",[0m
+
+[2m// [layout] Enforce maximum of props on a single line in JSX[0m
+[2m// "@stylistic/jsx-max-props-per-line": "off",[0m
+
+[2m// [layout] Require or prevent a new line after jsx elements and expressions.[0m
+[2m// "@stylistic/jsx-newline": "off",[0m
+
+[2m// [layout] Require one JSX element per line[0m
+[2m// "@stylistic/jsx-one-expression-per-line": "off",[0m
+
+[2m// [layout] Disallow multiple spaces between inline JSX props[0m
+[2m// "@stylistic/jsx-props-no-multi-spaces": "off",[0m
+
+[2m// [layout] Disallow extra closing tags for components without children[0m
+[2m// "@stylistic/jsx-self-closing-comp": "off",[0m
+
+[2m// [layout] Enforce props alphabetical sorting[0m
+[2m// "@stylistic/jsx-sort-props": "off",[0m
+
+[2m// [layout] Enforce whitespace in and around the JSX opening and closing brackets[0m
+[2m// "@stylistic/jsx-tag-spacing": "off",[0m
+
+[2m// [layout] Disallow missing parentheses around multiline JSX[0m
+[2m// "@stylistic/jsx-wrap-multilines": "off",[0m
+
+[2m// [suggestion] Enforce PascalCase for user-defined JSX components[0m
+[2m// "@stylistic/jsx-pascal-case": "off",[0m
+
+Rules from stylistic/plus:
+
+[2m// [layout] Indentation for binary operators[0m
+[2m// "@stylistic/indent-binary-ops": "off",[0m
+
+[2m// [layout] Enforces consistent spacing inside TypeScript type generics[0m
+[2m// "@stylistic/type-generic-spacing": "off",[0m
+
+[2m// [layout] Expect space before the type declaration in the named tuple[0m
+[2m// "@stylistic/type-named-tuple-spacing": "off",[0m
+

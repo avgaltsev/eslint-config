@@ -2,3 +2,5 @@ tsconfig.json
 eslint.config.js
 
 /src/
+
+/list_output.txt
