@@ -1,4 +1,6 @@
-import type { FlatConfig } from "@typescript-eslint/utils/dist/ts-eslint";
+/* eslint-disable @typescript-eslint/naming-convention */
+
+import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
 
 export const rules: FlatConfig.Rules = {
 	// src/supported-rules.ts
@@ -88,6 +90,7 @@ export const rules: FlatConfig.Rules = {
 		{
 			"selector": "variable",
 			"modifiers": ["const", "global"],
+			"types": ["boolean", "number", "string"],
 			"format": ["UPPER_CASE"],
 			"leadingUnderscore": "forbid",
 			"trailingUnderscore": "forbid",

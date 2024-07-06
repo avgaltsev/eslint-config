@@ -1,12 +1,12 @@
-import type { FlatConfig } from "@typescript-eslint/utils/dist/ts-eslint";
+import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
 
-import { plugin } from "typescript-eslint";
+import {plugin} from "typescript-eslint";
 
-import { rules as oldRules } from "./rules_old.js";
-import { rules as problemRules } from "./rules_problem.js";
-import { rules as suggestionRules } from "./rules_suggestion.js";
+import {rules as oldRules} from "./rules_old.js";
+import {rules as problemRules} from "./rules_problem.js";
+import {rules as suggestionRules} from "./rules_suggestion.js";
 
-const baseConfigs: FlatConfig.Config[] = [
+const baseConfigs: Array<FlatConfig.Config> = [
 	{
 		name: "typescript-eslint/old",
 		rules: oldRules,
@@ -28,9 +28,10 @@ const configs = baseConfigs.map((baseConfig) => {
 		...baseConfig,
 
 		plugins: {
+			// eslint-disable-next-line @typescript-eslint/naming-convention
 			"@typescript-eslint": plugin,
 		},
-	}
+	};
 });
 
-export { configs };
+export {configs};

@@ -17,15 +17,15 @@ import stylisticEslintPluginJsx from "../node_modules/@stylistic/eslint-plugin-j
 import stylisticEslintPluginPlus from "../node_modules/@stylistic/eslint-plugin-plus/dist/index.js";
 
 // Import configs with applied rules.
-import { configs as eslintConfigs } from "./eslint/index.js";
-import { configs as typescriptEslintConfigs } from "./typescriptEslint/index.js";
-import { configs as stylisticConfigs } from "./stylistic/index.js";
+import {configs as eslintConfigs} from "./eslint/index.js";
+import {configs as typescriptEslintConfigs} from "./typescriptEslint/index.js";
+import {configs as stylisticConfigs} from "./stylistic/index.js";
 
 // Extract rules from different sources.
 const ruleSources = {
 	["eslint"]: {
 		prefix: "",
-		rules: Object.fromEntries(eslintRules.entries())
+		rules: Object.fromEntries(eslintRules.entries()),
 	},
 
 	["typescript-eslint"]: {
@@ -103,7 +103,7 @@ function outputRuleSource(name, ruleSource) {
 		rulesByType[rule.meta.type].set(fullRuleName, rule);
 	}
 
-	for (const [type, ruleSet] of Object.entries(rulesByType)) {
+	for (const ruleSet of Object.values(rulesByType)) {
 		for (const [ruleName, rule] of ruleSet) {
 			const state = appliedRules[ruleName] !== undefined ? "applied" : "available";
 			const value = appliedRules[ruleName] ?? "off";

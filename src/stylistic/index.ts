@@ -1,12 +1,12 @@
-import type { FlatConfig } from "@typescript-eslint/utils/dist/ts-eslint";
+import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
 
 import plugin from "@stylistic/eslint-plugin";
 
-import { rules as tsRules } from "./rules_ts.js";
-import { rules as jsxRules } from "./rules_jsx.js";
-import { rules as plusRules } from "./rules_plus.js";
+import {rules as tsRules} from "./rules_ts.js";
+import {rules as jsxRules} from "./rules_jsx.js";
+import {rules as plusRules} from "./rules_plus.js";
 
-const baseConfigs: FlatConfig.Config[] = [
+const baseConfigs: Array<FlatConfig.Config> = [
 	{
 		name: "stylistic/ts",
 		rules: tsRules,
@@ -28,9 +28,10 @@ const configs = baseConfigs.map((baseConfig) => {
 		...baseConfig,
 
 		plugins: {
+			// eslint-disable-next-line @typescript-eslint/naming-convention
 			"@stylistic": plugin,
 		},
-	}
+	};
 });
 
-export { configs };
+export {configs};
