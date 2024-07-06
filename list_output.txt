@@ -597,41 +597,6 @@ Rules from eslint:
 [2m// [layout] Require or disallow Unicode byte order mark (BOM)[0m
 [2m// "unicode-bom": "off",[0m
 
-Deprecated rules detected:
-
-[2m// [layout] Enforce consistent spacing inside array brackets[0m
-[31m"array-bracket-spacing": ["error", ...],[0m
-
-[2m// [layout] Require or disallow trailing commas[0m
-[31m"comma-dangle": ["error", ...],[0m
-
-[2m// [layout] Enforce consistent spacing before and after commas[0m
-[31m"comma-spacing": ["error", ...],[0m
-
-[2m// [layout] Enforce consistent indentation[0m
-[31m"indent": ["error", ...],[0m
-
-[2m// [suggestion] Disallow unnecessary semicolons[0m
-[31m"no-extra-semi": "error",[0m
-
-[2m// [layout] Disallow mixed spaces and tabs for indentation[0m
-[31m"no-mixed-spaces-and-tabs": "error",[0m
-
-[2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
-[31m"object-curly-newline": ["error", ...],[0m
-
-[2m// [layout] Enforce consistent spacing inside braces[0m
-[31m"object-curly-spacing": ["error", ...],[0m
-
-[2m// [layout] Enforce the consistent use of either backticks, double, or single quotes[0m
-[31m"quotes": ["error", ...],[0m
-
-[2m// [layout] Require or disallow semicolons instead of ASI[0m
-[31m"semi": ["error", ...],[0m
-
-[2m// [layout] Enforce consistent spacing inside parentheses[0m
-[31m"space-in-parens": ["error", ...],[0m
-
 Rules from typescript-eslint:
 
 [2m// [suggestion] Require that function overload signatures be consecutive[0m
@@ -991,27 +956,13 @@ Rules from typescript-eslint:
 [2m// [problem] Enforce unbound methods are called with their expected scope[0m
 [2m// "@typescript-eslint/unbound-method": "off",[0m
 
-Deprecated rules detected:
-
-[2m// [layout] Require or disallow trailing commas[0m
-[31m"@typescript-eslint/comma-dangle": ["error", ...],[0m
-
-[2m// [layout] Enforce consistent spacing before and after commas[0m
-[31m"@typescript-eslint/comma-spacing": ["error", ...],[0m
-
-[2m// [layout] Enforce consistent indentation[0m
-[31m"@typescript-eslint/indent": ["error", ...],[0m
-
-[2m// [suggestion] Disallow unnecessary semicolons[0m
-[31m"@typescript-eslint/no-extra-semi": "error",[0m
-
 Rules from stylistic/ts:
 
 [2m// [layout] Enforce linebreaks after opening and before closing array brackets[0m
 [2m// "@stylistic/array-bracket-newline": "off",[0m
 
 [2m// [layout] Enforce consistent spacing inside array brackets[0m
-[2m// "@stylistic/array-bracket-spacing": "off",[0m
+[32m"@stylistic/array-bracket-spacing": ["error", ...],[0m
 
 [2m// [layout] Enforce line breaks after each array element[0m
 [2m// "@stylistic/array-element-newline": "off",[0m
@@ -1029,10 +980,10 @@ Rules from stylistic/ts:
 [2m// "@stylistic/brace-style": "off",[0m
 
 [2m// [layout] Require or disallow trailing commas[0m
-[2m// "@stylistic/comma-dangle": "off",[0m
+[32m"@stylistic/comma-dangle": ["error", ...],[0m
 
 [2m// [layout] Enforce consistent spacing before and after commas[0m
-[2m// "@stylistic/comma-spacing": "off",[0m
+[32m"@stylistic/comma-spacing": ["error", ...],[0m
 
 [2m// [layout] Enforce consistent comma style[0m
 [2m// "@stylistic/comma-style": "off",[0m
@@ -1065,7 +1016,7 @@ Rules from stylistic/ts:
 [2m// "@stylistic/implicit-arrow-linebreak": "off",[0m
 
 [2m// [layout] Enforce consistent indentation[0m
-[2m// "@stylistic/indent": "off",[0m
+[32m"@stylistic/indent": ["error", ...],[0m
 
 [2m// [layout] Enforce the consistent use of either double or single quotes in JSX attributes[0m
 [2m// "@stylistic/jsx-quotes": "off",[0m
@@ -1110,7 +1061,7 @@ Rules from stylistic/ts:
 [2m// "@stylistic/no-extra-parens": "off",[0m
 
 [2m// [layout] Disallow unnecessary semicolons[0m
-[2m// "@stylistic/no-extra-semi": "off",[0m
+[32m"@stylistic/no-extra-semi": "error",[0m
 
 [2m// [layout] Disallow leading or trailing decimal points in numeric literals[0m
 [2m// "@stylistic/no-floating-decimal": "off",[0m
@@ -1119,7 +1070,7 @@ Rules from stylistic/ts:
 [2m// "@stylistic/no-mixed-operators": "off",[0m
 
 [2m// [layout] Disallow mixed spaces and tabs for indentation[0m
-[2m// "@stylistic/no-mixed-spaces-and-tabs": "off",[0m
+[32m"@stylistic/no-mixed-spaces-and-tabs": "error",[0m
 
 [2m// [layout] Disallow multiple spaces[0m
 [2m// "@stylistic/no-multi-spaces": "off",[0m
@@ -1140,10 +1091,10 @@ Rules from stylistic/ts:
 [2m// "@stylistic/nonblock-statement-body-position": "off",[0m
 
 [2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
-[2m// "@stylistic/object-curly-newline": "off",[0m
+[32m"@stylistic/object-curly-newline": ["error", ...],[0m
 
 [2m// [layout] Enforce consistent spacing inside braces[0m
-[2m// "@stylistic/object-curly-spacing": "off",[0m
+[32m"@stylistic/object-curly-spacing": ["error", ...],[0m
 
 [2m// [layout] Enforce placing object properties on separate lines[0m
 [2m// "@stylistic/object-property-newline": "off",[0m
@@ -1164,13 +1115,13 @@ Rules from stylistic/ts:
 [2m// "@stylistic/quote-props": "off",[0m
 
 [2m// [layout] Enforce the consistent use of either backticks, double, or single quotes[0m
-[2m// "@stylistic/quotes": "off",[0m
+[32m"@stylistic/quotes": ["error", ...],[0m
 
 [2m// [layout] Enforce spacing between rest and spread operators and their expressions[0m
 [2m// "@stylistic/rest-spread-spacing": "off",[0m
 
 [2m// [layout] Require or disallow semicolons instead of ASI[0m
-[2m// "@stylistic/semi": "off",[0m
+[32m"@stylistic/semi": ["error", ...],[0m
 
 [2m// [layout] Enforce consistent spacing before and after semicolons[0m
 [2m// "@stylistic/semi-spacing": "off",[0m
@@ -1185,7 +1136,7 @@ Rules from stylistic/ts:
 [2m// "@stylistic/space-before-function-paren": "off",[0m
 
 [2m// [layout] Enforce consistent spacing inside parentheses[0m
-[2m// "@stylistic/space-in-parens": "off",[0m
+[32m"@stylistic/space-in-parens": ["error", ...],[0m
 
 [2m// [layout] Require spacing around infix operators[0m
 [2m// "@stylistic/space-infix-ops": "off",[0m
