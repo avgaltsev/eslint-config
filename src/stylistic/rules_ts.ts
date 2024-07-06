@@ -7,7 +7,15 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/array-bracket-newline": "off",
 
 	// [layout] Enforce consistent spacing inside array brackets
-	// "@stylistic/array-bracket-spacing": "off",
+	"@stylistic/array-bracket-spacing": [
+		"error",
+		"never",
+		{
+			"singleValue": false,
+			"objectsInArrays": false,
+			"arraysInArrays": false,
+		},
+	],
 
 	// [layout] Enforce line breaks after each array element
 	// "@stylistic/array-element-newline": "off",
@@ -25,10 +33,28 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/brace-style": "off",
 
 	// [layout] Require or disallow trailing commas
-	// "@stylistic/comma-dangle": "off",
+	"@stylistic/comma-dangle": [
+		"error",
+		{
+			"arrays": "always-multiline",
+			"objects": "always-multiline",
+			"imports": "always-multiline",
+			"exports": "always-multiline",
+			"functions": "always-multiline",
+			"enums": "always-multiline",
+			"generics": "always-multiline",
+			"tuples": "always-multiline",
+		},
+	],
 
 	// [layout] Enforce consistent spacing before and after commas
-	// "@stylistic/comma-spacing": "off",
+	"@stylistic/comma-spacing": [
+		"error",
+		{
+			"before": false,
+			"after": true,
+		},
+	],
 
 	// [layout] Enforce consistent comma style
 	// "@stylistic/comma-style": "off",
@@ -61,7 +87,7 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/implicit-arrow-linebreak": "off",
 
 	// [layout] Enforce consistent indentation
-	// "@stylistic/indent": "off",
+	"@stylistic/indent": ["error", "tab"],
 
 	// [layout] Enforce the consistent use of either double or single quotes in JSX attributes
 	// "@stylistic/jsx-quotes": "off",
@@ -106,7 +132,7 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/no-extra-parens": "off",
 
 	// [layout] Disallow unnecessary semicolons
-	// "@stylistic/no-extra-semi": "off",
+	"@stylistic/no-extra-semi": "error",
 
 	// [layout] Disallow leading or trailing decimal points in numeric literals
 	// "@stylistic/no-floating-decimal": "off",
@@ -115,7 +141,7 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/no-mixed-operators": "off",
 
 	// [layout] Disallow mixed spaces and tabs for indentation
-	// "@stylistic/no-mixed-spaces-and-tabs": "off",
+	"@stylistic/no-mixed-spaces-and-tabs": "error",
 
 	// [layout] Disallow multiple spaces
 	// "@stylistic/no-multi-spaces": "off",
@@ -136,10 +162,25 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/nonblock-statement-body-position": "off",
 
 	// [layout] Enforce consistent line breaks after opening and before closing braces
-	// "@stylistic/object-curly-newline": "off",
+	"@stylistic/object-curly-newline": [
+		"error",
+		{
+			"ObjectExpression": {"multiline": true, "minProperties": 0, "consistent": true},
+			"ObjectPattern": {"multiline": true, "minProperties": 0, "consistent": true},
+			"ImportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
+			"ExportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
+		},
+	],
 
 	// [layout] Enforce consistent spacing inside braces
-	// "@stylistic/object-curly-spacing": "off",
+	"@stylistic/object-curly-spacing": [
+		"error",
+		"never",
+		{
+			"arraysInObjects": false,
+			"objectsInObjects": false,
+		},
+	],
 
 	// [layout] Enforce placing object properties on separate lines
 	// "@stylistic/object-property-newline": "off",
@@ -160,13 +201,19 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/quote-props": "off",
 
 	// [layout] Enforce the consistent use of either backticks, double, or single quotes
-	// "@stylistic/quotes": "off",
+	"@stylistic/quotes": ["error", "double"],
 
 	// [layout] Enforce spacing between rest and spread operators and their expressions
 	// "@stylistic/rest-spread-spacing": "off",
 
 	// [layout] Require or disallow semicolons instead of ASI
-	// "@stylistic/semi": "off",
+	"@stylistic/semi": [
+		"error",
+		"always",
+		{
+			"omitLastInOneLineBlock": false,
+		},
+	],
 
 	// [layout] Enforce consistent spacing before and after semicolons
 	// "@stylistic/semi-spacing": "off",
@@ -181,7 +228,7 @@ export const rules: FlatConfig.Rules = {
 	// "@stylistic/space-before-function-paren": "off",
 
 	// [layout] Enforce consistent spacing inside parentheses
-	// "@stylistic/space-in-parens": "off",
+	"@stylistic/space-in-parens": ["error", "never"],
 
 	// [layout] Require spacing around infix operators
 	// "@stylistic/space-infix-ops": "off",
