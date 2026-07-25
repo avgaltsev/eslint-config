@@ -1,10 +1,10 @@
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {Linter} from "eslint";
 
 import {rules as problemRules} from "./rules_problem.js";
 import {rules as suggestionRules} from "./rules_suggestion.js";
 import {rules as layoutRules} from "./rules_layout.js";
 
-const configs: Array<FlatConfig.Config> = [
+const configs: Array<Linter.Config> = [
 	{
 		name: "eslint/problems",
 		rules: problemRules,

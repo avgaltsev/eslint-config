@@ -1,3 +1,7 @@
+
+> @somethings/eslint-config@0.0.0 list
+> ./bin/list
+
 Rules from eslint:
 
 [2m// [suggestion] Enforce getter and setter pairs in objects and classes[0m
@@ -33,7 +37,7 @@ Rules from eslint:
 [2m// [suggestion] Require `default` cases in `switch` statements[0m
 [2m// "default-case": "off",[0m
 
-[2m// [suggestion] Enforce default clauses in switch statements to be last[0m
+[2m// [suggestion] Enforce `default` clauses in `switch` statements to be last[0m
 [2m// "default-case-last": "off",[0m
 
 [2m// [suggestion] Enforce default parameters to be last[0m
@@ -51,7 +55,7 @@ Rules from eslint:
 [2m// [suggestion] Require or disallow named `function` expressions[0m
 [2m// "func-names": "off",[0m
 
-[2m// [suggestion] Enforce the consistent use of either `function` declarations or expressions[0m
+[2m// [suggestion] Enforce the consistent use of either `function` declarations or expressions assigned to variables[0m
 [2m// "func-style": "off",[0m
 
 [2m// [suggestion] Require grouped accessor pairs in object literals and classes[0m
@@ -95,9 +99,6 @@ Rules from eslint:
 
 [2m// [suggestion] Enforce a maximum number of statements allowed in function blocks[0m
 [2m// "max-statements": "off",[0m
-
-[2m// [suggestion] Enforce a particular style for multiline comments[0m
-[2m// "multiline-comment-style": "off",[0m
 
 [2m// [suggestion] Require constructor names to begin with a capital letter[0m
 [2m// "new-cap": "off",[0m
@@ -231,7 +232,7 @@ Rules from eslint:
 [2m// [suggestion] Disallow octal escape sequences in string literals[0m
 [2m// "no-octal-escape": "off",[0m
 
-[2m// [suggestion] Disallow reassigning `function` parameters[0m
+[2m// [suggestion] Disallow reassigning function parameters[0m
 [2m// "no-param-reassign": "off",[0m
 
 [2m// [suggestion] Disallow the unary operators `++` and `--`[0m
@@ -264,7 +265,7 @@ Rules from eslint:
 [2m// [suggestion] Disallow assignment operators in `return` statements[0m
 [2m// "no-return-assign": "off",[0m
 
-[2m// [suggestion] Disallow `javascript:` urls[0m
+[2m// [suggestion] Disallow `javascript:` URLs[0m
 [2m// "no-script-url": "off",[0m
 
 [2m// [suggestion] Disallow comma operators[0m
@@ -366,7 +367,7 @@ Rules from eslint:
 [2m// [suggestion] Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`[0m
 [2m// "prefer-object-has-own": "off",[0m
 
-[2m// [suggestion] Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead[0m
+[2m// [suggestion] Disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead[0m
 [2m// "prefer-object-spread": "off",[0m
 
 [2m// [suggestion] Require using Error objects as Promise rejection reasons[0m
@@ -384,19 +385,22 @@ Rules from eslint:
 [2m// [suggestion] Require template literals instead of string concatenation[0m
 [2m// "prefer-template": "off",[0m
 
-[2m// [suggestion] Enforce the consistent use of the radix argument when using `parseInt()`[0m
+[2m// [suggestion] Disallow losing originally caught error when re-throwing custom errors[0m
+[2m// "preserve-caught-error": "off",[0m
+
+[2m// [suggestion] Enforce the use of the radix argument when using `parseInt()`[0m
 [2m// "radix": "off",[0m
 
 [2m// [suggestion] Disallow async functions which have no `await` expression[0m
 [2m// "require-await": "off",[0m
 
-[2m// [suggestion] Enforce the use of `u` or `v` flag on RegExp[0m
+[2m// [suggestion] Enforce the use of `u` or `v` flag on regular expressions[0m
 [2m// "require-unicode-regexp": "off",[0m
 
 [2m// [suggestion] Require generator functions to contain `yield`[0m
 [32m"require-yield": "error",[0m
 
-[2m// [suggestion] Enforce sorted import declarations within modules[0m
+[2m// [suggestion] Enforce sorted `import` declarations within modules[0m
 [2m// "sort-imports": "off",[0m
 
 [2m// [suggestion] Require object keys to be sorted[0m
@@ -423,7 +427,7 @@ Rules from eslint:
 [2m// [problem] Require `super()` calls in constructors[0m
 [32m"constructor-super": "error",[0m
 
-[2m// [problem] Enforce "for" loop update clause moving the counter in the right direction[0m
+[2m// [problem] Enforce `for` loop update clause moving the counter in the right direction[0m
 [32m"for-direction": "error",[0m
 
 [2m// [problem] Enforce `return` statements in getters[0m
@@ -438,13 +442,13 @@ Rules from eslint:
 [2m// [problem] Disallow reassigning class members[0m
 [32m"no-class-assign": "error",[0m
 
-[2m// [problem] Disallow comparing against -0[0m
+[2m// [problem] Disallow comparing against `-0`[0m
 [32m"no-compare-neg-zero": "error",[0m
 
 [2m// [problem] Disallow assignment operators in conditional expressions[0m
 [32m"no-cond-assign": "error",[0m
 
-[2m// [problem] Disallow reassigning `const` variables[0m
+[2m// [problem] Disallow reassigning `const`, `using`, and `await using` variables[0m
 [32m"no-const-assign": "error",[0m
 
 [2m// [problem] Disallow expressions where the operation doesn't affect the value[0m
@@ -514,10 +518,7 @@ Rules from eslint:
 [32m"no-misleading-character-class": "error",[0m
 
 [2m// [problem] Disallow `new` operators with global non-constructor functions[0m
-[2m// "no-new-native-nonconstructor": "off",[0m
-
-[2m// [problem] Disallow `new` operators with the `Symbol` object[0m
-[32m"no-new-symbol": "error",[0m
+[32m"no-new-native-nonconstructor": "error",[0m
 
 [2m// [problem] Disallow calling global object properties as functions[0m
 [32m"no-obj-calls": "error",[0m
@@ -545,6 +546,9 @@ Rules from eslint:
 
 [2m// [problem] Disallow `this`/`super` before calling `super()` in constructors[0m
 [32m"no-this-before-super": "error",[0m
+
+[2m// [problem] Disallow `let` or `var` variables that are read but never assigned[0m
+[2m// "no-unassigned-vars": "off",[0m
 
 [2m// [problem] Disallow the use of undeclared variables unless mentioned in `/*global */` comments[0m
 [32m"no-undef": "error",[0m
@@ -579,6 +583,9 @@ Rules from eslint:
 [2m// [problem] Disallow the use of variables before they are defined[0m
 [32m"no-use-before-define": ["error", ...],[0m
 
+[2m// [problem] Disallow variable assignments when the value is not used[0m
+[2m// "no-useless-assignment": "off",[0m
+
 [2m// [problem] Disallow useless backreferences in regular expressions[0m
 [2m// "no-useless-backreference": "off",[0m
 
@@ -590,9 +597,6 @@ Rules from eslint:
 
 [2m// [problem] Enforce comparing `typeof` expressions against valid strings[0m
 [32m"valid-typeof": "error",[0m
-
-[2m// [layout] Enforce position of line comments[0m
-[2m// "line-comment-position": "off",[0m
 
 [2m// [layout] Require or disallow Unicode byte order mark (BOM)[0m
 [2m// "unicode-bom": "off",[0m
@@ -607,9 +611,6 @@ Rules from typescript-eslint:
 
 [2m// [suggestion] Disallow `// tslint:<rule-flag>` comments[0m
 [2m// "@typescript-eslint/ban-tslint-comment": "off",[0m
-
-[2m// [suggestion] Disallow certain types[0m
-[32m"@typescript-eslint/ban-types": "error",[0m
 
 [2m// [suggestion] Enforce that class methods utilize `this`[0m
 [2m// "@typescript-eslint/class-methods-use-this": "off",[0m
@@ -659,7 +660,7 @@ Rules from typescript-eslint:
 [2m// [suggestion] Disallow generic `Array` constructors[0m
 [32m"@typescript-eslint/no-array-constructor": "error",[0m
 
-[2m// [suggestion] Require `.toString()` to only be called on objects which provide useful information when stringified[0m
+[2m// [suggestion] Require `.toString()` and `.toLocaleString()` to only be called on objects which provide useful information when stringified[0m
 [2m// "@typescript-eslint/no-base-to-string": "off",[0m
 
 [2m// [suggestion] Disallow duplicate constituents of union or intersection types[0m
@@ -671,11 +672,8 @@ Rules from typescript-eslint:
 [2m// [suggestion] Disallow empty functions[0m
 [32m"@typescript-eslint/no-empty-function": "error",[0m
 
-[2m// [suggestion] Disallow the declaration of empty interfaces[0m
-[32m"@typescript-eslint/no-empty-interface": "error",[0m
-
 [2m// [suggestion] Disallow accidentally using the "empty object" type[0m
-[2m// "@typescript-eslint/no-empty-object-type": "off",[0m
+[32m"@typescript-eslint/no-empty-object-type": "error",[0m
 
 [2m// [suggestion] Disallow the `any` type[0m
 [32m"@typescript-eslint/no-explicit-any": "warn",[0m
@@ -683,7 +681,7 @@ Rules from typescript-eslint:
 [2m// [suggestion] Disallow classes used as namespaces[0m
 [2m// "@typescript-eslint/no-extraneous-class": "off",[0m
 
-[2m// [suggestion] Disallow the use of `eval()`-like methods[0m
+[2m// [suggestion] Disallow the use of `eval()`-like functions[0m
 [2m// "@typescript-eslint/no-implied-eval": "off",[0m
 
 [2m// [suggestion] Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean[0m
@@ -691,9 +689,6 @@ Rules from typescript-eslint:
 
 [2m// [suggestion] Disallow `this` keywords outside of classes or class-like objects[0m
 [2m// "@typescript-eslint/no-invalid-this": "off",[0m
-
-[2m// [suggestion] Disallow function declarations that contain unsafe references inside loop statements[0m
-[2m// "@typescript-eslint/no-loop-func": "off",[0m
 
 [2m// [suggestion] Disallow magic numbers[0m
 [2m// "@typescript-eslint/no-magic-numbers": "off",[0m
@@ -710,8 +705,8 @@ Rules from typescript-eslint:
 [2m// [suggestion] Disallow members of unions and intersections that do nothing or override type information[0m
 [2m// "@typescript-eslint/no-redundant-type-constituents": "off",[0m
 
-[2m// [suggestion] Disallow specified modules when loaded by `import`[0m
-[2m// "@typescript-eslint/no-restricted-imports": "off",[0m
+[2m// [suggestion] Disallow certain types[0m
+[2m// "@typescript-eslint/no-restricted-types": "off",[0m
 
 [2m// [suggestion] Disallow variable declarations from shadowing variables declared in the outer scope[0m
 [2m// "@typescript-eslint/no-shadow": "off",[0m
@@ -724,6 +719,9 @@ Rules from typescript-eslint:
 
 [2m// [suggestion] Disallow conditionals where the type is always truthy or always falsy[0m
 [32m"@typescript-eslint/no-unnecessary-condition": ["error", ...],[0m
+
+[2m// [suggestion] Disallow unnecessary assignment of constructor property parameter[0m
+[2m// "@typescript-eslint/no-unnecessary-parameter-property-assignment": "off",[0m
 
 [2m// [suggestion] Disallow unnecessary namespace qualifiers[0m
 [2m// "@typescript-eslint/no-unnecessary-qualifier": "off",[0m
@@ -740,16 +738,22 @@ Rules from typescript-eslint:
 [2m// [suggestion] Disallow unnecessary constraints on generic types[0m
 [2m// "@typescript-eslint/no-unnecessary-type-constraint": "off",[0m
 
+[2m// [suggestion] Disallow conversion idioms when they do not change the type or value of the expression[0m
+[2m// "@typescript-eslint/no-unnecessary-type-conversion": "off",[0m
+
 [2m// [suggestion] Disallow comparing an enum value with a non-enum value[0m
 [2m// "@typescript-eslint/no-unsafe-enum-comparison": "off",[0m
 
 [2m// [suggestion] Disallow unused expressions[0m
 [2m// "@typescript-eslint/no-unused-expressions": "off",[0m
 
+[2m// [suggestion] Disallow default values that will never be used[0m
+[2m// "@typescript-eslint/no-useless-default-assignment": "off",[0m
+
 [2m// [suggestion] Disallow empty exports that don't change anything in a module file[0m
 [2m// "@typescript-eslint/no-useless-empty-export": "off",[0m
 
-[2m// [suggestion] Enforce non-null assertions over explicit type casts[0m
+[2m// [suggestion] Enforce non-null assertions over explicit type assertions[0m
 [2m// "@typescript-eslint/non-nullable-type-assertion-style": "off",[0m
 
 [2m// [suggestion] Enforce the use of `as const` over literal type[0m
@@ -818,13 +822,10 @@ Rules from typescript-eslint:
 [2m// [suggestion] Disallow certain triple slash directives in favor of ES6-style import declarations[0m
 [32m"@typescript-eslint/triple-slash-reference": "error",[0m
 
-[2m// [suggestion] Require type annotations in certain places[0m
-[2m// "@typescript-eslint/typedef": "off",[0m
-
 [2m// [suggestion] Disallow two overloads that could be unified into one with a union or an optional/rest parameter[0m
 [2m// "@typescript-eslint/unified-signatures": "off",[0m
 
-[2m// [suggestion] Enforce typing arguments in `.catch()` callbacks as `unknown`[0m
+[2m// [suggestion] Enforce typing arguments in Promise rejection callbacks as `unknown`[0m
 [2m// "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",[0m
 
 [2m// [problem] Disallow awaiting a value that is not a Thenable[0m
@@ -854,6 +855,9 @@ Rules from typescript-eslint:
 [2m// [problem] Require expressions of type void to appear in statement position[0m
 [2m// "@typescript-eslint/no-confusing-void-expression": "off",[0m
 
+[2m// [problem] Disallow using code marked as `@deprecated`[0m
+[2m// "@typescript-eslint/no-deprecated": "off",[0m
+
 [2m// [problem] Disallow duplicate class members[0m
 [2m// "@typescript-eslint/no-dupe-class-members": "off",[0m
 
@@ -875,14 +879,14 @@ Rules from typescript-eslint:
 [2m// [problem] Disallow `void` type outside of generic or return types[0m
 [2m// "@typescript-eslint/no-invalid-void-type": "off",[0m
 
-[2m// [problem] Disallow literal numbers that lose precision[0m
-[2m// "@typescript-eslint/no-loss-of-precision": "off",[0m
-
 [2m// [problem] Enforce valid definition of `new` and `constructor`[0m
 [32m"@typescript-eslint/no-misused-new": "error",[0m
 
 [2m// [problem] Disallow Promises in places not designed to handle them[0m
 [2m// "@typescript-eslint/no-misused-promises": "off",[0m
+
+[2m// [problem] Disallow using the spread operator when it might cause unexpected behavior[0m
+[2m// "@typescript-eslint/no-misused-spread": "off",[0m
 
 [2m// [problem] Disallow enums from having both number and string members[0m
 [2m// "@typescript-eslint/no-mixed-enums": "off",[0m
@@ -897,7 +901,10 @@ Rules from typescript-eslint:
 [32m"@typescript-eslint/no-non-null-assertion": "warn",[0m
 
 [2m// [problem] Disallow invocation of `require()`[0m
-[2m// "@typescript-eslint/no-require-imports": "off",[0m
+[32m"@typescript-eslint/no-require-imports": "error",[0m
+
+[2m// [problem] Disallow type parameters that aren't used multiple times[0m
+[2m// "@typescript-eslint/no-unnecessary-type-parameters": "off",[0m
 
 [2m// [problem] Disallow calling a function with a value with type `any`[0m
 [2m// "@typescript-eslint/no-unsafe-argument": "off",[0m
@@ -911,14 +918,23 @@ Rules from typescript-eslint:
 [2m// [problem] Disallow unsafe declaration merging[0m
 [2m// "@typescript-eslint/no-unsafe-declaration-merging": "off",[0m
 
+[2m// [problem] Disallow using the unsafe built-in Function type[0m
+[2m// "@typescript-eslint/no-unsafe-function-type": "off",[0m
+
 [2m// [problem] Disallow member access on a value with type `any`[0m
 [2m// "@typescript-eslint/no-unsafe-member-access": "off",[0m
 
 [2m// [problem] Disallow returning a value with type `any` from a function[0m
 [2m// "@typescript-eslint/no-unsafe-return": "off",[0m
 
+[2m// [problem] Disallow type assertions that narrow a type[0m
+[2m// "@typescript-eslint/no-unsafe-type-assertion": "off",[0m
+
 [2m// [problem] Require unary negation to take a number[0m
 [2m// "@typescript-eslint/no-unsafe-unary-minus": "off",[0m
+
+[2m// [problem] Disallow unused private class members[0m
+[2m// "@typescript-eslint/no-unused-private-class-members": "off",[0m
 
 [2m// [problem] Disallow unused variables[0m
 [32m"@typescript-eslint/no-unused-vars": ["error", ...],[0m
@@ -929,8 +945,8 @@ Rules from typescript-eslint:
 [2m// [problem] Disallow unnecessary constructors[0m
 [2m// "@typescript-eslint/no-useless-constructor": "off",[0m
 
-[2m// [problem] Disallow `require` statements except in import statements[0m
-[32m"@typescript-eslint/no-var-requires": "error",[0m
+[2m// [problem] Disallow using confusing built-in primitive class wrappers[0m
+[2m// "@typescript-eslint/no-wrapper-object-types": "off",[0m
 
 [2m// [problem] Disallow throwing non-`Error` values as exceptions[0m
 [2m// "@typescript-eslint/only-throw-error": "off",[0m
@@ -938,8 +954,11 @@ Rules from typescript-eslint:
 [2m// [problem] Require or disallow parameter properties in class constructors[0m
 [2m// "@typescript-eslint/parameter-properties": "off",[0m
 
-[2m// [problem] Enforce using type parameter when calling `Array#reduce` instead of casting[0m
+[2m// [problem] Enforce using type parameter when calling `Array#reduce` instead of using a type assertion[0m
 [2m// "@typescript-eslint/prefer-reduce-type-parameter": "off",[0m
+
+[2m// [problem] Enforce that `get()` types should be assignable to their equivalent `set()` type[0m
+[2m// "@typescript-eslint/related-getter-setter-pairs": "off",[0m
 
 [2m// [problem] Require `Array#sort` and `Array#toSorted` calls to always provide a `compareFunction`[0m
 [2m// "@typescript-eslint/require-array-sort-compare": "off",[0m
@@ -953,10 +972,13 @@ Rules from typescript-eslint:
 [2m// [problem] Enforce consistent awaiting of returned promises[0m
 [2m// "@typescript-eslint/return-await": "off",[0m
 
+[2m// [problem] Disallow passing a value-returning function in a position accepting a void function[0m
+[2m// "@typescript-eslint/strict-void-return": "off",[0m
+
 [2m// [problem] Enforce unbound methods are called with their expected scope[0m
 [2m// "@typescript-eslint/unbound-method": "off",[0m
 
-Rules from stylistic/ts:
+Rules from stylistic:
 
 [2m// [layout] Enforce linebreaks after opening and before closing array brackets[0m
 [2m// "@stylistic/array-bracket-newline": "off",[0m
@@ -991,14 +1013,14 @@ Rules from stylistic/ts:
 [2m// [layout] Enforce consistent spacing inside computed property brackets[0m
 [2m// "@stylistic/computed-property-spacing": "off",[0m
 
+[2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
+[2m// "@stylistic/curly-newline": "off",[0m
+
 [2m// [layout] Enforce consistent newlines before and after dots[0m
 [2m// "@stylistic/dot-location": "off",[0m
 
 [2m// [layout] Require or disallow newline at the end of files[0m
 [2m// "@stylistic/eol-last": "off",[0m
-
-[2m// [layout] Require or disallow spacing between function identifiers and their invocations[0m
-[2m// "@stylistic/func-call-spacing": "off",[0m
 
 [2m// [layout] Enforce line breaks between arguments of a function call[0m
 [2m// "@stylistic/function-call-argument-newline": "off",[0m
@@ -1018,8 +1040,62 @@ Rules from stylistic/ts:
 [2m// [layout] Enforce consistent indentation[0m
 [32m"@stylistic/indent": ["error", ...],[0m
 
+[2m// [layout] Indentation for binary operators[0m
+[2m// "@stylistic/indent-binary-ops": "off",[0m
+
+[2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
+[2m// "@stylistic/jsx-child-element-spacing": "off",[0m
+
+[2m// [layout] Enforce closing bracket location in JSX[0m
+[2m// "@stylistic/jsx-closing-bracket-location": "off",[0m
+
+[2m// [layout] Enforce closing tag location for multiline JSX[0m
+[2m// "@stylistic/jsx-closing-tag-location": "off",[0m
+
+[2m// [layout] Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes[0m
+[2m// "@stylistic/jsx-curly-brace-presence": "off",[0m
+
+[2m// [layout] Enforce consistent linebreaks in curly braces in JSX attributes and expressions[0m
+[2m// "@stylistic/jsx-curly-newline": "off",[0m
+
+[2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
+[2m// "@stylistic/jsx-curly-spacing": "off",[0m
+
+[2m// [layout] Enforce or disallow spaces around equal signs in JSX attributes[0m
+[2m// "@stylistic/jsx-equals-spacing": "off",[0m
+
+[2m// [layout] Enforce proper position of the first property in JSX[0m
+[2m// "@stylistic/jsx-first-prop-new-line": "off",[0m
+
+[2m// [layout] Enforce line breaks before and after JSX elements when they are used as arguments to a function.[0m
+[2m// "@stylistic/jsx-function-call-newline": "off",[0m
+
+[2m// [layout] Enforce props indentation in JSX[0m
+[2m// "@stylistic/jsx-indent-props": "off",[0m
+
+[2m// [layout] Enforce maximum of props on a single line in JSX[0m
+[2m// "@stylistic/jsx-max-props-per-line": "off",[0m
+
+[2m// [layout] Require or prevent a new line after jsx elements and expressions.[0m
+[2m// "@stylistic/jsx-newline": "off",[0m
+
+[2m// [layout] Require one JSX element per line[0m
+[2m// "@stylistic/jsx-one-expression-per-line": "off",[0m
+
+[2m// [layout] Enforce consistent line break styles for JSX props[0m
+[2m// "@stylistic/exp-jsx-props-style": "off",[0m
+
 [2m// [layout] Enforce the consistent use of either double or single quotes in JSX attributes[0m
 [2m// "@stylistic/jsx-quotes": "off",[0m
+
+[2m// [layout] Disallow extra closing tags for components without children[0m
+[2m// "@stylistic/jsx-self-closing-comp": "off",[0m
+
+[2m// [layout] Enforce whitespace in and around the JSX opening and closing brackets[0m
+[2m// "@stylistic/jsx-tag-spacing": "off",[0m
+
+[2m// [layout] Disallow missing parentheses around multiline JSX[0m
+[2m// "@stylistic/jsx-wrap-multilines": "off",[0m
 
 [2m// [layout] Enforce consistent spacing between property names and type annotations in types and interfaces[0m
 [2m// "@stylistic/key-spacing": "off",[0m
@@ -1039,11 +1115,17 @@ Rules from stylistic/ts:
 [2m// [layout] Require or disallow an empty line between class members[0m
 [2m// "@stylistic/lines-between-class-members": "off",[0m
 
+[2m// [layout] Enforce consistent spacing and line break styles inside brackets.[0m
+[2m// "@stylistic/exp-list-style": "off",[0m
+
 [2m// [layout] Enforce a maximum line length[0m
 [2m// "@stylistic/max-len": "off",[0m
 
 [2m// [layout] Enforce a maximum number of statements allowed per line[0m
 [2m// "@stylistic/max-statements-per-line": "off",[0m
+
+[2m// [layout] Require a specific member delimiter style for interfaces and type literals[0m
+[2m// "@stylistic/member-delimiter-style": "off",[0m
 
 [2m// [layout] Enforce newlines between operands of ternary expressions[0m
 [2m// "@stylistic/multiline-ternary": "off",[0m
@@ -1156,6 +1238,15 @@ Rules from stylistic/ts:
 [2m// [layout] Require or disallow spacing between template tags and their literals[0m
 [2m// "@stylistic/template-tag-spacing": "off",[0m
 
+[2m// [layout] Require consistent spacing around type annotations[0m
+[2m// "@stylistic/type-annotation-spacing": "off",[0m
+
+[2m// [layout] Enforces consistent spacing inside TypeScript type generics[0m
+[2m// "@stylistic/type-generic-spacing": "off",[0m
+
+[2m// [layout] Expect space before the type declaration in the named tuple[0m
+[2m// "@stylistic/type-named-tuple-spacing": "off",[0m
+
 [2m// [layout] Require parentheses around immediate `function` invocations[0m
 [2m// "@stylistic/wrap-iife": "off",[0m
 
@@ -1165,82 +1256,9 @@ Rules from stylistic/ts:
 [2m// [layout] Require or disallow spacing around the `*` in `yield*` expressions[0m
 [2m// "@stylistic/yield-star-spacing": "off",[0m
 
-[2m// [layout] Require a specific member delimiter style for interfaces and type literals[0m
-[2m// "@stylistic/member-delimiter-style": "off",[0m
-
-[2m// [layout] Require consistent spacing around type annotations[0m
-[2m// "@stylistic/type-annotation-spacing": "off",[0m
-
-[2m// [suggestion] Enforce a particular style for multiline comments[0m
-[2m// "@stylistic/multiline-comment-style": "off",[0m
-
-Rules from stylistic/jsx:
-
-[2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
-[2m// "@stylistic/jsx-child-element-spacing": "off",[0m
-
-[2m// [layout] Enforce closing bracket location in JSX[0m
-[2m// "@stylistic/jsx-closing-bracket-location": "off",[0m
-
-[2m// [layout] Enforce closing tag location for multiline JSX[0m
-[2m// "@stylistic/jsx-closing-tag-location": "off",[0m
-
-[2m// [layout] Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes[0m
-[2m// "@stylistic/jsx-curly-brace-presence": "off",[0m
-
-[2m// [layout] Enforce consistent linebreaks in curly braces in JSX attributes and expressions[0m
-[2m// "@stylistic/jsx-curly-newline": "off",[0m
-
-[2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
-[2m// "@stylistic/jsx-curly-spacing": "off",[0m
-
-[2m// [layout] Enforce or disallow spaces around equal signs in JSX attributes[0m
-[2m// "@stylistic/jsx-equals-spacing": "off",[0m
-
-[2m// [layout] Enforce proper position of the first property in JSX[0m
-[2m// "@stylistic/jsx-first-prop-new-line": "off",[0m
-
-[2m// [layout] Enforce line breaks before and after JSX elements when they are used as arguments to a function.[0m
-[2m// "@stylistic/jsx-function-call-newline": "off",[0m
-
-[2m// [layout] Enforce props indentation in JSX[0m
-[2m// "@stylistic/jsx-indent-props": "off",[0m
-
-[2m// [layout] Enforce maximum of props on a single line in JSX[0m
-[2m// "@stylistic/jsx-max-props-per-line": "off",[0m
-
-[2m// [layout] Require or prevent a new line after jsx elements and expressions.[0m
-[2m// "@stylistic/jsx-newline": "off",[0m
-
-[2m// [layout] Require one JSX element per line[0m
-[2m// "@stylistic/jsx-one-expression-per-line": "off",[0m
-
-[2m// [layout] Disallow multiple spaces between inline JSX props[0m
-[2m// "@stylistic/jsx-props-no-multi-spaces": "off",[0m
-
-[2m// [layout] Disallow extra closing tags for components without children[0m
-[2m// "@stylistic/jsx-self-closing-comp": "off",[0m
-
-[2m// [layout] Enforce props alphabetical sorting[0m
-[2m// "@stylistic/jsx-sort-props": "off",[0m
-
-[2m// [layout] Enforce whitespace in and around the JSX opening and closing brackets[0m
-[2m// "@stylistic/jsx-tag-spacing": "off",[0m
-
-[2m// [layout] Disallow missing parentheses around multiline JSX[0m
-[2m// "@stylistic/jsx-wrap-multilines": "off",[0m
-
 [2m// [suggestion] Enforce PascalCase for user-defined JSX components[0m
 [2m// "@stylistic/jsx-pascal-case": "off",[0m
 
-Rules from stylistic/plus:
-
-[2m// [layout] Indentation for binary operators[0m
-[2m// "@stylistic/indent-binary-ops": "off",[0m
-
-[2m// [layout] Enforces consistent spacing inside TypeScript type generics[0m
-[2m// "@stylistic/type-generic-spacing": "off",[0m
-
-[2m// [layout] Expect space before the type declaration in the named tuple[0m
-[2m// "@stylistic/type-named-tuple-spacing": "off",[0m
+[2m// [suggestion] Enforce a particular style for multiline comments[0m
+[2m// "@stylistic/multiline-comment-style": "off",[0m
 

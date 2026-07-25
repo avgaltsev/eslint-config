@@ -1,4 +1,4 @@
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {FlatConfig} from "@typescript-eslint/utils/ts-eslint";
 
 import {plugin} from "typescript-eslint";
 
@@ -17,7 +17,7 @@ const baseConfigs: Array<FlatConfig.Config> = [
 	},
 ];
 
-const configs = baseConfigs.map((baseConfig) => {
+const configs: Array<FlatConfig.Config> = baseConfigs.map((baseConfig) => {
 	return {
 		...baseConfig,
 

@@ -3,14 +3,15 @@
 		"rootDir": "./src/",
 		"outDir": "./lib/",
 
-		"target": "es2022",
-		"module": "es2022",
-		"moduleResolution": "node",
+		"target": "es2025",
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
 		"resolveJsonModule": true,
 		"declaration": true,
+		"skipLibCheck": true,
 
 		"lib": [
-			"es2022"
+			"es2025"
 		],
 
 		"typeRoots": [
@@ -19,16 +20,22 @@
 		],
 
 		"strict": true,
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitReturns": true,
-		"noPropertyAccessFromIndexSignature": true,
+		"exactOptionalPropertyTypes": true,
 		"noUncheckedIndexedAccess": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"experimentalDecorators": true,
+		"noUncheckedSideEffectImports": true,
+		"verbatimModuleSyntax": true,
 
 		"allowJs": true
 	},
+
+	"include": [
+		"./src/"
+	],
 
 	"exclude": [
 		"./node_modules/",

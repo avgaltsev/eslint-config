@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {Linter} from "eslint";
 
-export const rules: FlatConfig.Rules = {
+export const rules: Linter.RulesRecord = {
 	// [problem] Enforce `return` statements in callbacks of array methods
 	// "array-callback-return": "off",
 
 	// [problem] Require `super()` calls in constructors
 	"constructor-super": "error",
 
-	// [problem] Enforce "for" loop update clause moving the counter in the right direction
+	// [problem] Enforce `for` loop update clause moving the counter in the right direction
 	"for-direction": "error",
 
 	// [problem] Enforce `return` statements in getters
@@ -24,13 +24,13 @@ export const rules: FlatConfig.Rules = {
 	// [problem] Disallow reassigning class members
 	"no-class-assign": "error",
 
-	// [problem] Disallow comparing against -0
+	// [problem] Disallow comparing against `-0`
 	"no-compare-neg-zero": "error",
 
 	// [problem] Disallow assignment operators in conditional expressions
 	"no-cond-assign": "error",
 
-	// [problem] Disallow reassigning `const` variables
+	// [problem] Disallow reassigning `const`, `using`, and `await using` variables
 	"no-const-assign": "error",
 
 	// [problem] Disallow expressions where the operation doesn't affect the value
@@ -100,10 +100,7 @@ export const rules: FlatConfig.Rules = {
 	"no-misleading-character-class": "error",
 
 	// [problem] Disallow `new` operators with global non-constructor functions
-	// "no-new-native-nonconstructor": "off",
-
-	// [problem] Disallow `new` operators with the `Symbol` object
-	"no-new-symbol": "error",
+	"no-new-native-nonconstructor": "error",
 
 	// [problem] Disallow calling global object properties as functions
 	"no-obj-calls": "error",
@@ -131,6 +128,9 @@ export const rules: FlatConfig.Rules = {
 
 	// [problem] Disallow `this`/`super` before calling `super()` in constructors
 	"no-this-before-super": "error",
+
+	// [problem] Disallow `let` or `var` variables that are read but never assigned
+	// "no-unassigned-vars": "off",
 
 	// [problem] Disallow the use of undeclared variables unless mentioned in `/*global */` comments
 	"no-undef": "error",
@@ -182,6 +182,9 @@ export const rules: FlatConfig.Rules = {
 			"variables": true,
 		},
 	],
+
+	// [problem] Disallow variable assignments when the value is not used
+	// "no-useless-assignment": "off",
 
 	// [problem] Disallow useless backreferences in regular expressions
 	// "no-useless-backreference": "off",

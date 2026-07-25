@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {FlatConfig} from "@typescript-eslint/utils/ts-eslint";
 
 export const rules: FlatConfig.Rules = {
 	// [problem] Disallow awaiting a value that is not a Thenable
@@ -46,6 +46,9 @@ export const rules: FlatConfig.Rules = {
 	// [problem] Require expressions of type void to appear in statement position
 	// "@typescript-eslint/no-confusing-void-expression": "off",
 
+	// [problem] Disallow using code marked as `@deprecated`
+	// "@typescript-eslint/no-deprecated": "off",
+
 	// [problem] Disallow duplicate class members
 	// "@typescript-eslint/no-dupe-class-members": "off",
 
@@ -67,14 +70,14 @@ export const rules: FlatConfig.Rules = {
 	// [problem] Disallow `void` type outside of generic or return types
 	// "@typescript-eslint/no-invalid-void-type": "off",
 
-	// [problem] Disallow literal numbers that lose precision
-	// "@typescript-eslint/no-loss-of-precision": "off",
-
 	// [problem] Enforce valid definition of `new` and `constructor`
 	"@typescript-eslint/no-misused-new": "error",
 
 	// [problem] Disallow Promises in places not designed to handle them
 	// "@typescript-eslint/no-misused-promises": "off",
+
+	// [problem] Disallow using the spread operator when it might cause unexpected behavior
+	// "@typescript-eslint/no-misused-spread": "off",
 
 	// [problem] Disallow enums from having both number and string members
 	// "@typescript-eslint/no-mixed-enums": "off",
@@ -89,7 +92,10 @@ export const rules: FlatConfig.Rules = {
 	"@typescript-eslint/no-non-null-assertion": "warn",
 
 	// [problem] Disallow invocation of `require()`
-	// "@typescript-eslint/no-require-imports": "off",
+	"@typescript-eslint/no-require-imports": "error",
+
+	// [problem] Disallow type parameters that aren't used multiple times
+	// "@typescript-eslint/no-unnecessary-type-parameters": "off",
 
 	// [problem] Disallow calling a function with a value with type `any`
 	// "@typescript-eslint/no-unsafe-argument": "off",
@@ -103,14 +109,23 @@ export const rules: FlatConfig.Rules = {
 	// [problem] Disallow unsafe declaration merging
 	// "@typescript-eslint/no-unsafe-declaration-merging": "off",
 
+	// [problem] Disallow using the unsafe built-in Function type
+	"@typescript-eslint/no-unsafe-function-type": "error",
+
 	// [problem] Disallow member access on a value with type `any`
 	// "@typescript-eslint/no-unsafe-member-access": "off",
 
 	// [problem] Disallow returning a value with type `any` from a function
 	// "@typescript-eslint/no-unsafe-return": "off",
 
+	// [problem] Disallow type assertions that narrow a type
+	// "@typescript-eslint/no-unsafe-type-assertion": "off",
+
 	// [problem] Require unary negation to take a number
 	// "@typescript-eslint/no-unsafe-unary-minus": "off",
+
+	// [problem] Disallow unused private class members
+	// "@typescript-eslint/no-unused-private-class-members": "off",
 
 	// [problem] Disallow unused variables
 	"@typescript-eslint/no-unused-vars": [
@@ -132,8 +147,8 @@ export const rules: FlatConfig.Rules = {
 	// [problem] Disallow unnecessary constructors
 	// "@typescript-eslint/no-useless-constructor": "off",
 
-	// [problem] Disallow `require` statements except in import statements
-	"@typescript-eslint/no-var-requires": "error",
+	// [problem] Disallow using confusing built-in primitive class wrappers
+	"@typescript-eslint/no-wrapper-object-types": "error",
 
 	// [problem] Disallow throwing non-`Error` values as exceptions
 	// "@typescript-eslint/only-throw-error": "off",
@@ -141,8 +156,11 @@ export const rules: FlatConfig.Rules = {
 	// [problem] Require or disallow parameter properties in class constructors
 	// "@typescript-eslint/parameter-properties": "off",
 
-	// [problem] Enforce using type parameter when calling `Array#reduce` instead of casting
+	// [problem] Enforce using type parameter when calling `Array#reduce` instead of using a type assertion
 	// "@typescript-eslint/prefer-reduce-type-parameter": "off",
+
+	// [problem] Enforce that `get()` types should be assignable to their equivalent `set()` type
+	// "@typescript-eslint/related-getter-setter-pairs": "off",
 
 	// [problem] Require `Array#sort` and `Array#toSorted` calls to always provide a `compareFunction`
 	// "@typescript-eslint/require-array-sort-compare": "off",
@@ -155,6 +173,9 @@ export const rules: FlatConfig.Rules = {
 
 	// [problem] Enforce consistent awaiting of returned promises
 	// "@typescript-eslint/return-await": "off",
+
+	// [problem] Disallow passing a value-returning function in a position accepting a void function
+	// "@typescript-eslint/strict-void-return": "off",
 
 	// [problem] Enforce unbound methods are called with their expected scope
 	// "@typescript-eslint/unbound-method": "off",
