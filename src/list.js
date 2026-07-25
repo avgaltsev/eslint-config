@@ -9,51 +9,39 @@
  */
 
 // Import rules meta information from eslint libraries.
-import eslintRules from "../node_modules/eslint/lib/rules/index.js";
-import typescriptEslintRules from "../node_modules/@typescript-eslint/eslint-plugin/dist/rules/index.js";
-import stylisticEslintPluginJs from "../node_modules/@stylistic/eslint-plugin-js/dist/index.js";
-import stylisticEslintPluginTs from "../node_modules/@stylistic/eslint-plugin-ts/dist/index.js";
-import stylisticEslintPluginJsx from "../node_modules/@stylistic/eslint-plugin-jsx/dist/index.js";
-import stylisticEslintPluginPlus from "../node_modules/@stylistic/eslint-plugin-plus/dist/index.js";
+import eslintRulesImport from "../node_modules/eslint/lib/rules/index.js";
+import typescriptEslintPluginRulesImport from "../node_modules/@typescript-eslint/eslint-plugin/dist/rules/index.js";
+import stylisticEslintPluginImport from "../node_modules/@stylistic/eslint-plugin/dist/index.js";
 
-// Import configs with applied rules.
+// Import current configs with applied rules.
 import {configs as eslintConfigs} from "./eslint/index.js";
 import {configs as typescriptEslintConfigs} from "./typescriptEslint/index.js";
 import {configs as stylisticConfigs} from "./stylistic/index.js";
 
-// Extract rules from different sources.
+// Normalize rules imports to plain objects.
+const eslintRules = Object.fromEntries(eslintRulesImport.entries());
+const typescriptEslintRules = typescriptEslintPluginRulesImport;
+const stylisticRules = stylisticEslintPluginImport.rules;
+
+// Build rules sources list.
 const ruleSources = {
 	["eslint"]: {
 		prefix: "",
-		rules: Object.fromEntries(eslintRules.entries()),
+		rules: eslintRules,
 	},
 
 	["typescript-eslint"]: {
 		prefix: "@typescript-eslint/",
-		rules: typescriptEslintRules.default,
+		rules: typescriptEslintRules,
 	},
 
-	// JavaScript and TypeScript rules are claimed to be universal, so we merge them together.
-	["stylistic/ts"]: {
+	["stylistic"]: {
 		prefix: "@stylistic/",
-		rules: {
-			...stylisticEslintPluginJs.rules,
-			...stylisticEslintPluginTs.rules,
-		},
-	},
-
-	["stylistic/jsx"]: {
-		prefix: "@stylistic/",
-		rules: stylisticEslintPluginJsx.rules,
-	},
-
-	["stylistic/plus"]: {
-		prefix: "@stylistic/",
-		rules: stylisticEslintPluginPlus.rules,
+		rules: stylisticRules,
 	},
 };
 
-// Concatenate all configs.
+// Concatenate all current configs.
 const allConfigs = [
 	...eslintConfigs,
 	...typescriptEslintConfigs,
@@ -68,6 +56,7 @@ const appliedRules = allConfigs.reduce((result, config) => {
 	};
 }, {});
 
+// Output rule information.
 function outputRule(name, rule, state, value) {
 	const colors = {
 		"available": "\x1b[2m",
@@ -82,6 +71,7 @@ function outputRule(name, rule, state, value) {
 	console.log(`${color}${state === "available" ? "// " : ""}"${name}": ${stringValue},\x1b[0m\n`);
 }
 
+// Output rules source information.
 function outputRuleSource(name, ruleSource) {
 	console.log(`Rules from ${name}:\n`);
 

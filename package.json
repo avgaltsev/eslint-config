@@ -11,28 +11,29 @@
 		"url": "https://github.com/avgaltsev/eslint-config"
 	},
 	"license": "MIT",
-	"main": "./lib/index.js",
+	"type": "module",
 	"directories": {
-		"bin": "./bin/",
 		"lib": "./lib/"
 	},
-	"devDependencies": {
-		"globals": "^15.8.0",
-		"typescript": "^5.5.2"
-	},
-	"dependencies": {
-		"@stylistic/eslint-plugin": "^2.3.0",
-		"eslint": "^8.57.0",
-		"typescript-eslint": "^7.15.0"
-	},
-	"scripts": {
-		"build": "tsc --skipLibCheck",
-		"watch": "tsc --skipLibCheck --watch",
-		"lint": "eslint .",
-		"prepare": "npm run build && npm run lint"
-	},
-	"type": "module",
 	"exports": {
 		".": "./lib/index.js"
+	},
+	"main": "./lib/index.js",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc --watch",
+		"lint": "eslint .",
+		"prepare": "npm run build && npm run lint",
+		"postversion": "git push --tags origin HEAD",
+		"list": "./bin/list"
+	},
+	"devDependencies": {
+		"eslint": "^10.8.0",
+		"globals": "^17.7.0",
+		"typescript": "^6.0.3"
+	},
+	"dependencies": {
+		"@stylistic/eslint-plugin": "^5.10.0",
+		"typescript-eslint": "^8.65.0"
 	}
 }

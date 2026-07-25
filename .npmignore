@@ -3,4 +3,7 @@ eslint.config.js
 
 /src/
 
+/bin/
+/lib/list.js
+/lib/list.d.ts
 /list_output.txt

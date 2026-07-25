@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {FlatConfig} from "@typescript-eslint/utils/ts-eslint";
 
 export const rules: FlatConfig.Rules = {
 	// [suggestion] Require that function overload signatures be consecutive
@@ -17,9 +17,6 @@ export const rules: FlatConfig.Rules = {
 
 	// [suggestion] Disallow `// tslint:<rule-flag>` comments
 	// "@typescript-eslint/ban-tslint-comment": "off",
-
-	// [suggestion] Disallow certain types
-	"@typescript-eslint/ban-types": "error",
 
 	// [suggestion] Enforce that class methods utilize `this`
 	// "@typescript-eslint/class-methods-use-this": "off",
@@ -119,7 +116,7 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow generic `Array` constructors
 	"@typescript-eslint/no-array-constructor": "error",
 
-	// [suggestion] Require `.toString()` to only be called on objects which provide useful information when stringified
+	// [suggestion] Require `.toString()` and `.toLocaleString()` to only be called on objects which provide useful information when stringified
 	// "@typescript-eslint/no-base-to-string": "off",
 
 	// [suggestion] Disallow duplicate constituents of union or intersection types
@@ -131,11 +128,8 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow empty functions
 	"@typescript-eslint/no-empty-function": "error",
 
-	// [suggestion] Disallow the declaration of empty interfaces
-	"@typescript-eslint/no-empty-interface": "error",
-
 	// [suggestion] Disallow accidentally using the "empty object" type
-	// "@typescript-eslint/no-empty-object-type": "off",
+	"@typescript-eslint/no-empty-object-type": "error",
 
 	// [suggestion] Disallow the `any` type
 	"@typescript-eslint/no-explicit-any": "warn",
@@ -143,7 +137,7 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow classes used as namespaces
 	// "@typescript-eslint/no-extraneous-class": "off",
 
-	// [suggestion] Disallow the use of `eval()`-like methods
+	// [suggestion] Disallow the use of `eval()`-like functions
 	// "@typescript-eslint/no-implied-eval": "off",
 
 	// [suggestion] Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean
@@ -151,9 +145,6 @@ export const rules: FlatConfig.Rules = {
 
 	// [suggestion] Disallow `this` keywords outside of classes or class-like objects
 	// "@typescript-eslint/no-invalid-this": "off",
-
-	// [suggestion] Disallow function declarations that contain unsafe references inside loop statements
-	// "@typescript-eslint/no-loop-func": "off",
 
 	// [suggestion] Disallow magic numbers
 	// "@typescript-eslint/no-magic-numbers": "off",
@@ -170,8 +161,8 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow members of unions and intersections that do nothing or override type information
 	// "@typescript-eslint/no-redundant-type-constituents": "off",
 
-	// [suggestion] Disallow specified modules when loaded by `import`
-	// "@typescript-eslint/no-restricted-imports": "off",
+	// [suggestion] Disallow certain types
+	// "@typescript-eslint/no-restricted-types": "off",
 
 	// [suggestion] Disallow variable declarations from shadowing variables declared in the outer scope
 	// "@typescript-eslint/no-shadow": "off",
@@ -190,6 +181,9 @@ export const rules: FlatConfig.Rules = {
 		},
 	],
 
+	// [suggestion] Disallow unnecessary assignment of constructor property parameter
+	// "@typescript-eslint/no-unnecessary-parameter-property-assignment": "off",
+
 	// [suggestion] Disallow unnecessary namespace qualifiers
 	// "@typescript-eslint/no-unnecessary-qualifier": "off",
 
@@ -205,16 +199,22 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow unnecessary constraints on generic types
 	// "@typescript-eslint/no-unnecessary-type-constraint": "off",
 
+	// [suggestion] Disallow conversion idioms when they do not change the type or value of the expression
+	// "@typescript-eslint/no-unnecessary-type-conversion": "off",
+
 	// [suggestion] Disallow comparing an enum value with a non-enum value
 	// "@typescript-eslint/no-unsafe-enum-comparison": "off",
 
 	// [suggestion] Disallow unused expressions
 	// "@typescript-eslint/no-unused-expressions": "off",
 
+	// [suggestion] Disallow default values that will never be used
+	// "@typescript-eslint/no-useless-default-assignment": "off",
+
 	// [suggestion] Disallow empty exports that don't change anything in a module file
 	// "@typescript-eslint/no-useless-empty-export": "off",
 
-	// [suggestion] Enforce non-null assertions over explicit type casts
+	// [suggestion] Enforce non-null assertions over explicit type assertions
 	// "@typescript-eslint/non-nullable-type-assertion-style": "off",
 
 	// [suggestion] Enforce the use of `as const` over literal type
@@ -294,12 +294,9 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow certain triple slash directives in favor of ES6-style import declarations
 	"@typescript-eslint/triple-slash-reference": "error",
 
-	// [suggestion] Require type annotations in certain places
-	// "@typescript-eslint/typedef": "off",
-
 	// [suggestion] Disallow two overloads that could be unified into one with a union or an optional/rest parameter
 	// "@typescript-eslint/unified-signatures": "off",
 
-	// [suggestion] Enforce typing arguments in `.catch()` callbacks as `unknown`
+	// [suggestion] Enforce typing arguments in Promise rejection callbacks as `unknown`
 	// "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
 };

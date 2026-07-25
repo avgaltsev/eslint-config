@@ -2,7 +2,8 @@
  * This module exports two config sets: for JavaScript projects and for TypeScript projects.
  */
 
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {Linter} from "eslint";
+import type {FlatConfig} from "@typescript-eslint/utils/ts-eslint";
 
 import {parser} from "typescript-eslint";
 
@@ -10,7 +11,7 @@ import {configs as eslintConfigs} from "./eslint/index.js";
 import {configs as typescriptEslintConfigs} from "./typescriptEslint/index.js";
 import {configs as stylisticConfigs} from "./stylistic/index.js";
 
-const baseJavascriptConfigs: Array<FlatConfig.Config> = [
+const baseJavascriptConfigs: Array<Linter.Config> = [
 	...eslintConfigs,
 	...stylisticConfigs,
 ];
@@ -21,7 +22,7 @@ const baseTypescriptConfigs: Array<FlatConfig.Config> = [
 	...stylisticConfigs,
 ];
 
-const javascriptConfigs = baseJavascriptConfigs.map((baseConfig) => {
+const javascriptConfigs: Array<Linter.Config> = baseJavascriptConfigs.map((baseConfig) => {
 	return {
 		...baseConfig,
 
@@ -29,7 +30,7 @@ const javascriptConfigs = baseJavascriptConfigs.map((baseConfig) => {
 	};
 });
 
-const typescriptConfigs = baseTypescriptConfigs.map((baseConfig) => {
+const typescriptConfigs: Array<FlatConfig.Config> = baseTypescriptConfigs.map((baseConfig) => {
 	return {
 		...baseConfig,
 
@@ -37,7 +38,7 @@ const typescriptConfigs = baseTypescriptConfigs.map((baseConfig) => {
 			parser,
 
 			parserOptions: {
-				project: true,
+				projectService: true,
 			},
 		},
 

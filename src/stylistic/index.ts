@@ -1,29 +1,23 @@
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {Linter} from "eslint";
 
 import plugin from "@stylistic/eslint-plugin";
 
-import {rules as tsRules} from "./rules_ts.js";
-import {rules as jsxRules} from "./rules_jsx.js";
-import {rules as plusRules} from "./rules_plus.js";
+import {rules as suggestionRules} from "./rules_suggestion.js";
+import {rules as layoutRules} from "./rules_layout.js";
 
-const baseConfigs: Array<FlatConfig.Config> = [
+const baseConfigs: Array<Linter.Config> = [
 	{
-		name: "stylistic/ts",
-		rules: tsRules,
+		name: "stylistic/suggestions",
+		rules: suggestionRules,
 	},
 
 	{
-		name: "stylistic/jsx",
-		rules: jsxRules,
-	},
-
-	{
-		name: "stylistic/plus",
-		rules: plusRules,
+		name: "stylistic/layout",
+		rules: layoutRules,
 	},
 ];
 
-const configs = baseConfigs.map((baseConfig) => {
+const configs: Array<Linter.Config> = baseConfigs.map((baseConfig) => {
 	return {
 		...baseConfig,
 

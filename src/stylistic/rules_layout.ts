@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {Linter} from "eslint";
 
-export const rules: FlatConfig.Rules = {
+export const rules: Linter.RulesRecord = {
 	// [layout] Enforce linebreaks after opening and before closing array brackets
 	// "@stylistic/array-bracket-newline": "off",
 
@@ -62,14 +62,14 @@ export const rules: FlatConfig.Rules = {
 	// [layout] Enforce consistent spacing inside computed property brackets
 	// "@stylistic/computed-property-spacing": "off",
 
+	// [layout] Enforce consistent line breaks after opening and before closing braces
+	// "@stylistic/curly-newline": "off",
+
 	// [layout] Enforce consistent newlines before and after dots
 	// "@stylistic/dot-location": "off",
 
 	// [layout] Require or disallow newline at the end of files
 	// "@stylistic/eol-last": "off",
-
-	// [layout] Require or disallow spacing between function identifiers and their invocations
-	// "@stylistic/func-call-spacing": "off",
 
 	// [layout] Enforce line breaks between arguments of a function call
 	// "@stylistic/function-call-argument-newline": "off",
@@ -89,8 +89,62 @@ export const rules: FlatConfig.Rules = {
 	// [layout] Enforce consistent indentation
 	"@stylistic/indent": ["error", "tab"],
 
+	// [layout] Indentation for binary operators
+	// "@stylistic/indent-binary-ops": "off",
+
+	// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
+	// "@stylistic/jsx-child-element-spacing": "off",
+
+	// [layout] Enforce closing bracket location in JSX
+	// "@stylistic/jsx-closing-bracket-location": "off",
+
+	// [layout] Enforce closing tag location for multiline JSX
+	// "@stylistic/jsx-closing-tag-location": "off",
+
+	// [layout] Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes
+	// "@stylistic/jsx-curly-brace-presence": "off",
+
+	// [layout] Enforce consistent linebreaks in curly braces in JSX attributes and expressions
+	// "@stylistic/jsx-curly-newline": "off",
+
+	// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
+	// "@stylistic/jsx-curly-spacing": "off",
+
+	// [layout] Enforce or disallow spaces around equal signs in JSX attributes
+	// "@stylistic/jsx-equals-spacing": "off",
+
+	// [layout] Enforce proper position of the first property in JSX
+	// "@stylistic/jsx-first-prop-new-line": "off",
+
+	// [layout] Enforce line breaks before and after JSX elements when they are used as arguments to a function.
+	// "@stylistic/jsx-function-call-newline": "off",
+
+	// [layout] Enforce props indentation in JSX
+	// "@stylistic/jsx-indent-props": "off",
+
+	// [layout] Enforce maximum of props on a single line in JSX
+	// "@stylistic/jsx-max-props-per-line": "off",
+
+	// [layout] Require or prevent a new line after jsx elements and expressions.
+	// "@stylistic/jsx-newline": "off",
+
+	// [layout] Require one JSX element per line
+	// "@stylistic/jsx-one-expression-per-line": "off",
+
+	// [layout] Enforce consistent line break styles for JSX props
+	// "@stylistic/exp-jsx-props-style": "off",
+
 	// [layout] Enforce the consistent use of either double or single quotes in JSX attributes
 	// "@stylistic/jsx-quotes": "off",
+
+	// [layout] Disallow extra closing tags for components without children
+	// "@stylistic/jsx-self-closing-comp": "off",
+
+	// [layout] Enforce whitespace in and around the JSX opening and closing brackets
+	// "@stylistic/jsx-tag-spacing": "off",
+
+	// [layout] Disallow missing parentheses around multiline JSX
+	// "@stylistic/jsx-wrap-multilines": "off",
 
 	// [layout] Enforce consistent spacing between property names and type annotations in types and interfaces
 	// "@stylistic/key-spacing": "off",
@@ -110,11 +164,17 @@ export const rules: FlatConfig.Rules = {
 	// [layout] Require or disallow an empty line between class members
 	// "@stylistic/lines-between-class-members": "off",
 
+	// [layout] Enforce consistent spacing and line break styles inside brackets.
+	// "@stylistic/exp-list-style": "off",
+
 	// [layout] Enforce a maximum line length
 	// "@stylistic/max-len": "off",
 
 	// [layout] Enforce a maximum number of statements allowed per line
 	// "@stylistic/max-statements-per-line": "off",
+
+	// [layout] Require a specific member delimiter style for interfaces and type literals
+	// "@stylistic/member-delimiter-style": "off",
 
 	// [layout] Enforce newlines between operands of ternary expressions
 	// "@stylistic/multiline-ternary": "off",
@@ -248,6 +308,15 @@ export const rules: FlatConfig.Rules = {
 	// [layout] Require or disallow spacing between template tags and their literals
 	// "@stylistic/template-tag-spacing": "off",
 
+	// [layout] Require consistent spacing around type annotations
+	// "@stylistic/type-annotation-spacing": "off",
+
+	// [layout] Enforces consistent spacing inside TypeScript type generics
+	// "@stylistic/type-generic-spacing": "off",
+
+	// [layout] Expect space before the type declaration in the named tuple
+	// "@stylistic/type-named-tuple-spacing": "off",
+
 	// [layout] Require parentheses around immediate `function` invocations
 	// "@stylistic/wrap-iife": "off",
 
@@ -256,13 +325,4 @@ export const rules: FlatConfig.Rules = {
 
 	// [layout] Require or disallow spacing around the `*` in `yield*` expressions
 	// "@stylistic/yield-star-spacing": "off",
-
-	// [layout] Require a specific member delimiter style for interfaces and type literals
-	// "@stylistic/member-delimiter-style": "off",
-
-	// [layout] Require consistent spacing around type annotations
-	// "@stylistic/type-annotation-spacing": "off",
-
-	// [suggestion] Enforce a particular style for multiline comments
-	// "@stylistic/multiline-comment-style": "off",
 };

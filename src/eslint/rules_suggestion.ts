@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type {FlatConfig} from "@typescript-eslint/utils/dist/ts-eslint";
+import type {Linter} from "eslint";
 
-export const rules: FlatConfig.Rules = {
+export const rules: Linter.RulesRecord = {
 	// [suggestion] Enforce getter and setter pairs in objects and classes
 	// "accessor-pairs": "off",
 
@@ -45,7 +45,7 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Require `default` cases in `switch` statements
 	// "default-case": "off",
 
-	// [suggestion] Enforce default clauses in switch statements to be last
+	// [suggestion] Enforce `default` clauses in `switch` statements to be last
 	// "default-case-last": "off",
 
 	// [suggestion] Enforce default parameters to be last
@@ -63,7 +63,7 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Require or disallow named `function` expressions
 	// "func-names": "off",
 
-	// [suggestion] Enforce the consistent use of either `function` declarations or expressions
+	// [suggestion] Enforce the consistent use of either `function` declarations or expressions assigned to variables
 	// "func-style": "off",
 
 	// [suggestion] Require grouped accessor pairs in object literals and classes
@@ -107,9 +107,6 @@ export const rules: FlatConfig.Rules = {
 
 	// [suggestion] Enforce a maximum number of statements allowed in function blocks
 	// "max-statements": "off",
-
-	// [suggestion] Enforce a particular style for multiline comments
-	// "multiline-comment-style": "off",
 
 	// [suggestion] Require constructor names to begin with a capital letter
 	// "new-cap": "off",
@@ -243,7 +240,7 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow octal escape sequences in string literals
 	// "no-octal-escape": "off",
 
-	// [suggestion] Disallow reassigning `function` parameters
+	// [suggestion] Disallow reassigning function parameters
 	// "no-param-reassign": "off",
 
 	// [suggestion] Disallow the unary operators `++` and `--`
@@ -276,7 +273,7 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow assignment operators in `return` statements
 	// "no-return-assign": "off",
 
-	// [suggestion] Disallow `javascript:` urls
+	// [suggestion] Disallow `javascript:` URLs
 	// "no-script-url": "off",
 
 	// [suggestion] Disallow comma operators
@@ -384,7 +381,7 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`
 	// "prefer-object-has-own": "off",
 
-	// [suggestion] Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead
+	// [suggestion] Disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead
 	// "prefer-object-spread": "off",
 
 	// [suggestion] Require using Error objects as Promise rejection reasons
@@ -402,19 +399,22 @@ export const rules: FlatConfig.Rules = {
 	// [suggestion] Require template literals instead of string concatenation
 	// "prefer-template": "off",
 
-	// [suggestion] Enforce the consistent use of the radix argument when using `parseInt()`
+	// [suggestion] Disallow losing originally caught error when re-throwing custom errors
+	// "preserve-caught-error": "off",
+
+	// [suggestion] Enforce the use of the radix argument when using `parseInt()`
 	// "radix": "off",
 
 	// [suggestion] Disallow async functions which have no `await` expression
 	// "require-await": "off",
 
-	// [suggestion] Enforce the use of `u` or `v` flag on RegExp
+	// [suggestion] Enforce the use of `u` or `v` flag on regular expressions
 	// "require-unicode-regexp": "off",
 
 	// [suggestion] Require generator functions to contain `yield`
 	"require-yield": "error",
 
-	// [suggestion] Enforce sorted import declarations within modules
+	// [suggestion] Enforce sorted `import` declarations within modules
 	// "sort-imports": "off",
 
 	// [suggestion] Require object keys to be sorted
