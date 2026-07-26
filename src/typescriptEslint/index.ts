@@ -2,8 +2,8 @@ import type {FlatConfig} from "@typescript-eslint/utils/ts-eslint";
 
 import {plugin} from "typescript-eslint";
 
-import {rules as problemRules} from "./rules_problem.js";
-import {rules as suggestionRules} from "./rules_suggestion.js";
+import {rules as problemRules} from "./problem.js";
+import {rules as suggestionRules} from "./suggestion.js";
 
 const baseConfigs: Array<FlatConfig.Config> = [
 	{
