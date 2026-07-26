@@ -13,26 +13,20 @@ export const rules: FlatConfig.Rules = {
 	// "@typescript-eslint/class-literal-property-style": "off",
 
 	// [problem] Require explicit return types on functions and class methods
-	"@typescript-eslint/explicit-function-return-type": [
-		"error",
-		{
-			"allowExpressions": true,
-			"allowTypedFunctionExpressions": true,
-			"allowHigherOrderFunctions": true,
-			"allowDirectConstAssertionInArrowFunctions": true,
-			"allowConciseArrowFunctionExpressionsStartingWithVoid": true,
-		},
-	],
+	"@typescript-eslint/explicit-function-return-type": ["error", {
+		"allowExpressions": true,
+		"allowTypedFunctionExpressions": true,
+		"allowHigherOrderFunctions": true,
+		"allowDirectConstAssertionInArrowFunctions": true,
+		"allowConciseArrowFunctionExpressionsStartingWithVoid": true,
+	}],
 
 	// [problem] Require explicit accessibility modifiers on class properties and methods
-	"@typescript-eslint/explicit-member-accessibility": [
-		"error",
-		{
-			"accessibility": "explicit",
-			"ignoredMethodNames": [],
-			"overrides": {},
-		},
-	],
+	"@typescript-eslint/explicit-member-accessibility": ["error", {
+		"accessibility": "explicit",
+		"ignoredMethodNames": [],
+		"overrides": {},
+	}],
 
 	// [problem] Require explicit return and argument types on exported functions' and classes' public class methods
 	"@typescript-eslint/explicit-module-boundary-types": "warn",
@@ -128,18 +122,15 @@ export const rules: FlatConfig.Rules = {
 	// "@typescript-eslint/no-unused-private-class-members": "off",
 
 	// [problem] Disallow unused variables
-	"@typescript-eslint/no-unused-vars": [
-		"error",
-		{
-			"vars": "all",
-			"varsIgnorePattern": "",
-			"args": "none",
-			"ignoreRestSiblings": true,
-			"argsIgnorePattern": "",
-			"caughtErrors": "none",
-			"caughtErrorsIgnorePattern": "",
-		},
-	],
+	"@typescript-eslint/no-unused-vars": ["error", {
+		"vars": "all",
+		"varsIgnorePattern": "",
+		"args": "none",
+		"ignoreRestSiblings": true,
+		"argsIgnorePattern": "",
+		"caughtErrors": "none",
+		"caughtErrorsIgnorePattern": "",
+	}],
 
 	// [problem] Disallow the use of variables before they are defined
 	// "@typescript-eslint/no-use-before-define": "off",

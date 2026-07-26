@@ -13,16 +13,13 @@ export const rules: Linter.RulesRecord = {
 	// "block-scoped-var": "off",
 
 	// [suggestion] Enforce camelcase naming convention
-	"camelcase": [
-		"error",
-		{
-			"properties": "always",
-			"ignoreDestructuring": false,
-			"ignoreImports": false,
-			"ignoreGlobals": false,
-			"allow": [],
-		},
-	],
+	"camelcase": ["error", {
+		"properties": "always",
+		"ignoreDestructuring": false,
+		"ignoreImports": false,
+		"ignoreGlobals": false,
+		"allow": [],
+	}],
 
 	// [suggestion] Enforce or disallow capitalization of the first letter of a comment
 	// "capitalized-comments": "off",
@@ -358,13 +355,10 @@ export const rules: Linter.RulesRecord = {
 	// "prefer-arrow-callback": "off",
 
 	// [suggestion] Require `const` declarations for variables that are never reassigned after declared
-	"prefer-const": [
-		"error",
-		{
-			"destructuring": "any",
-			"ignoreReadBeforeAssign": false,
-		},
-	],
+	"prefer-const": ["error", {
+		"destructuring": "any",
+		"ignoreReadBeforeAssign": false,
+	}],
 
 	// [suggestion] Require destructuring from arrays and/or objects
 	// "prefer-destructuring": "off",

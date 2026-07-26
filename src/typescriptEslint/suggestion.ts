@@ -7,13 +7,10 @@ export const rules: FlatConfig.Rules = {
 	"@typescript-eslint/adjacent-overload-signatures": "error",
 
 	// [suggestion] Require consistently using either `T[]` or `Array<T>` for arrays
-	"@typescript-eslint/array-type": [
-		"error",
-		{
-			"default": "generic",
-			"readonly": "generic",
-		},
-	],
+	"@typescript-eslint/array-type": ["error", {
+		"default": "generic",
+		"readonly": "generic",
+	}],
 
 	// [suggestion] Disallow `// tslint:<rule-flag>` comments
 	// "@typescript-eslint/ban-tslint-comment": "off",
@@ -61,57 +58,48 @@ export const rules: FlatConfig.Rules = {
 	// "@typescript-eslint/method-signature-style": "off",
 
 	// [suggestion] Enforce naming conventions for everything across a codebase
-	"@typescript-eslint/naming-convention": [
-		"error",
-		{
-			"selector": "default",
-			"format": ["camelCase"],
-			"leadingUnderscore": "forbid",
-			"trailingUnderscore": "forbid",
+	"@typescript-eslint/naming-convention": ["error", {
+		"selector": "default",
+		"format": ["camelCase"],
+		"leadingUnderscore": "forbid",
+		"trailingUnderscore": "forbid",
+	}, {
+		"selector": "variable",
+		"modifiers": ["const", "global"],
+		"types": ["boolean", "number", "string"],
+		"format": ["UPPER_CASE"],
+		"leadingUnderscore": "forbid",
+		"trailingUnderscore": "forbid",
+	}, {
+		"selector": "typeAlias",
+		"format": ["PascalCase"],
+		"leadingUnderscore": "forbid",
+		"trailingUnderscore": "forbid",
+	}, {
+		"selector": "enum",
+		"format": ["PascalCase"],
+		"leadingUnderscore": "forbid",
+		"trailingUnderscore": "forbid",
+	}, {
+		"selector": "class",
+		"format": ["PascalCase"],
+		"leadingUnderscore": "forbid",
+		"trailingUnderscore": "forbid",
+	}, {
+		"selector": "interface",
+		"format": ["PascalCase"],
+		"custom": {
+			"regex": "^I[A-Z]",
+			"match": false,
 		},
-		{
-			"selector": "variable",
-			"modifiers": ["const", "global"],
-			"types": ["boolean", "number", "string"],
-			"format": ["UPPER_CASE"],
-			"leadingUnderscore": "forbid",
-			"trailingUnderscore": "forbid",
-		},
-		{
-			"selector": "typeAlias",
-			"format": ["PascalCase"],
-			"leadingUnderscore": "forbid",
-			"trailingUnderscore": "forbid",
-		},
-		{
-			"selector": "enum",
-			"format": ["PascalCase"],
-			"leadingUnderscore": "forbid",
-			"trailingUnderscore": "forbid",
-		},
-		{
-			"selector": "class",
-			"format": ["PascalCase"],
-			"leadingUnderscore": "forbid",
-			"trailingUnderscore": "forbid",
-		},
-		{
-			"selector": "interface",
-			"format": ["PascalCase"],
-			"custom": {
-				"regex": "^I[A-Z]",
-				"match": false,
-			},
-			"leadingUnderscore": "forbid",
-			"trailingUnderscore": "forbid",
-		},
-		{
-			"selector": "typeParameter",
-			"format": ["PascalCase"],
-			"leadingUnderscore": "forbid",
-			"trailingUnderscore": "forbid",
-		},
-	],
+		"leadingUnderscore": "forbid",
+		"trailingUnderscore": "forbid",
+	}, {
+		"selector": "typeParameter",
+		"format": ["PascalCase"],
+		"leadingUnderscore": "forbid",
+		"trailingUnderscore": "forbid",
+	}],
 
 	// [suggestion] Disallow generic `Array` constructors
 	"@typescript-eslint/no-array-constructor": "error",
@@ -174,12 +162,7 @@ export const rules: FlatConfig.Rules = {
 	// "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
 
 	// [suggestion] Disallow conditionals where the type is always truthy or always falsy
-	"@typescript-eslint/no-unnecessary-condition": [
-		"error",
-		{
-			"allowConstantLoopConditions": true,
-		},
-	],
+	"@typescript-eslint/no-unnecessary-condition": ["error", {}],
 
 	// [suggestion] Disallow unnecessary assignment of constructor property parameter
 	// "@typescript-eslint/no-unnecessary-parameter-property-assignment": "off",
@@ -275,18 +258,15 @@ export const rules: FlatConfig.Rules = {
 	// "@typescript-eslint/require-await": "off",
 
 	// [suggestion] Disallow certain types in boolean expressions
-	"@typescript-eslint/strict-boolean-expressions": [
-		"error",
-		{
-			"allowString": false,
-			"allowNumber": false,
-			"allowNullableObject": false,
-			"allowNullableBoolean": false,
-			"allowNullableString": false,
-			"allowNullableNumber": false,
-			"allowAny": false,
-		},
-	],
+	"@typescript-eslint/strict-boolean-expressions": ["error", {
+		"allowString": false,
+		"allowNumber": false,
+		"allowNullableObject": false,
+		"allowNullableBoolean": false,
+		"allowNullableString": false,
+		"allowNullableNumber": false,
+		"allowAny": false,
+	}],
 
 	// [suggestion] Require switch-case statements to be exhaustive
 	// "@typescript-eslint/switch-exhaustiveness-check": "off",

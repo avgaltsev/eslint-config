@@ -7,15 +7,11 @@ export const rules: Linter.RulesRecord = {
 	// "@stylistic/array-bracket-newline": "off",
 
 	// [layout] Enforce consistent spacing inside array brackets
-	"@stylistic/array-bracket-spacing": [
-		"error",
-		"never",
-		{
-			"singleValue": false,
-			"objectsInArrays": false,
-			"arraysInArrays": false,
-		},
-	],
+	"@stylistic/array-bracket-spacing": ["error", "never", {
+		"singleValue": false,
+		"objectsInArrays": false,
+		"arraysInArrays": false,
+	}],
 
 	// [layout] Enforce line breaks after each array element
 	// "@stylistic/array-element-newline": "off",
@@ -33,28 +29,22 @@ export const rules: Linter.RulesRecord = {
 	// "@stylistic/brace-style": "off",
 
 	// [layout] Require or disallow trailing commas
-	"@stylistic/comma-dangle": [
-		"error",
-		{
-			"arrays": "always-multiline",
-			"objects": "always-multiline",
-			"imports": "always-multiline",
-			"exports": "always-multiline",
-			"functions": "always-multiline",
-			"enums": "always-multiline",
-			"generics": "always-multiline",
-			"tuples": "always-multiline",
-		},
-	],
+	"@stylistic/comma-dangle": ["error", {
+		"arrays": "always-multiline",
+		"objects": "always-multiline",
+		"imports": "always-multiline",
+		"exports": "always-multiline",
+		"functions": "always-multiline",
+		"enums": "always-multiline",
+		"generics": "always-multiline",
+		"tuples": "always-multiline",
+	}],
 
 	// [layout] Enforce consistent spacing before and after commas
-	"@stylistic/comma-spacing": [
-		"error",
-		{
-			"before": false,
-			"after": true,
-		},
-	],
+	"@stylistic/comma-spacing": ["error", {
+		"before": false,
+		"after": true,
+	}],
 
 	// [layout] Enforce consistent comma style
 	// "@stylistic/comma-style": "off",
@@ -222,25 +212,18 @@ export const rules: Linter.RulesRecord = {
 	// "@stylistic/nonblock-statement-body-position": "off",
 
 	// [layout] Enforce consistent line breaks after opening and before closing braces
-	"@stylistic/object-curly-newline": [
-		"error",
-		{
-			"ObjectExpression": {"multiline": true, "minProperties": 0, "consistent": true},
-			"ObjectPattern": {"multiline": true, "minProperties": 0, "consistent": true},
-			"ImportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
-			"ExportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
-		},
-	],
+	"@stylistic/object-curly-newline": ["error", {
+		"ObjectExpression": {"multiline": true, "minProperties": 0, "consistent": true},
+		"ObjectPattern": {"multiline": true, "minProperties": 0, "consistent": true},
+		"ImportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
+		"ExportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
+	}],
 
 	// [layout] Enforce consistent spacing inside braces
-	"@stylistic/object-curly-spacing": [
-		"error",
-		"never",
-		{
-			"arraysInObjects": false,
-			"objectsInObjects": false,
-		},
-	],
+	"@stylistic/object-curly-spacing": ["error", "never", {
+		"arraysInObjects": false,
+		"objectsInObjects": false,
+	}],
 
 	// [layout] Enforce placing object properties on separate lines
 	// "@stylistic/object-property-newline": "off",
@@ -267,13 +250,9 @@ export const rules: Linter.RulesRecord = {
 	// "@stylistic/rest-spread-spacing": "off",
 
 	// [layout] Require or disallow semicolons instead of ASI
-	"@stylistic/semi": [
-		"error",
-		"always",
-		{
-			"omitLastInOneLineBlock": false,
-		},
-	],
+	"@stylistic/semi": ["error", "always", {
+		"omitLastInOneLineBlock": false,
+	}],
 
 	// [layout] Enforce consistent spacing before and after semicolons
 	// "@stylistic/semi-spacing": "off",
