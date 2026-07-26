@@ -2,8 +2,8 @@ import type {Linter} from "eslint";
 
 import plugin from "@stylistic/eslint-plugin";
 
-import {rules as suggestionRules} from "./rules_suggestion.js";
-import {rules as layoutRules} from "./rules_layout.js";
+import {rules as suggestionRules} from "./suggestion.js";
+import {rules as layoutRules} from "./layout.js";
 
 const baseConfigs: Array<Linter.Config> = [
 	{
