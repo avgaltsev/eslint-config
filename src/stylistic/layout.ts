@@ -4,83 +4,69 @@ import type {Linter} from "eslint";
 
 export const rules: Linter.RulesRecord = {
 	// [layout] Enforce linebreaks after opening and before closing array brackets
-	// "@stylistic/array-bracket-newline": "off",
+	"@stylistic/array-bracket-newline": ["error", "consistent"],
 
 	// [layout] Enforce consistent spacing inside array brackets
-	"@stylistic/array-bracket-spacing": ["error", "never", {
-		"singleValue": false,
-		"objectsInArrays": false,
-		"arraysInArrays": false,
-	}],
+	"@stylistic/array-bracket-spacing": "error",
 
 	// [layout] Enforce line breaks after each array element
-	// "@stylistic/array-element-newline": "off",
+	"@stylistic/array-element-newline": ["error", "consistent"],
 
 	// [layout] Require parentheses around arrow function arguments
-	// "@stylistic/arrow-parens": "off",
+	"@stylistic/arrow-parens": "error",
 
 	// [layout] Enforce consistent spacing before and after the arrow in arrow functions
-	// "@stylistic/arrow-spacing": "off",
+	"@stylistic/arrow-spacing": "error",
 
 	// [layout] Disallow or enforce spaces inside of blocks after opening block and before closing block
-	// "@stylistic/block-spacing": "off",
+	"@stylistic/block-spacing": "error",
 
 	// [layout] Enforce consistent brace style for blocks
-	// "@stylistic/brace-style": "off",
+	"@stylistic/brace-style": ["error", "1tbs", {
+		"allowSingleLine": true,
+	}],
 
 	// [layout] Require or disallow trailing commas
-	"@stylistic/comma-dangle": ["error", {
-		"arrays": "always-multiline",
-		"objects": "always-multiline",
-		"imports": "always-multiline",
-		"exports": "always-multiline",
-		"functions": "always-multiline",
-		"enums": "always-multiline",
-		"generics": "always-multiline",
-		"tuples": "always-multiline",
-	}],
+	"@stylistic/comma-dangle": ["error", "always-multiline"],
 
 	// [layout] Enforce consistent spacing before and after commas
-	"@stylistic/comma-spacing": ["error", {
-		"before": false,
-		"after": true,
-	}],
+	"@stylistic/comma-spacing": "error",
 
 	// [layout] Enforce consistent comma style
-	// "@stylistic/comma-style": "off",
+	"@stylistic/comma-style": "error",
 
 	// [layout] Enforce consistent spacing inside computed property brackets
-	// "@stylistic/computed-property-spacing": "off",
+	"@stylistic/computed-property-spacing": "error",
 
 	// [layout] Enforce consistent line breaks after opening and before closing braces
-	// "@stylistic/curly-newline": "off",
+	"@stylistic/curly-newline": "error",
 
 	// [layout] Enforce consistent newlines before and after dots
-	// "@stylistic/dot-location": "off",
+	"@stylistic/dot-location": "error",
 
 	// [layout] Require or disallow newline at the end of files
-	// "@stylistic/eol-last": "off",
+	"@stylistic/eol-last": "error",
 
 	// [layout] Enforce line breaks between arguments of a function call
-	// "@stylistic/function-call-argument-newline": "off",
+	"@stylistic/function-call-argument-newline": ["error", "consistent"],
 
 	// [layout] Require or disallow spacing between function identifiers and their invocations
-	// "@stylistic/function-call-spacing": "off",
+	"@stylistic/function-call-spacing": "error",
 
 	// [layout] Enforce consistent line breaks inside function parentheses
-	// "@stylistic/function-paren-newline": "off",
+	"@stylistic/function-paren-newline": "error",
 
 	// [layout] Enforce consistent spacing around `*` operators in generator functions
-	// "@stylistic/generator-star-spacing": "off",
+	"@stylistic/generator-star-spacing": "error",
 
 	// [layout] Enforce the location of arrow function bodies
-	// "@stylistic/implicit-arrow-linebreak": "off",
+	"@stylistic/implicit-arrow-linebreak": "error",
 
 	// [layout] Enforce consistent indentation
 	"@stylistic/indent": ["error", "tab"],
 
 	// [layout] Indentation for binary operators
-	// "@stylistic/indent-binary-ops": "off",
+	"@stylistic/indent-binary-ops": ["error", "tab"],
 
 	// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
 	// "@stylistic/jsx-child-element-spacing": "off",
@@ -137,19 +123,19 @@ export const rules: Linter.RulesRecord = {
 	// "@stylistic/jsx-wrap-multilines": "off",
 
 	// [layout] Enforce consistent spacing between property names and type annotations in types and interfaces
-	// "@stylistic/key-spacing": "off",
+	"@stylistic/key-spacing": "error",
 
 	// [layout] Enforce consistent spacing before and after keywords
-	// "@stylistic/keyword-spacing": "off",
+	"@stylistic/keyword-spacing": "error",
 
 	// [layout] Enforce position of line comments
 	// "@stylistic/line-comment-position": "off",
 
 	// [layout] Enforce consistent linebreak style
-	// "@stylistic/linebreak-style": "off",
+	"@stylistic/linebreak-style": "error",
 
 	// [layout] Require empty lines around comments
-	// "@stylistic/lines-around-comment": "off",
+	"@stylistic/lines-around-comment": "error",
 
 	// [layout] Require or disallow an empty line between class members
 	// "@stylistic/lines-between-class-members": "off",
@@ -164,13 +150,13 @@ export const rules: Linter.RulesRecord = {
 	// "@stylistic/max-statements-per-line": "off",
 
 	// [layout] Require a specific member delimiter style for interfaces and type literals
-	// "@stylistic/member-delimiter-style": "off",
+	"@stylistic/member-delimiter-style": "error",
 
 	// [layout] Enforce newlines between operands of ternary expressions
 	// "@stylistic/multiline-ternary": "off",
 
 	// [layout] Enforce or disallow parentheses when invoking a constructor with no arguments
-	// "@stylistic/new-parens": "off",
+	"@stylistic/new-parens": "error",
 
 	// [layout] Require a newline after each call in a method chain
 	// "@stylistic/newline-per-chained-call": "off",
@@ -185,123 +171,135 @@ export const rules: Linter.RulesRecord = {
 	"@stylistic/no-extra-semi": "error",
 
 	// [layout] Disallow leading or trailing decimal points in numeric literals
-	// "@stylistic/no-floating-decimal": "off",
+	"@stylistic/no-floating-decimal": "error",
 
 	// [layout] Disallow mixed binary operators
-	// "@stylistic/no-mixed-operators": "off",
+	"@stylistic/no-mixed-operators": "error",
 
 	// [layout] Disallow mixed spaces and tabs for indentation
 	"@stylistic/no-mixed-spaces-and-tabs": "error",
 
 	// [layout] Disallow multiple spaces
-	// "@stylistic/no-multi-spaces": "off",
+	"@stylistic/no-multi-spaces": "error",
 
 	// [layout] Disallow multiple empty lines
-	// "@stylistic/no-multiple-empty-lines": "off",
+	"@stylistic/no-multiple-empty-lines": ["error", {
+		"max": 1,
+		"maxEOF": 0,
+		"maxBOF": 0,
+	}],
 
 	// [layout] Disallow all tabs
-	// "@stylistic/no-tabs": "off",
+	"@stylistic/no-tabs": ["error", {
+		"allowIndentationTabs": true,
+	}],
 
 	// [layout] Disallow trailing whitespace at the end of lines
-	// "@stylistic/no-trailing-spaces": "off",
+	"@stylistic/no-trailing-spaces": "error",
 
 	// [layout] Disallow whitespace before properties
-	// "@stylistic/no-whitespace-before-property": "off",
+	"@stylistic/no-whitespace-before-property": "error",
 
 	// [layout] Enforce the location of single-line statements
-	// "@stylistic/nonblock-statement-body-position": "off",
+	"@stylistic/nonblock-statement-body-position": "error",
 
 	// [layout] Enforce consistent line breaks after opening and before closing braces
-	"@stylistic/object-curly-newline": ["error", {
-		"ObjectExpression": {"multiline": true, "minProperties": 0, "consistent": true},
-		"ObjectPattern": {"multiline": true, "minProperties": 0, "consistent": true},
-		"ImportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
-		"ExportDeclaration": {"multiline": true, "minProperties": 0, "consistent": true},
-	}],
+	"@stylistic/object-curly-newline": "error",
 
 	// [layout] Enforce consistent spacing inside braces
-	"@stylistic/object-curly-spacing": ["error", "never", {
-		"arraysInObjects": false,
-		"objectsInObjects": false,
-	}],
+	"@stylistic/object-curly-spacing": "error",
 
 	// [layout] Enforce placing object properties on separate lines
-	// "@stylistic/object-property-newline": "off",
-
-	// [layout] Require or disallow newlines around variable declarations
-	// "@stylistic/one-var-declaration-per-line": "off",
-
-	// [layout] Enforce consistent linebreak style for operators
-	// "@stylistic/operator-linebreak": "off",
-
-	// [layout] Require or disallow padding within blocks
-	// "@stylistic/padded-blocks": "off",
-
-	// [layout] Require or disallow padding lines between statements
-	// "@stylistic/padding-line-between-statements": "off",
-
-	// [layout] Require quotes around object literal, type literal, interfaces and enums property names
-	// "@stylistic/quote-props": "off",
-
-	// [layout] Enforce the consistent use of either backticks, double, or single quotes
-	"@stylistic/quotes": ["error", "double"],
-
-	// [layout] Enforce spacing between rest and spread operators and their expressions
-	// "@stylistic/rest-spread-spacing": "off",
-
-	// [layout] Require or disallow semicolons instead of ASI
-	"@stylistic/semi": ["error", "always", {
-		"omitLastInOneLineBlock": false,
+	"@stylistic/object-property-newline": ["error", {
+		"allowAllPropertiesOnSameLine": true,
 	}],
 
+	// [layout] Require or disallow newlines around variable declarations
+	"@stylistic/one-var-declaration-per-line": "error",
+
+	// [layout] Enforce consistent linebreak style for operators
+	"@stylistic/operator-linebreak": "error",
+
+	// [layout] Require or disallow padding within blocks
+	"@stylistic/padded-blocks": ["error", "never"],
+
+	// [layout] Require or disallow padding lines between statements
+	"@stylistic/padding-line-between-statements": ["error", {
+		"blankLine": "always",
+		"prev": "*",
+		"next": "return",
+	}, {
+		"blankLine": "always",
+		"prev": ["const", "let"],
+		"next": "*",
+	}, {
+		"blankLine": "any",
+		"prev": ["const", "let"],
+		"next": ["const", "let"],
+	}],
+
+	// [layout] Require quotes around object literal, type literal, interfaces and enums property names
+	"@stylistic/quote-props": ["error", "consistent"],
+
+	// [layout] Enforce the consistent use of either backticks, double, or single quotes
+	"@stylistic/quotes": "error",
+
+	// [layout] Enforce spacing between rest and spread operators and their expressions
+	"@stylistic/rest-spread-spacing": "error",
+
+	// [layout] Require or disallow semicolons instead of ASI
+	"@stylistic/semi": "error",
+
 	// [layout] Enforce consistent spacing before and after semicolons
-	// "@stylistic/semi-spacing": "off",
+	"@stylistic/semi-spacing": "error",
 
 	// [layout] Enforce location of semicolons
-	// "@stylistic/semi-style": "off",
+	"@stylistic/semi-style": "error",
 
 	// [layout] Enforce consistent spacing before blocks
-	// "@stylistic/space-before-blocks": "off",
+	"@stylistic/space-before-blocks": "error",
 
 	// [layout] Enforce consistent spacing before function parenthesis
-	// "@stylistic/space-before-function-paren": "off",
+	"@stylistic/space-before-function-paren": ["error", {
+		"named": "never",
+	}],
 
 	// [layout] Enforce consistent spacing inside parentheses
-	"@stylistic/space-in-parens": ["error", "never"],
+	"@stylistic/space-in-parens": "error",
 
 	// [layout] Require spacing around infix operators
-	// "@stylistic/space-infix-ops": "off",
+	"@stylistic/space-infix-ops": "error",
 
 	// [layout] Enforce consistent spacing before or after unary operators
-	// "@stylistic/space-unary-ops": "off",
+	"@stylistic/space-unary-ops": "error",
 
 	// [layout] Enforce consistent spacing after the `//` or `/*` in a comment
-	// "@stylistic/spaced-comment": "off",
+	"@stylistic/spaced-comment": "error",
 
 	// [layout] Enforce spacing around colons of switch statements
-	// "@stylistic/switch-colon-spacing": "off",
+	"@stylistic/switch-colon-spacing": "error",
 
 	// [layout] Require or disallow spacing around embedded expressions of template strings
-	// "@stylistic/template-curly-spacing": "off",
+	"@stylistic/template-curly-spacing": "error",
 
 	// [layout] Require or disallow spacing between template tags and their literals
-	// "@stylistic/template-tag-spacing": "off",
+	"@stylistic/template-tag-spacing": "error",
 
 	// [layout] Require consistent spacing around type annotations
-	// "@stylistic/type-annotation-spacing": "off",
+	"@stylistic/type-annotation-spacing": "error",
 
 	// [layout] Enforces consistent spacing inside TypeScript type generics
-	// "@stylistic/type-generic-spacing": "off",
+	"@stylistic/type-generic-spacing": "error",
 
 	// [layout] Expect space before the type declaration in the named tuple
-	// "@stylistic/type-named-tuple-spacing": "off",
+	"@stylistic/type-named-tuple-spacing": "error",
 
 	// [layout] Require parentheses around immediate `function` invocations
-	// "@stylistic/wrap-iife": "off",
+	"@stylistic/wrap-iife": ["error", "inside"],
 
 	// [layout] Require parenthesis around regex literals
 	// "@stylistic/wrap-regex": "off",
 
 	// [layout] Require or disallow spacing around the `*` in `yield*` expressions
-	// "@stylistic/yield-star-spacing": "off",
+	"@stylistic/yield-star-spacing": "error",
 };

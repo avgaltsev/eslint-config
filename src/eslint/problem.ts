@@ -4,7 +4,7 @@ import type {Linter} from "eslint";
 
 export const rules: Linter.RulesRecord = {
 	// [problem] Enforce `return` statements in callbacks of array methods
-	// "array-callback-return": "off",
+	"array-callback-return": "error",
 
 	// [problem] Require `super()` calls in constructors
 	"constructor-super": "error",
@@ -19,7 +19,7 @@ export const rules: Linter.RulesRecord = {
 	"no-async-promise-executor": "error",
 
 	// [problem] Disallow `await` inside of loops
-	// "no-await-in-loop": "off",
+	"no-await-in-loop": "error",
 
 	// [problem] Disallow reassigning class members
 	"no-class-assign": "error",
@@ -34,13 +34,13 @@ export const rules: Linter.RulesRecord = {
 	"no-const-assign": "error",
 
 	// [problem] Disallow expressions where the operation doesn't affect the value
-	// "no-constant-binary-expression": "off",
+	"no-constant-binary-expression": "error",
 
 	// [problem] Disallow constant expressions in conditions
 	"no-constant-condition": "error",
 
 	// [problem] Disallow returning value from constructor
-	// "no-constructor-return": "off",
+	"no-constructor-return": "error",
 
 	// [problem] Disallow control characters in regular expressions
 	"no-control-regex": "error",
@@ -64,7 +64,7 @@ export const rules: Linter.RulesRecord = {
 	"no-duplicate-case": "error",
 
 	// [problem] Disallow duplicate module imports
-	// "no-duplicate-imports": "off",
+	"no-duplicate-imports": "error",
 
 	// [problem] Disallow empty character classes in regular expressions
 	"no-empty-character-class": "error",
@@ -94,7 +94,7 @@ export const rules: Linter.RulesRecord = {
 	"no-irregular-whitespace": "error",
 
 	// [problem] Disallow literal numbers that lose precision
-	// "no-loss-of-precision": "off",
+	"no-loss-of-precision": "error",
 
 	// [problem] Disallow characters which are made with multiple code points in character class syntax
 	"no-misleading-character-class": "error",
@@ -106,7 +106,7 @@ export const rules: Linter.RulesRecord = {
 	"no-obj-calls": "error",
 
 	// [problem] Disallow returning values from Promise executor functions
-	// "no-promise-executor-return": "off",
+	"no-promise-executor-return": "error",
 
 	// [problem] Disallow calling some `Object.prototype` methods directly on objects
 	"no-prototype-builtins": "error",
@@ -115,7 +115,7 @@ export const rules: Linter.RulesRecord = {
 	"no-self-assign": "error",
 
 	// [problem] Disallow comparisons where both sides are exactly the same
-	// "no-self-compare": "off",
+	"no-self-compare": "error",
 
 	// [problem] Disallow returning values from setters
 	"no-setter-return": "error",
@@ -124,13 +124,13 @@ export const rules: Linter.RulesRecord = {
 	"no-sparse-arrays": "error",
 
 	// [problem] Disallow template literal placeholder syntax in regular strings
-	// "no-template-curly-in-string": "off",
+	"no-template-curly-in-string": "error",
 
 	// [problem] Disallow `this`/`super` before calling `super()` in constructors
 	"no-this-before-super": "error",
 
 	// [problem] Disallow `let` or `var` variables that are read but never assigned
-	// "no-unassigned-vars": "off",
+	"no-unassigned-vars": "error",
 
 	// [problem] Disallow the use of undeclared variables unless mentioned in `/*global */` comments
 	"no-undef": "error",
@@ -139,13 +139,13 @@ export const rules: Linter.RulesRecord = {
 	"no-unexpected-multiline": "error",
 
 	// [problem] Disallow unmodified loop conditions
-	// "no-unmodified-loop-condition": "off",
+	"no-unmodified-loop-condition": "error",
 
 	// [problem] Disallow unreachable code after `return`, `throw`, `continue`, and `break` statements
 	"no-unreachable": "error",
 
 	// [problem] Disallow loops with a body that allows only one iteration
-	// "no-unreachable-loop": "off",
+	"no-unreachable-loop": "error",
 
 	// [problem] Disallow control flow statements in `finally` blocks
 	"no-unsafe-finally": "error",
@@ -154,37 +154,29 @@ export const rules: Linter.RulesRecord = {
 	"no-unsafe-negation": "error",
 
 	// [problem] Disallow use of optional chaining in contexts where the `undefined` value is not allowed
-	// "no-unsafe-optional-chaining": "off",
+	"no-unsafe-optional-chaining": "error",
 
 	// [problem] Disallow unused private class members
-	// "no-unused-private-class-members": "off",
+	"no-unused-private-class-members": "error",
 
 	// [problem] Disallow unused variables
 	"no-unused-vars": ["error", {
-		"vars": "all",
-		"varsIgnorePattern": "",
 		"args": "none",
-		"ignoreRestSiblings": true,
-		"argsIgnorePattern": "",
 		"caughtErrors": "none",
-		"caughtErrorsIgnorePattern": "",
+		"ignoreRestSiblings": true,
 	}],
 
 	// [problem] Disallow the use of variables before they are defined
-	"no-use-before-define": ["error", {
-		"functions": true,
-		"classes": true,
-		"variables": true,
-	}],
+	"no-use-before-define": "error",
 
 	// [problem] Disallow variable assignments when the value is not used
-	// "no-useless-assignment": "off",
+	"no-useless-assignment": "error",
 
 	// [problem] Disallow useless backreferences in regular expressions
-	// "no-useless-backreference": "off",
+	"no-useless-backreference": "error",
 
 	// [problem] Disallow assignments that can lead to race conditions due to usage of `await` or `yield`
-	// "require-atomic-updates": "off",
+	"require-atomic-updates": "error",
 
 	// [problem] Require calls to `isNaN()` when checking for `NaN`
 	"use-isnan": "error",
