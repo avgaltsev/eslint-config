@@ -13,13 +13,7 @@ export const rules: Linter.RulesRecord = {
 	// "block-scoped-var": "off",
 
 	// [suggestion] Enforce camelcase naming convention
-	"camelcase": ["error", {
-		"properties": "always",
-		"ignoreDestructuring": false,
-		"ignoreImports": false,
-		"ignoreGlobals": false,
-		"allow": [],
-	}],
+	"camelcase": "error",
 
 	// [suggestion] Enforce or disallow capitalization of the first letter of a comment
 	// "capitalized-comments": "off",
@@ -37,37 +31,39 @@ export const rules: Linter.RulesRecord = {
 	// "consistent-this": "off",
 
 	// [suggestion] Enforce consistent brace style for all control statements
-	// "curly": "off",
+	"curly": "error",
 
 	// [suggestion] Require `default` cases in `switch` statements
 	// "default-case": "off",
 
 	// [suggestion] Enforce `default` clauses in `switch` statements to be last
-	// "default-case-last": "off",
+	"default-case-last": "error",
 
 	// [suggestion] Enforce default parameters to be last
-	// "default-param-last": "off",
+	"default-param-last": "error",
 
 	// [suggestion] Enforce dot notation whenever possible
 	// "dot-notation": "off",
 
 	// [suggestion] Require the use of `===` and `!==`
-	// "eqeqeq": "off",
+	"eqeqeq": "error",
 
 	// [suggestion] Require function names to match the name of the variable or property to which they are assigned
 	// "func-name-matching": "off",
 
 	// [suggestion] Require or disallow named `function` expressions
-	// "func-names": "off",
+	"func-names": ["error", "never"],
 
 	// [suggestion] Enforce the consistent use of either `function` declarations or expressions assigned to variables
-	// "func-style": "off",
+	"func-style": ["error", "declaration", {
+		"allowArrowFunctions": true,
+	}],
 
 	// [suggestion] Require grouped accessor pairs in object literals and classes
-	// "grouped-accessor-pairs": "off",
+	"grouped-accessor-pairs": ["error", "setBeforeGet"],
 
 	// [suggestion] Require `for-in` loops to include an `if` statement
-	// "guard-for-in": "off",
+	"guard-for-in": "error",
 
 	// [suggestion] Disallow specified identifiers
 	// "id-denylist": "off",
@@ -82,7 +78,7 @@ export const rules: Linter.RulesRecord = {
 	// "init-declarations": "off",
 
 	// [suggestion] Require or disallow logical assignment operator shorthand
-	// "logical-assignment-operators": "off",
+	"logical-assignment-operators": "error",
 
 	// [suggestion] Enforce a maximum number of classes per file
 	// "max-classes-per-file": "off",
@@ -106,19 +102,19 @@ export const rules: Linter.RulesRecord = {
 	// "max-statements": "off",
 
 	// [suggestion] Require constructor names to begin with a capital letter
-	// "new-cap": "off",
+	"new-cap": "error",
 
 	// [suggestion] Disallow the use of `alert`, `confirm`, and `prompt`
-	// "no-alert": "off",
+	"no-alert": "error",
 
 	// [suggestion] Disallow `Array` constructors
-	// "no-array-constructor": "off",
+	"no-array-constructor": "error",
 
 	// [suggestion] Disallow bitwise operators
 	// "no-bitwise": "off",
 
 	// [suggestion] Disallow the use of `arguments.caller` or `arguments.callee`
-	// "no-caller": "off",
+	"no-caller": "error",
 
 	// [suggestion] Disallow lexical declarations in case clauses
 	"no-case-declarations": "error",
@@ -142,22 +138,22 @@ export const rules: Linter.RulesRecord = {
 	"no-empty": "error",
 
 	// [suggestion] Disallow empty functions
-	// "no-empty-function": "off",
+	"no-empty-function": "error",
 
 	// [suggestion] Disallow empty static blocks
-	// "no-empty-static-block": "off",
+	"no-empty-static-block": "error",
 
 	// [suggestion] Disallow `null` comparisons without type-checking operators
 	// "no-eq-null": "off",
 
 	// [suggestion] Disallow the use of `eval()`
-	// "no-eval": "off",
+	"no-eval": "error",
 
 	// [suggestion] Disallow extending native types
-	// "no-extend-native": "off",
+	"no-extend-native": "error",
 
 	// [suggestion] Disallow unnecessary calls to `.bind()`
-	// "no-extra-bind": "off",
+	"no-extra-bind": "error",
 
 	// [suggestion] Disallow unnecessary boolean casts
 	"no-extra-boolean-cast": "error",
@@ -169,43 +165,43 @@ export const rules: Linter.RulesRecord = {
 	"no-global-assign": "error",
 
 	// [suggestion] Disallow shorthand type conversions
-	// "no-implicit-coercion": "off",
+	"no-implicit-coercion": "error",
 
 	// [suggestion] Disallow declarations in the global scope
-	// "no-implicit-globals": "off",
+	"no-implicit-globals": "error",
 
 	// [suggestion] Disallow the use of `eval()`-like methods
-	// "no-implied-eval": "off",
+	"no-implied-eval": "error",
 
 	// [suggestion] Disallow inline comments after code
 	// "no-inline-comments": "off",
 
 	// [suggestion] Disallow use of `this` in contexts where the value of `this` is `undefined`
-	// "no-invalid-this": "off",
+	"no-invalid-this": "error",
 
 	// [suggestion] Disallow the use of the `__iterator__` property
-	// "no-iterator": "off",
+	"no-iterator": "error",
 
 	// [suggestion] Disallow labels that share a name with a variable
 	// "no-label-var": "off",
 
 	// [suggestion] Disallow labeled statements
-	// "no-labels": "off",
+	"no-labels": "error",
 
 	// [suggestion] Disallow unnecessary nested blocks
-	// "no-lone-blocks": "off",
+	"no-lone-blocks": "error",
 
 	// [suggestion] Disallow `if` statements as the only statement in `else` blocks
-	// "no-lonely-if": "off",
+	"no-lonely-if": "error",
 
 	// [suggestion] Disallow function declarations that contain unsafe references inside loop statements
-	// "no-loop-func": "off",
+	"no-loop-func": "error",
 
 	// [suggestion] Disallow magic numbers
 	// "no-magic-numbers": "off",
 
 	// [suggestion] Disallow use of chained assignment expressions
-	// "no-multi-assign": "off",
+	"no-multi-assign": "error",
 
 	// [suggestion] Disallow multiline strings
 	// "no-multi-str": "off",
@@ -220,31 +216,31 @@ export const rules: Linter.RulesRecord = {
 	// "no-new": "off",
 
 	// [suggestion] Disallow `new` operators with the `Function` object
-	// "no-new-func": "off",
+	"no-new-func": "error",
 
 	// [suggestion] Disallow `new` operators with the `String`, `Number`, and `Boolean` objects
-	// "no-new-wrappers": "off",
+	"no-new-wrappers": "error",
 
 	// [suggestion] Disallow `\8` and `\9` escape sequences in string literals
 	// "no-nonoctal-decimal-escape": "off",
 
 	// [suggestion] Disallow calls to the `Object` constructor without an argument
-	// "no-object-constructor": "off",
+	"no-object-constructor": "error",
 
 	// [suggestion] Disallow octal literals
 	"no-octal": "error",
 
 	// [suggestion] Disallow octal escape sequences in string literals
-	// "no-octal-escape": "off",
+	"no-octal-escape": "error",
 
 	// [suggestion] Disallow reassigning function parameters
-	// "no-param-reassign": "off",
+	"no-param-reassign": "error",
 
 	// [suggestion] Disallow the unary operators `++` and `--`
 	// "no-plusplus": "off",
 
 	// [suggestion] Disallow the use of the `__proto__` property
-	// "no-proto": "off",
+	"no-proto": "error",
 
 	// [suggestion] Disallow variable redeclaration
 	"no-redeclare": "error",
@@ -268,16 +264,16 @@ export const rules: Linter.RulesRecord = {
 	// "no-restricted-syntax": "off",
 
 	// [suggestion] Disallow assignment operators in `return` statements
-	// "no-return-assign": "off",
+	"no-return-assign": "error",
 
 	// [suggestion] Disallow `javascript:` URLs
-	// "no-script-url": "off",
+	"no-script-url": "error",
 
 	// [suggestion] Disallow comma operators
-	// "no-sequences": "off",
+	"no-sequences": "error",
 
 	// [suggestion] Disallow variable declarations from shadowing variables declared in the outer scope
-	// "no-shadow": "off",
+	"no-shadow": "error",
 
 	// [suggestion] Disallow identifiers from shadowing restricted names
 	"no-shadow-restricted-names": "error",
@@ -286,7 +282,7 @@ export const rules: Linter.RulesRecord = {
 	// "no-ternary": "off",
 
 	// [suggestion] Disallow throwing literals as exceptions
-	// "no-throw-literal": "off",
+	"no-throw-literal": "error",
 
 	// [suggestion] Disallow initializing variables to `undefined`
 	// "no-undef-init": "off",
@@ -295,19 +291,19 @@ export const rules: Linter.RulesRecord = {
 	// "no-undefined": "off",
 
 	// [suggestion] Disallow dangling underscores in identifiers
-	// "no-underscore-dangle": "off",
+	"no-underscore-dangle": "error",
 
 	// [suggestion] Disallow ternary operators when simpler alternatives exist
 	// "no-unneeded-ternary": "off",
 
 	// [suggestion] Disallow unused expressions
-	// "no-unused-expressions": "off",
+	"no-unused-expressions": "error",
 
 	// [suggestion] Disallow unused labels
 	"no-unused-labels": "error",
 
 	// [suggestion] Disallow unnecessary calls to `.call()` and `.apply()`
-	// "no-useless-call": "off",
+	"no-useless-call": "error",
 
 	// [suggestion] Disallow unnecessary `catch` clauses
 	"no-useless-catch": "error",
@@ -316,10 +312,10 @@ export const rules: Linter.RulesRecord = {
 	// "no-useless-computed-key": "off",
 
 	// [suggestion] Disallow unnecessary concatenation of literals or template literals
-	// "no-useless-concat": "off",
+	"no-useless-concat": "error",
 
 	// [suggestion] Disallow unnecessary constructors
-	// "no-useless-constructor": "off",
+	"no-useless-constructor": "error",
 
 	// [suggestion] Disallow unnecessary escape characters
 	"no-useless-escape": "error",
@@ -328,13 +324,13 @@ export const rules: Linter.RulesRecord = {
 	// "no-useless-rename": "off",
 
 	// [suggestion] Disallow redundant return statements
-	// "no-useless-return": "off",
+	"no-useless-return": "error",
 
 	// [suggestion] Require `let` or `const` instead of `var`
-	// "no-var": "off",
+	"no-var": "error",
 
 	// [suggestion] Disallow `void` operators
-	// "no-void": "off",
+	"no-void": "error",
 
 	// [suggestion] Disallow specified warning terms in comments
 	// "no-warning-comments": "off",
@@ -343,64 +339,61 @@ export const rules: Linter.RulesRecord = {
 	"no-with": "error",
 
 	// [suggestion] Require or disallow method and property shorthand syntax for object literals
-	// "object-shorthand": "off",
+	"object-shorthand": "error",
 
 	// [suggestion] Enforce variables to be declared either together or separately in functions
-	// "one-var": "off",
+	"one-var": ["error", "never"],
 
 	// [suggestion] Require or disallow assignment operator shorthand where possible
-	// "operator-assignment": "off",
+	"operator-assignment": "error",
 
 	// [suggestion] Require using arrow functions for callbacks
-	// "prefer-arrow-callback": "off",
+	"prefer-arrow-callback": "error",
 
 	// [suggestion] Require `const` declarations for variables that are never reassigned after declared
-	"prefer-const": ["error", {
-		"destructuring": "any",
-		"ignoreReadBeforeAssign": false,
-	}],
+	"prefer-const": "error",
 
 	// [suggestion] Require destructuring from arrays and/or objects
-	// "prefer-destructuring": "off",
+	"prefer-destructuring": "error",
 
 	// [suggestion] Disallow the use of `Math.pow` in favor of the `**` operator
-	// "prefer-exponentiation-operator": "off",
+	"prefer-exponentiation-operator": "error",
 
 	// [suggestion] Enforce using named capture group in regular expression
 	// "prefer-named-capture-group": "off",
 
 	// [suggestion] Disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals
-	// "prefer-numeric-literals": "off",
+	"prefer-numeric-literals": "error",
 
 	// [suggestion] Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`
-	// "prefer-object-has-own": "off",
+	"prefer-object-has-own": "error",
 
 	// [suggestion] Disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead
-	// "prefer-object-spread": "off",
+	"prefer-object-spread": "error",
 
 	// [suggestion] Require using Error objects as Promise rejection reasons
-	// "prefer-promise-reject-errors": "off",
+	"prefer-promise-reject-errors": "error",
 
 	// [suggestion] Disallow use of the `RegExp` constructor in favor of regular expression literals
-	// "prefer-regex-literals": "off",
+	"prefer-regex-literals": "error",
 
 	// [suggestion] Require rest parameters instead of `arguments`
-	// "prefer-rest-params": "off",
+	"prefer-rest-params": "error",
 
 	// [suggestion] Require spread operators instead of `.apply()`
-	// "prefer-spread": "off",
+	"prefer-spread": "error",
 
 	// [suggestion] Require template literals instead of string concatenation
-	// "prefer-template": "off",
+	"prefer-template": "error",
 
 	// [suggestion] Disallow losing originally caught error when re-throwing custom errors
 	// "preserve-caught-error": "off",
 
 	// [suggestion] Enforce the use of the radix argument when using `parseInt()`
-	// "radix": "off",
+	"radix": "error",
 
 	// [suggestion] Disallow async functions which have no `await` expression
-	// "require-await": "off",
+	"require-await": "error",
 
 	// [suggestion] Enforce the use of `u` or `v` flag on regular expressions
 	// "require-unicode-regexp": "off",
@@ -421,11 +414,11 @@ export const rules: Linter.RulesRecord = {
 	// "strict": "off",
 
 	// [suggestion] Require symbol descriptions
-	// "symbol-description": "off",
+	"symbol-description": "error",
 
 	// [suggestion] Require `var` declarations be placed at the top of their containing scope
 	// "vars-on-top": "off",
 
 	// [suggestion] Require or disallow "Yoda" conditions
-	// "yoda": "off",
+	"yoda": "error",
 };

@@ -58,9 +58,26 @@ Use that output to:
 - Update the appropriate rules files according to the output: add newly introduced rules (as an enabled rule, or as a commented-out entry if it's deliberately skipped), and move rules between files if a rule's category has changed. Create new rules files for newly introduced categories, and remove files for categories that no longer exist. Simply copy-paste chunks of the output into the rule files (detailed configs are replaced with "..." for simplicity — revert them if needed). In general, each rules file's contents should match the script's output for that category (minus "..." substitutions).
 - Check for deprecation warnings ("Deprecated!" comments). Replace any rule reported as deprecated with its upstream replacement, or drop it if none exists. Or keep it if you really need to.
 - Check for base rule override warnings ("Base rule is not applied!" comments). They appear if a TypeScript rule overrides a base ESLint rule with the same name, but the base rule is not set. Make sure the base rule is set or keep the warning at your own discretion.
-- Once every rules file has been reviewed and updated, re-run `list` and save the output to make future reviews easier:
+- Once every rules file has been reviewed and updated, re-run `list` and save the output to `list_output.txt` to make future reviews easier:
 
 ```bash
 npm run build
 npm run list > list_output.txt
 ```
+
+Changing rules
+--------------
+
+The principles behind enabling or disabling a given rule:
+
+- Enable as many rules as possible.
+- Use the default configuration (just `"error"`) whenever it matches the desired behavior.
+- When it doesn't, change as little of the default configuration as possible, leaving options that already work as-is untouched.
+- Only adjust configuration further after running into a real-world case where it falls short.
+
+To change a rule:
+
+- Update the rule sources first (see previous section).
+- Make changes to the rules files.
+- Run `list` and check for "Base rule is not applied!" comments. Make sure the output matches the changed files — copy the output over to the rules files if necessary.
+- Save the output to `list_output.txt`.
