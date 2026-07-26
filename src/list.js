@@ -18,75 +18,96 @@ import {configs as eslintConfigs} from "./eslint/index.js";
 import {configs as typescriptEslintConfigs} from "./typescriptEslint/index.js";
 import {configs as stylisticConfigs} from "./stylistic/index.js";
 
+const COLORS = {
+	"description": "\x1b[2m",
+	"available": "\x1b[2m",
+	"applied": "\x1b[32m",
+	"deprecated": "\x1b[31m",
+	"reset": "\x1b[0m",
+};
+
 // Normalize rules imports to plain objects.
 const eslintRules = Object.fromEntries(eslintRulesImport.entries());
 const typescriptEslintRules = typescriptEslintPluginRulesImport;
 const stylisticRules = stylisticEslintPluginImport.rules;
+
+function flattenRules(configs) {
+	return configs.reduce((result, config) => {
+		return {
+			...result,
+			...config.rules,
+		};
+	}, {});
+}
 
 // Build rules sources list.
 const ruleSources = {
 	["eslint"]: {
 		prefix: "",
 		rules: eslintRules,
+		appliedRules: flattenRules(eslintConfigs),
 	},
 
 	["typescript-eslint"]: {
 		prefix: "@typescript-eslint/",
 		rules: typescriptEslintRules,
+		appliedRules: flattenRules(typescriptEslintConfigs),
 	},
 
 	["stylistic"]: {
 		prefix: "@stylistic/",
 		rules: stylisticRules,
+		appliedRules: flattenRules(stylisticConfigs),
 	},
 };
 
-// Concatenate all current configs.
-const allConfigs = [
-	...eslintConfigs,
-	...typescriptEslintConfigs,
-	...stylisticConfigs,
-];
-
-// Merge all applied rules into a single object.
-const appliedRules = allConfigs.reduce((result, config) => {
-	return {
-		...result,
-		...config.rules,
-	};
-}, {});
-
 // Output rule information.
-function outputRule(name, rule, state, value) {
-	const colors = {
-		"available": "\x1b[2m",
-		"applied": "\x1b[32m",
-		"deprecated": "\x1b[31m",
-	};
+function outputRule(name, rule, appliedRule) {
+	const isApplied = appliedRule !== undefined;
+	const isDeprecated = rule.meta.deprecated;
 
-	const color = colors[state] ?? "";
-	const stringValue = Array.isArray(value) ? `["${value[0]}", ...]` : `"${value}"`;
+	const color = !isApplied ? COLORS["available"] : isDeprecated ? COLORS["deprecated"] : COLORS["applied"];
+	const value = !isApplied ? "\"off\"" : Array.isArray(appliedRule) ? `["${appliedRule[0]}", ...]` : `"${appliedRule}"`;
 
-	console.log(`${colors["available"]}// [${rule.meta.type}] ${rule.meta.docs.description}\x1b[0m`);
-	console.log(`${color}${state === "available" ? "// " : ""}"${name}": ${stringValue},\x1b[0m\n`);
+	const type = rule.meta.type;
+	const description = rule.meta.docs.description;
+
+	console.log(`${COLORS["description"]}// [${type}] ${description}${COLORS["reset"]}`);
+
+	// Check for base rule overrides.
+	if (name.startsWith("@typescript-eslint/")) {
+		const baseName = name.replace("@typescript-eslint/", "");
+
+		if (ruleSources["eslint"].rules[baseName] !== undefined) {
+			const isBaseNotApplied = ruleSources["eslint"].appliedRules[baseName] === undefined;
+
+			const comment = isApplied && isBaseNotApplied ? `${COLORS["description"]} // Base rule is not applied!${COLORS["reset"]}` : "";
+
+			console.log(`${color}${!isApplied ? "// " : ""}"${baseName}": "off",${COLORS["reset"]}${comment}`);
+		}
+	}
+
+	const comment = isDeprecated ? `${COLORS["description"]} // Deprecated!${COLORS["reset"]}` : "";
+
+	console.log(`${color}${!isApplied ? "// " : ""}"${name}": ${value},${COLORS["reset"]}${comment}\n`);
 }
 
 // Output rules source information.
 function outputRuleSource(name, ruleSource) {
 	console.log(`Rules from ${name}:\n`);
 
-	const deprecatedRules = new Map();
+	const {prefix, rules, appliedRules} = ruleSource;
+
+	// const deprecatedRules = new Map();
 	const rulesByType = {};
 
-	for (const [ruleName, rule] of Object.entries(ruleSource.rules)) {
-		const fullRuleName = `${ruleSource.prefix}${ruleName}`;
+	for (const [ruleName, rule] of Object.entries(rules)) {
+		const fullRuleName = `${prefix}${ruleName}`;
 
 		if (rule.meta.deprecated ?? false) {
-			if (appliedRules[fullRuleName] !== undefined) {
-				deprecatedRules.set(fullRuleName, rule);
+			if (appliedRules[fullRuleName] === undefined) {
+				continue;
 			}
-
-			continue;
 		}
 
 		rulesByType[rule.meta.type] = rulesByType[rule.meta.type] ?? new Map();
@@ -95,22 +116,23 @@ function outputRuleSource(name, ruleSource) {
 
 	for (const ruleSet of Object.values(rulesByType)) {
 		for (const [ruleName, rule] of ruleSet) {
-			const state = appliedRules[ruleName] !== undefined ? "applied" : "available";
-			const value = appliedRules[ruleName] ?? "off";
+			const appliedRule = appliedRules[ruleName];
+			// const state = appliedRules[ruleName] !== undefined ? "applied" : "available";
+			// const value = appliedRules[ruleName] ?? "off";
 
-			outputRule(ruleName, rule, state, value);
+			outputRule(ruleName, rule, appliedRule);
 		}
 	}
 
-	if (deprecatedRules.size > 0) {
-		console.log("Deprecated rules detected:\n");
+	// if (deprecatedRules.size > 0) {
+	// 	console.log("Deprecated rules detected:\n");
 
-		for (const [ruleName, rule] of deprecatedRules) {
-			const value = appliedRules[ruleName];
+	// 	for (const [ruleName, rule] of deprecatedRules) {
+	// 		const value = appliedRules[ruleName];
 
-			outputRule(ruleName, rule, "deprecated", value);
-		}
-	}
+	// 		outputRule(ruleName, rule, "deprecated", value);
+	// 	}
+	// }
 }
 
 export function list() {
