@@ -160,28 +160,22 @@ export const rules: Linter.RulesRecord = {
 	// "no-unused-private-class-members": "off",
 
 	// [problem] Disallow unused variables
-	"no-unused-vars": [
-		"error",
-		{
-			"vars": "all",
-			"varsIgnorePattern": "",
-			"args": "none",
-			"ignoreRestSiblings": true,
-			"argsIgnorePattern": "",
-			"caughtErrors": "none",
-			"caughtErrorsIgnorePattern": "",
-		},
-	],
+	"no-unused-vars": ["error", {
+		"vars": "all",
+		"varsIgnorePattern": "",
+		"args": "none",
+		"ignoreRestSiblings": true,
+		"argsIgnorePattern": "",
+		"caughtErrors": "none",
+		"caughtErrorsIgnorePattern": "",
+	}],
 
 	// [problem] Disallow the use of variables before they are defined
-	"no-use-before-define": [
-		"error",
-		{
-			"functions": true,
-			"classes": true,
-			"variables": true,
-		},
-	],
+	"no-use-before-define": ["error", {
+		"functions": true,
+		"classes": true,
+		"variables": true,
+	}],
 
 	// [problem] Disallow variable assignments when the value is not used
 	// "no-useless-assignment": "off",
