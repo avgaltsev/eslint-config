@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+import {
+	ruleSources,
+	print,
+} from "../lib/print/index.js";
+
+print(ruleSources);

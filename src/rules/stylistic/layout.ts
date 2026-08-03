@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
 import type {Linter} from "eslint";
+import type {RuleOptions} from "@stylistic/eslint-plugin";
 
-export const rules: Linter.RulesRecord = {
+export const rules: Partial<{[K in keyof RuleOptions]: Linter.RuleEntry<RuleOptions[K]>}> = {
 	// [layout] Enforce linebreaks after opening and before closing array brackets
 	"@stylistic/array-bracket-newline": ["error", "consistent"],
 
@@ -204,7 +205,9 @@ export const rules: Linter.RulesRecord = {
 	"@stylistic/nonblock-statement-body-position": "error",
 
 	// [layout] Enforce consistent line breaks after opening and before closing braces
-	"@stylistic/object-curly-newline": "error",
+	"@stylistic/object-curly-newline": ["error", {
+		"ImportDeclaration": {"multiline": true, "minProperties": 2},
+	}],
 
 	// [layout] Enforce consistent spacing inside braces
 	"@stylistic/object-curly-spacing": "error",

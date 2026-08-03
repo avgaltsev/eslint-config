@@ -15,19 +15,24 @@
 	"directories": {
 		"lib": "./lib/"
 	},
+	"types": "./lib/rules/index.d.ts",
+	"main": "./lib/rules/index.js",
 	"exports": {
-		".": "./lib/index.js"
+		".": {
+			"types": "./lib/rules/index.d.ts",
+			"default": "./lib/rules/index.js"
+		}
 	},
-	"main": "./lib/index.js",
 	"scripts": {
 		"build": "tsc",
 		"watch": "tsc --watch",
 		"lint": "eslint .",
 		"prepare": "npm run build && npm run lint",
 		"postversion": "git push --tags origin HEAD",
-		"list": "./bin/list"
+		"print": "./bin/print"
 	},
 	"devDependencies": {
+		"@types/node": "^26.1.2",
 		"globals": "^17.7.0",
 		"typescript": "^6.0.3"
 	},

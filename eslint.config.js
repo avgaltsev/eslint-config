@@ -3,7 +3,7 @@ import globals from "globals";
 import {
 	javascriptConfigs,
 	typescriptConfigs,
-} from "./lib/index.js";
+} from "./lib/rules/index.js";
 
 // This project's src directory has both JavaScript and TypeScript files, so include both config sets.
 const baseConfigs = [

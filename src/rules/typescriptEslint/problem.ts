@@ -82,7 +82,7 @@ export const rules: FlatConfig.Rules = {
 	"@typescript-eslint/no-require-imports": "error",
 
 	// [problem] Disallow type parameters that aren't used multiple times
-	"@typescript-eslint/no-unnecessary-type-parameters": "error",
+	// "@typescript-eslint/no-unnecessary-type-parameters": "off",
 
 	// [problem] Disallow calling a function with a value with type `any`
 	"@typescript-eslint/no-unsafe-argument": "error",

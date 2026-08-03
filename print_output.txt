@@ -1,8 +1,8 @@
 
-> @somethings/eslint-config@0.0.0 list
-> ./bin/list
+> @somethings/eslint-config@0.0.0 print
+> ./bin/print
 
-Rules from eslint:
+[0mRules from eslint:
 
 [2m// [suggestion] Enforce getter and setter pairs in objects and classes[0m
 [2m// "accessor-pairs": "off",[0m
@@ -53,13 +53,15 @@ Rules from eslint:
 [2m// "func-name-matching": "off",[0m
 
 [2m// [suggestion] Require or disallow named `function` expressions[0m
-[32m"func-names": ["error", ...],[0m
+[32m"func-names": ["error", "never"],[0m
 
 [2m// [suggestion] Enforce the consistent use of either `function` declarations or expressions assigned to variables[0m
-[32m"func-style": ["error", ...],[0m
+[32m"func-style": ["error", "declaration", {
+	"allowArrowFunctions": true,
+}],[0m
 
 [2m// [suggestion] Require grouped accessor pairs in object literals and classes[0m
-[32m"grouped-accessor-pairs": ["error", ...],[0m
+[32m"grouped-accessor-pairs": ["error", "setBeforeGet"],[0m
 
 [2m// [suggestion] Require `for-in` loops to include an `if` statement[0m
 [32m"guard-for-in": "error",[0m
@@ -341,7 +343,7 @@ Rules from eslint:
 [32m"object-shorthand": "error",[0m
 
 [2m// [suggestion] Enforce variables to be declared either together or separately in functions[0m
-[32m"one-var": ["error", ...],[0m
+[32m"one-var": ["error", "never"],[0m
 
 [2m// [suggestion] Require or disallow assignment operator shorthand where possible[0m
 [32m"operator-assignment": "error",[0m
@@ -578,7 +580,11 @@ Rules from eslint:
 [32m"no-unused-private-class-members": "error",[0m
 
 [2m// [problem] Disallow unused variables[0m
-[32m"no-unused-vars": ["error", ...],[0m
+[32m"no-unused-vars": ["error", {
+	"args": "none",
+	"caughtErrors": "none",
+	"ignoreRestSiblings": true,
+}],[0m
 
 [2m// [problem] Disallow the use of variables before they are defined[0m
 [32m"no-use-before-define": "error",[0m
@@ -601,13 +607,15 @@ Rules from eslint:
 [2m// [layout] Require or disallow Unicode byte order mark (BOM)[0m
 [32m"unicode-bom": "error",[0m
 
-Rules from typescript-eslint:
+[0mRules from typescript-eslint:
 
 [2m// [suggestion] Require that function overload signatures be consecutive[0m
 [32m"@typescript-eslint/adjacent-overload-signatures": "error",[0m
 
 [2m// [suggestion] Require consistently using either `T[]` or `Array<T>` for arrays[0m
-[32m"@typescript-eslint/array-type": ["error", ...],[0m
+[32m"@typescript-eslint/array-type": ["error", {
+	"default": "generic",
+}],[0m
 
 [2m// [suggestion] Disallow `// tslint:<rule-flag>` comments[0m
 [2m// "@typescript-eslint/ban-tslint-comment": "off",[0m
@@ -627,7 +635,9 @@ Rules from typescript-eslint:
 [2m// "@typescript-eslint/consistent-return": "off",[0m
 
 [2m// [suggestion] Enforce consistent usage of type assertions[0m
-[32m"@typescript-eslint/consistent-type-assertions": ["error", ...],[0m
+[32m"@typescript-eslint/consistent-type-assertions": ["error", {
+	"assertionStyle": "never",
+}],[0m
 
 [2m// [suggestion] Enforce type definitions to consistently use either `interface` or `type`[0m
 [32m"@typescript-eslint/consistent-type-definitions": "error",[0m
@@ -661,7 +671,29 @@ Rules from typescript-eslint:
 [32m"@typescript-eslint/method-signature-style": "error",[0m
 
 [2m// [suggestion] Enforce naming conventions for everything across a codebase[0m
-[32m"@typescript-eslint/naming-convention": ["error", ...],[0m
+[32m"@typescript-eslint/naming-convention": ["error", {
+	"selector": "default",
+	"format": ["strictCamelCase"],
+	"leadingUnderscore": "forbid",
+	"trailingUnderscore": "forbid",
+}, {
+	"selector": "typeLike",
+	"format": ["StrictPascalCase"],
+	"leadingUnderscore": "forbid",
+	"trailingUnderscore": "forbid",
+}, {
+	"selector": "variable",
+	"modifiers": ["const", "global"],
+	"types": ["boolean", "number", "string"],
+	"format": ["UPPER_CASE"],
+	"leadingUnderscore": "forbid",
+	"trailingUnderscore": "forbid",
+}, {
+	"selector": "enumMember",
+	"format": ["UPPER_CASE"],
+	"leadingUnderscore": "forbid",
+	"trailingUnderscore": "forbid",
+}],[0m
 
 [2m// [suggestion] Disallow generic `Array` constructors[0m
 [32m"no-array-constructor": "off",[0m
@@ -831,7 +863,11 @@ Rules from typescript-eslint:
 [32m"@typescript-eslint/require-await": "error",[0m
 
 [2m// [suggestion] Disallow certain types in boolean expressions[0m
-[32m"@typescript-eslint/strict-boolean-expressions": ["error", ...],[0m
+[32m"@typescript-eslint/strict-boolean-expressions": ["error", {
+	"allowString": false,
+	"allowNumber": false,
+	"allowNullableObject": false,
+}],[0m
 
 [2m// [suggestion] Require switch-case statements to be exhaustive[0m
 [32m"@typescript-eslint/switch-exhaustiveness-check": "error",[0m
@@ -858,7 +894,9 @@ Rules from typescript-eslint:
 [32m"@typescript-eslint/explicit-function-return-type": "error",[0m
 
 [2m// [problem] Require explicit accessibility modifiers on class properties and methods[0m
-[32m"@typescript-eslint/explicit-member-accessibility": ["error", ...],[0m
+[32m"@typescript-eslint/explicit-member-accessibility": ["error", {
+	"accessibility": "no-public",
+}],[0m
 
 [2m// [problem] Require explicit return and argument types on exported functions' and classes' public class methods[0m
 [32m"@typescript-eslint/explicit-module-boundary-types": "error",[0m
@@ -922,7 +960,7 @@ Rules from typescript-eslint:
 [32m"@typescript-eslint/no-require-imports": "error",[0m
 
 [2m// [problem] Disallow type parameters that aren't used multiple times[0m
-[32m"@typescript-eslint/no-unnecessary-type-parameters": "error",[0m
+[2m// "@typescript-eslint/no-unnecessary-type-parameters": "off",[0m
 
 [2m// [problem] Disallow calling a function with a value with type `any`[0m
 [32m"@typescript-eslint/no-unsafe-argument": "error",[0m
@@ -957,7 +995,11 @@ Rules from typescript-eslint:
 
 [2m// [problem] Disallow unused variables[0m
 [32m"no-unused-vars": "off",[0m
-[32m"@typescript-eslint/no-unused-vars": ["error", ...],[0m
+[32m"@typescript-eslint/no-unused-vars": ["error", {
+	"args": "none",
+	"caughtErrors": "none",
+	"ignoreRestSiblings": true,
+}],[0m
 
 [2m// [problem] Disallow the use of variables before they are defined[0m
 [32m"no-use-before-define": "off",[0m
@@ -1000,16 +1042,16 @@ Rules from typescript-eslint:
 [2m// [problem] Enforce unbound methods are called with their expected scope[0m
 [32m"@typescript-eslint/unbound-method": "error",[0m
 
-Rules from stylistic:
+[0mRules from stylistic:
 
 [2m// [layout] Enforce linebreaks after opening and before closing array brackets[0m
-[32m"@stylistic/array-bracket-newline": ["error", ...],[0m
+[32m"@stylistic/array-bracket-newline": ["error", "consistent"],[0m
 
 [2m// [layout] Enforce consistent spacing inside array brackets[0m
 [32m"@stylistic/array-bracket-spacing": "error",[0m
 
 [2m// [layout] Enforce line breaks after each array element[0m
-[32m"@stylistic/array-element-newline": ["error", ...],[0m
+[32m"@stylistic/array-element-newline": ["error", "consistent"],[0m
 
 [2m// [layout] Require parentheses around arrow function arguments[0m
 [32m"@stylistic/arrow-parens": "error",[0m
@@ -1021,10 +1063,12 @@ Rules from stylistic:
 [32m"@stylistic/block-spacing": "error",[0m
 
 [2m// [layout] Enforce consistent brace style for blocks[0m
-[32m"@stylistic/brace-style": ["error", ...],[0m
+[32m"@stylistic/brace-style": ["error", "1tbs", {
+	"allowSingleLine": true,
+}],[0m
 
 [2m// [layout] Require or disallow trailing commas[0m
-[32m"@stylistic/comma-dangle": ["error", ...],[0m
+[32m"@stylistic/comma-dangle": ["error", "always-multiline"],[0m
 
 [2m// [layout] Enforce consistent spacing before and after commas[0m
 [32m"@stylistic/comma-spacing": "error",[0m
@@ -1045,7 +1089,7 @@ Rules from stylistic:
 [32m"@stylistic/eol-last": "error",[0m
 
 [2m// [layout] Enforce line breaks between arguments of a function call[0m
-[32m"@stylistic/function-call-argument-newline": ["error", ...],[0m
+[32m"@stylistic/function-call-argument-newline": ["error", "consistent"],[0m
 
 [2m// [layout] Require or disallow spacing between function identifiers and their invocations[0m
 [32m"@stylistic/function-call-spacing": "error",[0m
@@ -1060,10 +1104,10 @@ Rules from stylistic:
 [32m"@stylistic/implicit-arrow-linebreak": "error",[0m
 
 [2m// [layout] Enforce consistent indentation[0m
-[32m"@stylistic/indent": ["error", ...],[0m
+[32m"@stylistic/indent": ["error", "tab"],[0m
 
 [2m// [layout] Indentation for binary operators[0m
-[32m"@stylistic/indent-binary-ops": ["error", ...],[0m
+[32m"@stylistic/indent-binary-ops": ["error", "tab"],[0m
 
 [2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
 [2m// "@stylistic/jsx-child-element-spacing": "off",[0m
@@ -1180,10 +1224,16 @@ Rules from stylistic:
 [32m"@stylistic/no-multi-spaces": "error",[0m
 
 [2m// [layout] Disallow multiple empty lines[0m
-[32m"@stylistic/no-multiple-empty-lines": ["error", ...],[0m
+[32m"@stylistic/no-multiple-empty-lines": ["error", {
+	"max": 1,
+	"maxEOF": 0,
+	"maxBOF": 0,
+}],[0m
 
 [2m// [layout] Disallow all tabs[0m
-[32m"@stylistic/no-tabs": ["error", ...],[0m
+[32m"@stylistic/no-tabs": ["error", {
+	"allowIndentationTabs": true,
+}],[0m
 
 [2m// [layout] Disallow trailing whitespace at the end of lines[0m
 [32m"@stylistic/no-trailing-spaces": "error",[0m
@@ -1195,13 +1245,17 @@ Rules from stylistic:
 [32m"@stylistic/nonblock-statement-body-position": "error",[0m
 
 [2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
-[32m"@stylistic/object-curly-newline": "error",[0m
+[32m"@stylistic/object-curly-newline": ["error", {
+	"ImportDeclaration": {"multiline": true, "minProperties": 2},
+}],[0m
 
 [2m// [layout] Enforce consistent spacing inside braces[0m
 [32m"@stylistic/object-curly-spacing": "error",[0m
 
 [2m// [layout] Enforce placing object properties on separate lines[0m
-[32m"@stylistic/object-property-newline": ["error", ...],[0m
+[32m"@stylistic/object-property-newline": ["error", {
+	"allowAllPropertiesOnSameLine": true,
+}],[0m
 
 [2m// [layout] Require or disallow newlines around variable declarations[0m
 [32m"@stylistic/one-var-declaration-per-line": "error",[0m
@@ -1210,13 +1264,25 @@ Rules from stylistic:
 [32m"@stylistic/operator-linebreak": "error",[0m
 
 [2m// [layout] Require or disallow padding within blocks[0m
-[32m"@stylistic/padded-blocks": ["error", ...],[0m
+[32m"@stylistic/padded-blocks": ["error", "never"],[0m
 
 [2m// [layout] Require or disallow padding lines between statements[0m
-[32m"@stylistic/padding-line-between-statements": ["error", ...],[0m
+[32m"@stylistic/padding-line-between-statements": ["error", {
+	"blankLine": "always",
+	"prev": "*",
+	"next": "return",
+}, {
+	"blankLine": "always",
+	"prev": ["const", "let"],
+	"next": "*",
+}, {
+	"blankLine": "any",
+	"prev": ["const", "let"],
+	"next": ["const", "let"],
+}],[0m
 
 [2m// [layout] Require quotes around object literal, type literal, interfaces and enums property names[0m
-[32m"@stylistic/quote-props": ["error", ...],[0m
+[32m"@stylistic/quote-props": ["error", "consistent"],[0m
 
 [2m// [layout] Enforce the consistent use of either backticks, double, or single quotes[0m
 [32m"@stylistic/quotes": "error",[0m
@@ -1237,7 +1303,9 @@ Rules from stylistic:
 [32m"@stylistic/space-before-blocks": "error",[0m
 
 [2m// [layout] Enforce consistent spacing before function parenthesis[0m
-[32m"@stylistic/space-before-function-paren": ["error", ...],[0m
+[32m"@stylistic/space-before-function-paren": ["error", {
+	"named": "never",
+}],[0m
 
 [2m// [layout] Enforce consistent spacing inside parentheses[0m
 [32m"@stylistic/space-in-parens": "error",[0m
@@ -1270,7 +1338,7 @@ Rules from stylistic:
 [32m"@stylistic/type-named-tuple-spacing": "error",[0m
 
 [2m// [layout] Require parentheses around immediate `function` invocations[0m
-[32m"@stylistic/wrap-iife": ["error", ...],[0m
+[32m"@stylistic/wrap-iife": ["error", "inside"],[0m
 
 [2m// [layout] Require parenthesis around regex literals[0m
 [2m// "@stylistic/wrap-regex": "off",[0m

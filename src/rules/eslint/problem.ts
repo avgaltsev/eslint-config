@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type {Linter} from "eslint";
+import type {ESLintRules} from "eslint/rules";
 
-export const rules: Linter.RulesRecord = {
+export const rules: Partial<ESLintRules> = {
 	// [problem] Enforce `return` statements in callbacks of array methods
 	"array-callback-return": "error",
 
