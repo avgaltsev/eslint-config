@@ -5,36 +5,83 @@
 [0mRules from eslint:
 
 [2m// [suggestion] Enforce getter and setter pairs in objects and classes[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"enforceForTSTypes": false,[0m
+[2m// 		"enforceForClassMembers": true,[0m
+[2m// 		"getWithoutSet": false,[0m
+[2m// 		"setWithoutGet": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "accessor-pairs": "off",[0m
 
 [2m// [suggestion] Require braces around arrow function bodies[0m
+[2m// [[0m
+[2m// 	"as-needed"[0m
+[2m// ][0m
 [2m// "arrow-body-style": "off",[0m
 
 [2m// [suggestion] Enforce the use of variables within the scope they are defined[0m
 [2m// "block-scoped-var": "off",[0m
 
 [2m// [suggestion] Enforce camelcase naming convention[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"ignoreDestructuring": false,[0m
+[2m// 		"ignoreGlobals": false,[0m
+[2m// 		"ignoreImports": false,[0m
+[2m// 		"properties": "always"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"camelcase": "error",[0m
 
 [2m// [suggestion] Enforce or disallow capitalization of the first letter of a comment[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [2m// "capitalized-comments": "off",[0m
 
 [2m// [suggestion] Enforce that class methods utilize `this`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"enforceForClassFields": true,[0m
+[2m// 		"exceptMethods": [],[0m
+[2m// 		"ignoreOverrideMethods": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "class-methods-use-this": "off",[0m
 
 [2m// [suggestion] Enforce a maximum cyclomatic complexity allowed in a program[0m
+[2m// [[0m
+[2m// 	20[0m
+[2m// ][0m
 [2m// "complexity": "off",[0m
 
 [2m// [suggestion] Require `return` statements to either always or never specify values[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"treatUndefinedAsUnspecified": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "consistent-return": "off",[0m
 
 [2m// [suggestion] Enforce consistent naming when capturing the current execution context[0m
+[2m// [[0m
+[2m// 	"that"[0m
+[2m// ][0m
 [2m// "consistent-this": "off",[0m
 
 [2m// [suggestion] Enforce consistent brace style for all control statements[0m
+[2m// [[0m
+[2m// 	"all"[0m
+[2m// ][0m
 [32m"curly": "error",[0m
 
 [2m// [suggestion] Require `default` cases in `switch` statements[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [2m// "default-case": "off",[0m
 
 [2m// [suggestion] Enforce `default` clauses in `switch` statements to be last[0m
@@ -44,65 +91,161 @@
 [32m"default-param-last": "error",[0m
 
 [2m// [suggestion] Enforce dot notation whenever possible[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowKeywords": true,[0m
+[2m// 		"allowPattern": ""[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "dot-notation": "off",[0m
 
 [2m// [suggestion] Require the use of `===` and `!==`[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"eqeqeq": "error",[0m
 
 [2m// [suggestion] Require function names to match the name of the variable or property to which they are assigned[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [2m// "func-name-matching": "off",[0m
 
 [2m// [suggestion] Require or disallow named `function` expressions[0m
+[2m// [[0m
+[2m// 	"always",[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"func-names": ["error", "never"],[0m
 
 [2m// [suggestion] Enforce the consistent use of either `function` declarations or expressions assigned to variables[0m
+[2m// [[0m
+[2m// 	"expression",[0m
+[2m// 	{[0m
+[2m// 		"allowArrowFunctions": false,[0m
+[2m// 		"allowTypeAnnotation": false,[0m
+[2m// 		"overrides": {}[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"func-style": ["error", "declaration", {
 	"allowArrowFunctions": true,
 }],[0m
 
 [2m// [suggestion] Require grouped accessor pairs in object literals and classes[0m
+[2m// [[0m
+[2m// 	"anyOrder",[0m
+[2m// 	{[0m
+[2m// 		"enforceForTSTypes": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"grouped-accessor-pairs": ["error", "setBeforeGet"],[0m
 
 [2m// [suggestion] Require `for-in` loops to include an `if` statement[0m
 [32m"guard-for-in": "error",[0m
 
 [2m// [suggestion] Disallow specified identifiers[0m
+[2m// [][0m
 [2m// "id-denylist": "off",[0m
 
 [2m// [suggestion] Enforce minimum and maximum identifier lengths[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"exceptionPatterns": [],[0m
+[2m// 		"exceptions": [],[0m
+[2m// 		"min": 2,[0m
+[2m// 		"properties": "always"[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "id-length": "off",[0m
 
 [2m// [suggestion] Require identifiers to match a specified regular expression[0m
+[2m// [[0m
+[2m// 	"^.+$",[0m
+[2m// 	{[0m
+[2m// 		"classFields": false,[0m
+[2m// 		"ignoreDestructuring": false,[0m
+[2m// 		"onlyDeclarations": false,[0m
+[2m// 		"properties": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "id-match": "off",[0m
 
 [2m// [suggestion] Require or disallow initialization in variable declarations[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [2m// "init-declarations": "off",[0m
 
 [2m// [suggestion] Require or disallow logical assignment operator shorthand[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"logical-assignment-operators": "error",[0m
 
 [2m// [suggestion] Enforce a maximum number of classes per file[0m
+[2m// [[0m
+[2m// 	1[0m
+[2m// ][0m
 [2m// "max-classes-per-file": "off",[0m
 
 [2m// [suggestion] Enforce a maximum depth that blocks can be nested[0m
+[2m// [[0m
+[2m// 	4[0m
+[2m// ][0m
 [2m// "max-depth": "off",[0m
 
 [2m// [suggestion] Enforce a maximum number of lines per file[0m
+[2m// [[0m
+[2m// 	300[0m
+[2m// ][0m
 [2m// "max-lines": "off",[0m
 
 [2m// [suggestion] Enforce a maximum number of lines of code in a function[0m
+[2m// [[0m
+[2m// 	50[0m
+[2m// ][0m
 [2m// "max-lines-per-function": "off",[0m
 
 [2m// [suggestion] Enforce a maximum depth that callbacks can be nested[0m
+[2m// [[0m
+[2m// 	10[0m
+[2m// ][0m
 [2m// "max-nested-callbacks": "off",[0m
 
 [2m// [suggestion] Enforce a maximum number of parameters in function definitions[0m
+[2m// [[0m
+[2m// 	3[0m
+[2m// ][0m
 [2m// "max-params": "off",[0m
 
 [2m// [suggestion] Enforce a maximum number of statements allowed in function blocks[0m
+[2m// [[0m
+[2m// 	10[0m
+[2m// ][0m
 [2m// "max-statements": "off",[0m
 
 [2m// [suggestion] Require constructor names to begin with a capital letter[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"capIsNew": true,[0m
+[2m// 		"capIsNewExceptions": [[0m
+[2m// 			"Array",[0m
+[2m// 			"Boolean",[0m
+[2m// 			"Date",[0m
+[2m// 			"Error",[0m
+[2m// 			"Function",[0m
+[2m// 			"Number",[0m
+[2m// 			"Object",[0m
+[2m// 			"RegExp",[0m
+[2m// 			"String",[0m
+[2m// 			"Symbol",[0m
+[2m// 			"BigInt"[0m
+[2m// 		],[0m
+[2m// 		"newIsCap": true,[0m
+[2m// 		"newIsCapExceptions": [],[0m
+[2m// 		"properties": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"new-cap": "error",[0m
 
 [2m// [suggestion] Disallow the use of `alert`, `confirm`, and `prompt`[0m
@@ -112,6 +255,12 @@
 [32m"no-array-constructor": "error",[0m
 
 [2m// [suggestion] Disallow bitwise operators[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"int32Hint": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-bitwise": "off",[0m
 
 [2m// [suggestion] Disallow the use of `arguments.caller` or `arguments.callee`[0m
@@ -121,6 +270,9 @@
 [32m"no-case-declarations": "error",[0m
 
 [2m// [suggestion] Disallow the use of `console`[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [2m// "no-console": "off",[0m
 
 [2m// [suggestion] Disallow `continue` statements[0m
@@ -133,12 +285,27 @@
 [2m// "no-div-regex": "off",[0m
 
 [2m// [suggestion] Disallow `else` blocks after `return` statements in `if` statements[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowElseIf": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-else-return": "off",[0m
 
 [2m// [suggestion] Disallow empty block statements[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowEmptyCatch": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-empty": "error",[0m
 
 [2m// [suggestion] Disallow empty functions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-empty-function": "error",[0m
 
 [2m// [suggestion] Disallow empty static blocks[0m
@@ -148,36 +315,76 @@
 [2m// "no-eq-null": "off",[0m
 
 [2m// [suggestion] Disallow the use of `eval()`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowIndirect": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-eval": "error",[0m
 
 [2m// [suggestion] Disallow extending native types[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"exceptions": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-extend-native": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary calls to `.bind()`[0m
 [32m"no-extra-bind": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary boolean casts[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"no-extra-boolean-cast": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary labels[0m
 [2m// "no-extra-label": "off",[0m
 
 [2m// [suggestion] Disallow assignments to native objects or read-only global variables[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"exceptions": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-global-assign": "error",[0m
 
 [2m// [suggestion] Disallow shorthand type conversions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"boolean": true,[0m
+[2m// 		"disallowTemplateShorthand": false,[0m
+[2m// 		"number": true,[0m
+[2m// 		"string": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-implicit-coercion": "error",[0m
 
 [2m// [suggestion] Disallow declarations in the global scope[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"lexicalBindings": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-implicit-globals": "error",[0m
 
 [2m// [suggestion] Disallow the use of `eval()`-like methods[0m
 [32m"no-implied-eval": "error",[0m
 
 [2m// [suggestion] Disallow inline comments after code[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [2m// "no-inline-comments": "off",[0m
 
 [2m// [suggestion] Disallow use of `this` in contexts where the value of `this` is `undefined`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"capIsConstructor": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-invalid-this": "error",[0m
 
 [2m// [suggestion] Disallow the use of the `__iterator__` property[0m
@@ -187,6 +394,12 @@
 [2m// "no-label-var": "off",[0m
 
 [2m// [suggestion] Disallow labeled statements[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowLoop": false,[0m
+[2m// 		"allowSwitch": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-labels": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary nested blocks[0m
@@ -199,9 +412,28 @@
 [32m"no-loop-func": "error",[0m
 
 [2m// [suggestion] Disallow magic numbers[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"detectObjects": false,[0m
+[2m// 		"enforceConst": false,[0m
+[2m// 		"ignore": [],[0m
+[2m// 		"ignoreArrayIndexes": false,[0m
+[2m// 		"ignoreDefaultValues": false,[0m
+[2m// 		"ignoreClassFieldInitialValues": false,[0m
+[2m// 		"ignoreEnums": false,[0m
+[2m// 		"ignoreNumericLiteralTypes": false,[0m
+[2m// 		"ignoreReadonlyClassProperties": false,[0m
+[2m// 		"ignoreTypeIndexes": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-magic-numbers": "off",[0m
 
 [2m// [suggestion] Disallow use of chained assignment expressions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreNonDeclaration": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-multi-assign": "error",[0m
 
 [2m// [suggestion] Disallow multiline strings[0m
@@ -238,18 +470,31 @@
 [32m"no-param-reassign": "error",[0m
 
 [2m// [suggestion] Disallow the unary operators `++` and `--`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowForLoopAfterthoughts": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-plusplus": "off",[0m
 
 [2m// [suggestion] Disallow the use of the `__proto__` property[0m
 [32m"no-proto": "error",[0m
 
 [2m// [suggestion] Disallow variable redeclaration[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"builtinGlobals": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-redeclare": "error",[0m
 
 [2m// [suggestion] Disallow multiple spaces in regular expressions[0m
 [32m"no-regex-spaces": "error",[0m
 
 [2m// [suggestion] Disallow specified names in exports[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [2m// "no-restricted-exports": "off",[0m
 
 [2m// [suggestion] Disallow specified global variables[0m
@@ -259,24 +504,49 @@
 [2m// "no-restricted-imports": "off",[0m
 
 [2m// [suggestion] Disallow certain properties on certain objects[0m
+[2m// [][0m
 [2m// "no-restricted-properties": "off",[0m
 
 [2m// [suggestion] Disallow specified syntax[0m
+[2m// [][0m
 [2m// "no-restricted-syntax": "off",[0m
 
 [2m// [suggestion] Disallow assignment operators in `return` statements[0m
+[2m// [[0m
+[2m// 	"except-parens"[0m
+[2m// ][0m
 [32m"no-return-assign": "error",[0m
 
 [2m// [suggestion] Disallow `javascript:` URLs[0m
 [32m"no-script-url": "error",[0m
 
 [2m// [suggestion] Disallow comma operators[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowInParentheses": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-sequences": "error",[0m
 
 [2m// [suggestion] Disallow variable declarations from shadowing variables declared in the outer scope[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"builtinGlobals": false,[0m
+[2m// 		"hoist": "functions",[0m
+[2m// 		"ignoreOnInitialization": false,[0m
+[2m// 		"ignoreTypeValueShadow": true,[0m
+[2m// 		"ignoreFunctionTypeParameterNameValueShadow": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-shadow": "error",[0m
 
 [2m// [suggestion] Disallow identifiers from shadowing restricted names[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"reportGlobalThis": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-shadow-restricted-names": "error",[0m
 
 [2m// [suggestion] Disallow ternary operators[0m
@@ -292,12 +562,39 @@
 [2m// "no-undefined": "off",[0m
 
 [2m// [suggestion] Disallow dangling underscores in identifiers[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"allowAfterSuper": false,[0m
+[2m// 		"allowAfterThis": false,[0m
+[2m// 		"allowAfterThisConstructor": false,[0m
+[2m// 		"allowFunctionParams": true,[0m
+[2m// 		"allowInArrayDestructuring": true,[0m
+[2m// 		"allowInObjectDestructuring": true,[0m
+[2m// 		"enforceInClassFields": false,[0m
+[2m// 		"enforceInMethodNames": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-underscore-dangle": "error",[0m
 
 [2m// [suggestion] Disallow ternary operators when simpler alternatives exist[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"defaultAssignment": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-unneeded-ternary": "off",[0m
 
 [2m// [suggestion] Disallow unused expressions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowShortCircuit": false,[0m
+[2m// 		"allowTernary": false,[0m
+[2m// 		"allowTaggedTemplates": false,[0m
+[2m// 		"enforceForJSX": false,[0m
+[2m// 		"ignoreDirectives": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-unused-expressions": "error",[0m
 
 [2m// [suggestion] Disallow unused labels[0m
@@ -310,6 +607,11 @@
 [32m"no-useless-catch": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary computed property keys in objects and classes[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"enforceForClassMembers": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-useless-computed-key": "off",[0m
 
 [2m// [suggestion] Disallow unnecessary concatenation of literals or template literals[0m
@@ -319,9 +621,21 @@
 [32m"no-useless-constructor": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary escape characters[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowRegexCharacters": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-useless-escape": "error",[0m
 
 [2m// [suggestion] Disallow renaming import, export, and destructured assignments to the same name[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreDestructuring": false,[0m
+[2m// 		"ignoreImport": false,[0m
+[2m// 		"ignoreExport": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-useless-rename": "off",[0m
 
 [2m// [suggestion] Disallow redundant return statements[0m
@@ -331,27 +645,63 @@
 [32m"no-var": "error",[0m
 
 [2m// [suggestion] Disallow `void` operators[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowAsStatement": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-void": "error",[0m
 
 [2m// [suggestion] Disallow specified warning terms in comments[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"location": "start",[0m
+[2m// 		"terms": [[0m
+[2m// 			"todo",[0m
+[2m// 			"fixme",[0m
+[2m// 			"xxx"[0m
+[2m// 		][0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-warning-comments": "off",[0m
 
 [2m// [suggestion] Disallow `with` statements[0m
 [32m"no-with": "error",[0m
 
 [2m// [suggestion] Require or disallow method and property shorthand syntax for object literals[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"object-shorthand": "error",[0m
 
 [2m// [suggestion] Enforce variables to be declared either together or separately in functions[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"one-var": ["error", "never"],[0m
 
 [2m// [suggestion] Require or disallow assignment operator shorthand where possible[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"operator-assignment": "error",[0m
 
 [2m// [suggestion] Require using arrow functions for callbacks[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowNamedFunctions": false,[0m
+[2m// 		"allowUnboundThis": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"prefer-arrow-callback": "error",[0m
 
 [2m// [suggestion] Require `const` declarations for variables that are never reassigned after declared[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"destructuring": "any",[0m
+[2m// 		"ignoreReadBeforeAssign": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"prefer-const": "error",[0m
 
 [2m// [suggestion] Require destructuring from arrays and/or objects[0m
@@ -373,9 +723,19 @@
 [32m"prefer-object-spread": "error",[0m
 
 [2m// [suggestion] Require using Error objects as Promise rejection reasons[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowEmptyReject": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"prefer-promise-reject-errors": "error",[0m
 
 [2m// [suggestion] Disallow use of the `RegExp` constructor in favor of regular expression literals[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"disallowRedundantWrapping": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"prefer-regex-literals": "error",[0m
 
 [2m// [suggestion] Require rest parameters instead of `arguments`[0m
@@ -388,6 +748,12 @@
 [32m"prefer-template": "error",[0m
 
 [2m// [suggestion] Disallow losing originally caught error when re-throwing custom errors[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"requireCatchParameter": false,[0m
+[2m// 		"errorClassNames": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "preserve-caught-error": "off",[0m
 
 [2m// [suggestion] Enforce the use of the radix argument when using `parseInt()`[0m
@@ -397,21 +763,56 @@
 [32m"require-await": "error",[0m
 
 [2m// [suggestion] Enforce the use of `u` or `v` flag on regular expressions[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [2m// "require-unicode-regexp": "off",[0m
 
 [2m// [suggestion] Require generator functions to contain `yield`[0m
 [32m"require-yield": "error",[0m
 
 [2m// [suggestion] Enforce sorted `import` declarations within modules[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowSeparatedGroups": false,[0m
+[2m// 		"ignoreCase": false,[0m
+[2m// 		"ignoreDeclarationSort": false,[0m
+[2m// 		"ignoreMemberSort": false,[0m
+[2m// 		"memberSyntaxSortOrder": [[0m
+[2m// 			"none",[0m
+[2m// 			"all",[0m
+[2m// 			"multiple",[0m
+[2m// 			"single"[0m
+[2m// 		][0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "sort-imports": "off",[0m
 
 [2m// [suggestion] Require object keys to be sorted[0m
+[2m// [[0m
+[2m// 	"asc",[0m
+[2m// 	{[0m
+[2m// 		"allowLineSeparatedGroups": false,[0m
+[2m// 		"caseSensitive": true,[0m
+[2m// 		"ignoreComputedKeys": false,[0m
+[2m// 		"minKeys": 2,[0m
+[2m// 		"natural": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "sort-keys": "off",[0m
 
 [2m// [suggestion] Require variables within the same declaration block to be sorted[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreCase": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "sort-vars": "off",[0m
 
 [2m// [suggestion] Require or disallow strict mode directives[0m
+[2m// [[0m
+[2m// 	"safe"[0m
+[2m// ][0m
 [2m// "strict": "off",[0m
 
 [2m// [suggestion] Require symbol descriptions[0m
@@ -421,9 +822,23 @@
 [2m// "vars-on-top": "off",[0m
 
 [2m// [suggestion] Require or disallow "Yoda" conditions[0m
+[2m// [[0m
+[2m// 	"never",[0m
+[2m// 	{[0m
+[2m// 		"exceptRange": false,[0m
+[2m// 		"onlyEquality": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"yoda": "error",[0m
 
 [2m// [problem] Enforce `return` statements in callbacks of array methods[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowImplicit": false,[0m
+[2m// 		"checkForEach": false,[0m
+[2m// 		"allowVoid": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"array-callback-return": "error",[0m
 
 [2m// [problem] Require `super()` calls in constructors[0m
@@ -433,6 +848,11 @@
 [32m"for-direction": "error",[0m
 
 [2m// [problem] Enforce `return` statements in getters[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowImplicit": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"getter-return": "error",[0m
 
 [2m// [problem] Disallow using an async function as a Promise executor[0m
@@ -448,15 +868,28 @@
 [32m"no-compare-neg-zero": "error",[0m
 
 [2m// [problem] Disallow assignment operators in conditional expressions[0m
+[2m// [[0m
+[2m// 	"except-parens"[0m
+[2m// ][0m
 [32m"no-cond-assign": "error",[0m
 
 [2m// [problem] Disallow reassigning `const`, `using`, and `await using` variables[0m
 [32m"no-const-assign": "error",[0m
 
 [2m// [problem] Disallow expressions where the operation doesn't affect the value[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"checkRelationalComparisons": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-constant-binary-expression": "error",[0m
 
 [2m// [problem] Disallow constant expressions in conditions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"checkLoops": "allExceptWhileTrue"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-constant-condition": "error",[0m
 
 [2m// [problem] Disallow returning value from constructor[0m
@@ -484,18 +917,35 @@
 [32m"no-duplicate-case": "error",[0m
 
 [2m// [problem] Disallow duplicate module imports[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"includeExports": false,[0m
+[2m// 		"allowSeparateTypeImports": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-duplicate-imports": "error",[0m
 
 [2m// [problem] Disallow empty character classes in regular expressions[0m
 [32m"no-empty-character-class": "error",[0m
 
 [2m// [problem] Disallow empty destructuring patterns[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowObjectPatternsAsParameters": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-empty-pattern": "error",[0m
 
 [2m// [problem] Disallow reassigning exceptions in `catch` clauses[0m
 [32m"no-ex-assign": "error",[0m
 
 [2m// [problem] Disallow fallthrough of `case` statements[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowEmptyCase": false,[0m
+[2m// 		"reportUnusedFallthroughComment": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-fallthrough": "error",[0m
 
 [2m// [problem] Disallow reassigning `function` declarations[0m
@@ -505,18 +955,41 @@
 [32m"no-import-assign": "error",[0m
 
 [2m// [problem] Disallow variable or `function` declarations in nested blocks[0m
+[2m// [[0m
+[2m// 	"functions",[0m
+[2m// 	{[0m
+[2m// 		"blockScopedFunctions": "allow"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-inner-declarations": "error",[0m
 
 [2m// [problem] Disallow invalid regular expression strings in `RegExp` constructors[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"no-invalid-regexp": "error",[0m
 
 [2m// [problem] Disallow irregular whitespace[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"skipComments": false,[0m
+[2m// 		"skipJSXText": false,[0m
+[2m// 		"skipRegExps": false,[0m
+[2m// 		"skipStrings": true,[0m
+[2m// 		"skipTemplates": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-irregular-whitespace": "error",[0m
 
 [2m// [problem] Disallow literal numbers that lose precision[0m
 [32m"no-loss-of-precision": "error",[0m
 
 [2m// [problem] Disallow characters which are made with multiple code points in character class syntax[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowEscape": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-misleading-character-class": "error",[0m
 
 [2m// [problem] Disallow `new` operators with global non-constructor functions[0m
@@ -526,12 +999,22 @@
 [32m"no-obj-calls": "error",[0m
 
 [2m// [problem] Disallow returning values from Promise executor functions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowVoid": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-promise-executor-return": "error",[0m
 
 [2m// [problem] Disallow calling some `Object.prototype` methods directly on objects[0m
 [32m"no-prototype-builtins": "error",[0m
 
 [2m// [problem] Disallow assignments where both sides are exactly the same[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"props": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-self-assign": "error",[0m
 
 [2m// [problem] Disallow comparisons where both sides are exactly the same[0m
@@ -553,6 +1036,11 @@
 [32m"no-unassigned-vars": "error",[0m
 
 [2m// [problem] Disallow the use of undeclared variables unless mentioned in `/*global */` comments[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"typeof": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-undef": "error",[0m
 
 [2m// [problem] Disallow confusing multiline expressions[0m
@@ -565,21 +1053,47 @@
 [32m"no-unreachable": "error",[0m
 
 [2m// [problem] Disallow loops with a body that allows only one iteration[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignore": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-unreachable-loop": "error",[0m
 
 [2m// [problem] Disallow control flow statements in `finally` blocks[0m
 [32m"no-unsafe-finally": "error",[0m
 
 [2m// [problem] Disallow negating the left operand of relational operators[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"enforceForOrderingRelations": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-unsafe-negation": "error",[0m
 
 [2m// [problem] Disallow use of optional chaining in contexts where the `undefined` value is not allowed[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"disallowArithmeticOperators": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-unsafe-optional-chaining": "error",[0m
 
 [2m// [problem] Disallow unused private class members[0m
 [32m"no-unused-private-class-members": "error",[0m
 
 [2m// [problem] Disallow unused variables[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"vars": "all",[0m
+[2m// 		"args": "after-used",[0m
+[2m// 		"ignoreRestSiblings": false,[0m
+[2m// 		"caughtErrors": "all",[0m
+[2m// 		"ignoreClassWithStaticInitBlock": false,[0m
+[2m// 		"ignoreUsingDeclarations": false,[0m
+[2m// 		"reportUsedIgnorePattern": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-unused-vars": ["error", {
 	"args": "none",
 	"caughtErrors": "none",
@@ -587,6 +1101,17 @@
 }],[0m
 
 [2m// [problem] Disallow the use of variables before they are defined[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"classes": true,[0m
+[2m// 		"functions": true,[0m
+[2m// 		"variables": true,[0m
+[2m// 		"allowNamedExports": false,[0m
+[2m// 		"enums": true,[0m
+[2m// 		"typedefs": true,[0m
+[2m// 		"ignoreTypeReferences": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-use-before-define": "error",[0m
 
 [2m// [problem] Disallow variable assignments when the value is not used[0m
@@ -596,81 +1121,327 @@
 [32m"no-useless-backreference": "error",[0m
 
 [2m// [problem] Disallow assignments that can lead to race conditions due to usage of `await` or `yield`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowProperties": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"require-atomic-updates": "error",[0m
 
 [2m// [problem] Require calls to `isNaN()` when checking for `NaN`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"enforceForIndexOf": false,[0m
+[2m// 		"enforceForSwitchCase": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"use-isnan": "error",[0m
 
 [2m// [problem] Enforce comparing `typeof` expressions against valid strings[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"requireStringLiterals": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"valid-typeof": "error",[0m
 
 [2m// [layout] Require or disallow Unicode byte order mark (BOM)[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"unicode-bom": "error",[0m
 
 [0mRules from typescript-eslint:
 
 [2m// [suggestion] Require that function overload signatures be consecutive[0m
+[2m// [][0m
 [32m"@typescript-eslint/adjacent-overload-signatures": "error",[0m
 
 [2m// [suggestion] Require consistently using either `T[]` or `Array<T>` for arrays[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"default": "array"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/array-type": ["error", {
 	"default": "generic",
 }],[0m
 
 [2m// [suggestion] Disallow `// tslint:<rule-flag>` comments[0m
+[2m// [][0m
 [2m// "@typescript-eslint/ban-tslint-comment": "off",[0m
 
 [2m// [suggestion] Enforce that class methods utilize `this`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"enforceForClassFields": true,[0m
+[2m// 		"exceptMethods": [],[0m
+[2m// 		"ignoreClassesThatImplementAnInterface": false,[0m
+[2m// 		"ignoreOverrideMethods": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "class-methods-use-this": "off",[0m
 [2m// "@typescript-eslint/class-methods-use-this": "off",[0m
 
 [2m// [suggestion] Enforce specifying generic type arguments on type annotation or constructor name of a constructor call[0m
+[2m// [[0m
+[2m// 	"constructor"[0m
+[2m// ][0m
 [32m"@typescript-eslint/consistent-generic-constructors": "error",[0m
 
 [2m// [suggestion] Require or disallow the `Record` type[0m
+[2m// [[0m
+[2m// 	"record"[0m
+[2m// ][0m
 [2m// "@typescript-eslint/consistent-indexed-object-style": "off",[0m
 
 [2m// [suggestion] Require `return` statements to either always or never specify values[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"treatUndefinedAsUnspecified": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "consistent-return": "off",[0m
 [2m// "@typescript-eslint/consistent-return": "off",[0m
 
 [2m// [suggestion] Enforce consistent usage of type assertions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"arrayLiteralTypeAssertions": "allow",[0m
+[2m// 		"assertionStyle": "as",[0m
+[2m// 		"objectLiteralTypeAssertions": "allow"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/consistent-type-assertions": ["error", {
 	"assertionStyle": "never",
 }],[0m
 
 [2m// [suggestion] Enforce type definitions to consistently use either `interface` or `type`[0m
+[2m// [[0m
+[2m// 	"interface"[0m
+[2m// ][0m
 [32m"@typescript-eslint/consistent-type-definitions": "error",[0m
 
 [2m// [suggestion] Enforce consistent usage of type exports[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"fixMixedExportsWithInlineTypeSpecifier": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/consistent-type-exports": "error",[0m
 
 [2m// [suggestion] Enforce consistent usage of type imports[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"disallowTypeAnnotations": true,[0m
+[2m// 		"fixStyle": "separate-type-imports",[0m
+[2m// 		"prefer": "type-imports"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/consistent-type-imports": "error",[0m
 
 [2m// [suggestion] Enforce default parameters to be last[0m
+[2m// [][0m
 [32m"default-param-last": "off",[0m
 [32m"@typescript-eslint/default-param-last": "error",[0m
 
 [2m// [suggestion] Enforce dot notation whenever possible[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowIndexSignaturePropertyAccess": false,[0m
+[2m// 		"allowKeywords": true,[0m
+[2m// 		"allowPattern": "",[0m
+[2m// 		"allowPrivateClassPropertyAccess": false,[0m
+[2m// 		"allowProtectedClassPropertyAccess": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "dot-notation": "off",[0m
 [2m// "@typescript-eslint/dot-notation": "off",[0m
 
 [2m// [suggestion] Require or disallow initialization in variable declarations[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [2m// "init-declarations": "off",[0m
 [2m// "@typescript-eslint/init-declarations": "off",[0m
 
 [2m// [suggestion] Enforce a maximum number of parameters in function definitions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"countVoidThis": false,[0m
+[2m// 		"max": 3[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "max-params": "off",[0m
 [2m// "@typescript-eslint/max-params": "off",[0m
 
 [2m// [suggestion] Require a consistent member declaration order[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"default": {[0m
+[2m// 			"memberTypes": [[0m
+[2m// 				"signature",[0m
+[2m// 				"call-signature",[0m
+[2m// 				"public-static-field",[0m
+[2m// 				"protected-static-field",[0m
+[2m// 				"private-static-field",[0m
+[2m// 				"#private-static-field",[0m
+[2m// 				"public-decorated-field",[0m
+[2m// 				"protected-decorated-field",[0m
+[2m// 				"private-decorated-field",[0m
+[2m// 				"public-instance-field",[0m
+[2m// 				"protected-instance-field",[0m
+[2m// 				"private-instance-field",[0m
+[2m// 				"#private-instance-field",[0m
+[2m// 				"public-abstract-field",[0m
+[2m// 				"protected-abstract-field",[0m
+[2m// 				"public-field",[0m
+[2m// 				"protected-field",[0m
+[2m// 				"private-field",[0m
+[2m// 				"#private-field",[0m
+[2m// 				"static-field",[0m
+[2m// 				"instance-field",[0m
+[2m// 				"abstract-field",[0m
+[2m// 				"decorated-field",[0m
+[2m// 				"field",[0m
+[2m// 				"static-initialization",[0m
+[2m// 				"public-constructor",[0m
+[2m// 				"protected-constructor",[0m
+[2m// 				"private-constructor",[0m
+[2m// 				"constructor",[0m
+[2m// 				"public-static-accessor",[0m
+[2m// 				"protected-static-accessor",[0m
+[2m// 				"private-static-accessor",[0m
+[2m// 				"#private-static-accessor",[0m
+[2m// 				"public-decorated-accessor",[0m
+[2m// 				"protected-decorated-accessor",[0m
+[2m// 				"private-decorated-accessor",[0m
+[2m// 				"public-instance-accessor",[0m
+[2m// 				"protected-instance-accessor",[0m
+[2m// 				"private-instance-accessor",[0m
+[2m// 				"#private-instance-accessor",[0m
+[2m// 				"public-abstract-accessor",[0m
+[2m// 				"protected-abstract-accessor",[0m
+[2m// 				"public-accessor",[0m
+[2m// 				"protected-accessor",[0m
+[2m// 				"private-accessor",[0m
+[2m// 				"#private-accessor",[0m
+[2m// 				"static-accessor",[0m
+[2m// 				"instance-accessor",[0m
+[2m// 				"abstract-accessor",[0m
+[2m// 				"decorated-accessor",[0m
+[2m// 				"accessor",[0m
+[2m// 				"public-static-get",[0m
+[2m// 				"protected-static-get",[0m
+[2m// 				"private-static-get",[0m
+[2m// 				"#private-static-get",[0m
+[2m// 				"public-decorated-get",[0m
+[2m// 				"protected-decorated-get",[0m
+[2m// 				"private-decorated-get",[0m
+[2m// 				"public-instance-get",[0m
+[2m// 				"protected-instance-get",[0m
+[2m// 				"private-instance-get",[0m
+[2m// 				"#private-instance-get",[0m
+[2m// 				"public-abstract-get",[0m
+[2m// 				"protected-abstract-get",[0m
+[2m// 				"public-get",[0m
+[2m// 				"protected-get",[0m
+[2m// 				"private-get",[0m
+[2m// 				"#private-get",[0m
+[2m// 				"static-get",[0m
+[2m// 				"instance-get",[0m
+[2m// 				"abstract-get",[0m
+[2m// 				"decorated-get",[0m
+[2m// 				"get",[0m
+[2m// 				"public-static-set",[0m
+[2m// 				"protected-static-set",[0m
+[2m// 				"private-static-set",[0m
+[2m// 				"#private-static-set",[0m
+[2m// 				"public-decorated-set",[0m
+[2m// 				"protected-decorated-set",[0m
+[2m// 				"private-decorated-set",[0m
+[2m// 				"public-instance-set",[0m
+[2m// 				"protected-instance-set",[0m
+[2m// 				"private-instance-set",[0m
+[2m// 				"#private-instance-set",[0m
+[2m// 				"public-abstract-set",[0m
+[2m// 				"protected-abstract-set",[0m
+[2m// 				"public-set",[0m
+[2m// 				"protected-set",[0m
+[2m// 				"private-set",[0m
+[2m// 				"#private-set",[0m
+[2m// 				"static-set",[0m
+[2m// 				"instance-set",[0m
+[2m// 				"abstract-set",[0m
+[2m// 				"decorated-set",[0m
+[2m// 				"set",[0m
+[2m// 				"public-static-method",[0m
+[2m// 				"protected-static-method",[0m
+[2m// 				"private-static-method",[0m
+[2m// 				"#private-static-method",[0m
+[2m// 				"public-decorated-method",[0m
+[2m// 				"protected-decorated-method",[0m
+[2m// 				"private-decorated-method",[0m
+[2m// 				"public-instance-method",[0m
+[2m// 				"protected-instance-method",[0m
+[2m// 				"private-instance-method",[0m
+[2m// 				"#private-instance-method",[0m
+[2m// 				"public-abstract-method",[0m
+[2m// 				"protected-abstract-method",[0m
+[2m// 				"public-method",[0m
+[2m// 				"protected-method",[0m
+[2m// 				"private-method",[0m
+[2m// 				"#private-method",[0m
+[2m// 				"static-method",[0m
+[2m// 				"instance-method",[0m
+[2m// 				"abstract-method",[0m
+[2m// 				"decorated-method",[0m
+[2m// 				"method"[0m
+[2m// 			][0m
+[2m// 		}[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@typescript-eslint/member-ordering": "off",[0m
 
 [2m// [suggestion] Enforce using a particular method signature syntax[0m
+[2m// [[0m
+[2m// 	"property"[0m
+[2m// ][0m
 [32m"@typescript-eslint/method-signature-style": "error",[0m
 
 [2m// [suggestion] Enforce naming conventions for everything across a codebase[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"format": [[0m
+[2m// 			"camelCase"[0m
+[2m// 		],[0m
+[2m// 		"leadingUnderscore": "allow",[0m
+[2m// 		"selector": "default",[0m
+[2m// 		"trailingUnderscore": "allow"[0m
+[2m// 	},[0m
+[2m// 	{[0m
+[2m// 		"format": [[0m
+[2m// 			"camelCase",[0m
+[2m// 			"PascalCase"[0m
+[2m// 		],[0m
+[2m// 		"selector": "import"[0m
+[2m// 	},[0m
+[2m// 	{[0m
+[2m// 		"format": [[0m
+[2m// 			"camelCase",[0m
+[2m// 			"UPPER_CASE"[0m
+[2m// 		],[0m
+[2m// 		"leadingUnderscore": "allow",[0m
+[2m// 		"selector": "variable",[0m
+[2m// 		"trailingUnderscore": "allow"[0m
+[2m// 	},[0m
+[2m// 	{[0m
+[2m// 		"format": [[0m
+[2m// 			"PascalCase"[0m
+[2m// 		],[0m
+[2m// 		"selector": "typeLike"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/naming-convention": ["error", {
 	"selector": "default",
 	"format": ["strictCamelCase"],
@@ -696,173 +1467,421 @@
 }],[0m
 
 [2m// [suggestion] Disallow generic `Array` constructors[0m
+[2m// [][0m
 [32m"no-array-constructor": "off",[0m
 [32m"@typescript-eslint/no-array-constructor": "error",[0m
 
 [2m// [suggestion] Require `.toString()` and `.toLocaleString()` to only be called on objects which provide useful information when stringified[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"checkUnknown": false,[0m
+[2m// 		"ignoredTypeNames": [[0m
+[2m// 			"Error",[0m
+[2m// 			"RegExp",[0m
+[2m// 			"URL",[0m
+[2m// 			"URLSearchParams"[0m
+[2m// 		][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-base-to-string": "error",[0m
 
 [2m// [suggestion] Disallow duplicate constituents of union or intersection types[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreIntersections": false,[0m
+[2m// 		"ignoreUnions": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-duplicate-type-constituents": "error",[0m
 
 [2m// [suggestion] Disallow using the `delete` operator on computed key expressions[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-dynamic-delete": "error",[0m
 
 [2m// [suggestion] Disallow empty functions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-empty-function": "off",[0m
 [32m"@typescript-eslint/no-empty-function": "error",[0m
 
 [2m// [suggestion] Disallow accidentally using the "empty object" type[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowInterfaces": "never",[0m
+[2m// 		"allowObjectTypes": "never"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-empty-object-type": "error",[0m
 
 [2m// [suggestion] Disallow the `any` type[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"fixToUnknown": false,[0m
+[2m// 		"ignoreRestArgs": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-explicit-any": "error",[0m
 
 [2m// [suggestion] Disallow classes used as namespaces[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowConstructorOnly": false,[0m
+[2m// 		"allowEmpty": false,[0m
+[2m// 		"allowStaticOnly": false,[0m
+[2m// 		"allowWithDecorator": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-extraneous-class": "error",[0m
 
 [2m// [suggestion] Disallow the use of `eval()`-like functions[0m
+[2m// [][0m
 [32m"no-implied-eval": "off",[0m
 [32m"@typescript-eslint/no-implied-eval": "error",[0m
 
 [2m// [suggestion] Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreParameters": false,[0m
+[2m// 		"ignoreProperties": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-inferrable-types": "error",[0m
 
 [2m// [suggestion] Disallow `this` keywords outside of classes or class-like objects[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"capIsConstructor": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-invalid-this": "off",[0m
 [32m"@typescript-eslint/no-invalid-this": "error",[0m
 
 [2m// [suggestion] Disallow magic numbers[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"detectObjects": false,[0m
+[2m// 		"enforceConst": false,[0m
+[2m// 		"ignore": [],[0m
+[2m// 		"ignoreArrayIndexes": false,[0m
+[2m// 		"ignoreEnums": false,[0m
+[2m// 		"ignoreNumericLiteralTypes": false,[0m
+[2m// 		"ignoreReadonlyClassProperties": false,[0m
+[2m// 		"ignoreTypeIndexes": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "no-magic-numbers": "off",[0m
 [2m// "@typescript-eslint/no-magic-numbers": "off",[0m
 
 [2m// [suggestion] Disallow the `void` operator except when used to discard a value[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"checkNever": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-meaningless-void-operator": "error",[0m
 
 [2m// [suggestion] Disallow TypeScript namespaces[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowDeclarations": false,[0m
+[2m// 		"allowDefinitionFiles": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-namespace": "error",[0m
 
 [2m// [suggestion] Disallow variable redeclaration[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"builtinGlobals": true,[0m
+[2m// 		"ignoreDeclarationMerge": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-redeclare": "off",[0m
 [32m"@typescript-eslint/no-redeclare": "error",[0m
 
 [2m// [suggestion] Disallow members of unions and intersections that do nothing or override type information[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-redundant-type-constituents": "error",[0m
 
 [2m// [suggestion] Disallow certain types[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [2m// "@typescript-eslint/no-restricted-types": "off",[0m
 
 [2m// [suggestion] Disallow variable declarations from shadowing variables declared in the outer scope[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"builtinGlobals": false,[0m
+[2m// 		"hoist": "functions-and-types",[0m
+[2m// 		"ignoreFunctionTypeParameterNameValueShadow": true,[0m
+[2m// 		"ignoreOnInitialization": false,[0m
+[2m// 		"ignoreTypeValueShadow": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-shadow": "off",[0m
 [32m"@typescript-eslint/no-shadow": "error",[0m
 
 [2m// [suggestion] Disallow aliasing `this`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowDestructuring": true,[0m
+[2m// 		"allowedNames": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-this-alias": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary equality comparisons against boolean literals[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowComparingNullableBooleansToFalse": true,[0m
+[2m// 		"allowComparingNullableBooleansToTrue": true,[0m
+[2m// 		"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",[0m
 
 [2m// [suggestion] Disallow conditionals where the type is always truthy or always falsy[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowConstantLoopConditions": "never",[0m
+[2m// 		"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,[0m
+[2m// 		"checkTypePredicates": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-unnecessary-condition": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary assignment of constructor property parameter[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unnecessary-parameter-property-assignment": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary namespace qualifiers[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unnecessary-qualifier": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary template expressions[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unnecessary-template-expression": "error",[0m
 
 [2m// [suggestion] Disallow type arguments that are equal to the default[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unnecessary-type-arguments": "error",[0m
 
 [2m// [suggestion] Disallow type assertions that do not change the type of an expression[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-unnecessary-type-assertion": "error",[0m
 
 [2m// [suggestion] Disallow unnecessary constraints on generic types[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unnecessary-type-constraint": "error",[0m
 
 [2m// [suggestion] Disallow conversion idioms when they do not change the type or value of the expression[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unnecessary-type-conversion": "error",[0m
 
 [2m// [suggestion] Disallow comparing an enum value with a non-enum value[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-enum-comparison": "error",[0m
 
 [2m// [suggestion] Disallow unused expressions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowShortCircuit": false,[0m
+[2m// 		"allowTaggedTemplates": false,[0m
+[2m// 		"allowTernary": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-unused-expressions": "off",[0m
 [32m"@typescript-eslint/no-unused-expressions": "error",[0m
 
 [2m// [suggestion] Disallow default values that will never be used[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-useless-default-assignment": "error",[0m
 
 [2m// [suggestion] Disallow empty exports that don't change anything in a module file[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-useless-empty-export": "error",[0m
 
 [2m// [suggestion] Enforce non-null assertions over explicit type assertions[0m
+[2m// [][0m
 [2m// "@typescript-eslint/non-nullable-type-assertion-style": "off",[0m
 
 [2m// [suggestion] Enforce the use of `as const` over literal type[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-as-const": "error",[0m
 
 [2m// [suggestion] Require destructuring from arrays and/or objects[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"AssignmentExpression": {[0m
+[2m// 			"array": true,[0m
+[2m// 			"object": true[0m
+[2m// 		},[0m
+[2m// 		"VariableDeclarator": {[0m
+[2m// 			"array": true,[0m
+[2m// 			"object": true[0m
+[2m// 		}[0m
+[2m// 	},[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"prefer-destructuring": "off",[0m
 [32m"@typescript-eslint/prefer-destructuring": "error",[0m
 
 [2m// [suggestion] Require each enum member value to be explicitly initialized[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-enum-initializers": "error",[0m
 
 [2m// [suggestion] Enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-find": "error",[0m
 
 [2m// [suggestion] Enforce the use of `for-of` loop over the standard `for` loop where possible[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-for-of": "error",[0m
 
 [2m// [suggestion] Enforce using function types instead of interfaces with call signatures[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-function-type": "error",[0m
 
 [2m// [suggestion] Enforce `includes` method over `indexOf` method[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-includes": "error",[0m
 
 [2m// [suggestion] Require all enum members to be literal values[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowBitwiseExpressions": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/prefer-literal-enum-member": "error",[0m
 
 [2m// [suggestion] Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-namespace-keyword": "error",[0m
 
 [2m// [suggestion] Enforce using the nullish coalescing operator instead of logical assignments or chaining[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,[0m
+[2m// 		"ignoreBooleanCoercion": false,[0m
+[2m// 		"ignoreConditionalTests": true,[0m
+[2m// 		"ignoreIfStatements": false,[0m
+[2m// 		"ignoreMixedLogicalExpressions": false,[0m
+[2m// 		"ignorePrimitives": {[0m
+[2m// 			"bigint": false,[0m
+[2m// 			"boolean": false,[0m
+[2m// 			"number": false,[0m
+[2m// 			"string": false[0m
+[2m// 		},[0m
+[2m// 		"ignoreTernaryTests": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/prefer-nullish-coalescing": "error",[0m
 
 [2m// [suggestion] Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowPotentiallyUnsafeFixesThatModifyTheReturnTypeIKnowWhatImDoing": false,[0m
+[2m// 		"checkAny": true,[0m
+[2m// 		"checkBigInt": true,[0m
+[2m// 		"checkBoolean": true,[0m
+[2m// 		"checkNumber": true,[0m
+[2m// 		"checkString": true,[0m
+[2m// 		"checkUnknown": true,[0m
+[2m// 		"requireNullish": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/prefer-optional-chain": "error",[0m
 
 [2m// [suggestion] Require using Error objects as Promise rejection reasons[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"allowEmptyReject": false,[0m
+[2m// 		"allowThrowingAny": false,[0m
+[2m// 		"allowThrowingUnknown": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"prefer-promise-reject-errors": "off",[0m
 [32m"@typescript-eslint/prefer-promise-reject-errors": "error",[0m
 
 [2m// [suggestion] Require private members to be marked as `readonly` if they're never modified outside of the constructor[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"onlyInlineLambdas": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/prefer-readonly": "error",[0m
 
 [2m// [suggestion] Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"checkParameterProperties": true,[0m
+[2m// 		"ignoreInferredTypes": false,[0m
+[2m// 		"treatMethodsAsReadonly": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@typescript-eslint/prefer-readonly-parameter-types": "off",[0m
 
 [2m// [suggestion] Enforce `RegExp#exec` over `String#match` if no global flag is provided[0m
+[2m// [][0m
 [2m// "@typescript-eslint/prefer-regexp-exec": "off",[0m
 
 [2m// [suggestion] Enforce that `this` is used when only `this` type is returned[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-return-this-type": "error",[0m
 
 [2m// [suggestion] Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowSingleElementEquality": "never"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/prefer-string-starts-ends-with": "error",[0m
 
 [2m// [suggestion] Require any function or method that returns a Promise to be marked async[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowAny": true,[0m
+[2m// 		"allowedPromiseNames": [],[0m
+[2m// 		"checkArrowFunctions": true,[0m
+[2m// 		"checkFunctionDeclarations": true,[0m
+[2m// 		"checkFunctionExpressions": true,[0m
+[2m// 		"checkMethodDeclarations": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@typescript-eslint/promise-function-async": "off",[0m
 
 [2m// [suggestion] Disallow async functions which do not return promises and have no `await` expression[0m
+[2m// [][0m
 [32m"require-await": "off",[0m
 [32m"@typescript-eslint/require-await": "error",[0m
 
 [2m// [suggestion] Disallow certain types in boolean expressions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowAny": false,[0m
+[2m// 		"allowNullableBoolean": false,[0m
+[2m// 		"allowNullableEnum": false,[0m
+[2m// 		"allowNullableNumber": false,[0m
+[2m// 		"allowNullableObject": true,[0m
+[2m// 		"allowNullableString": false,[0m
+[2m// 		"allowNumber": true,[0m
+[2m// 		"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,[0m
+[2m// 		"allowString": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/strict-boolean-expressions": ["error", {
 	"allowString": false,
 	"allowNumber": false,
@@ -870,130 +1889,266 @@
 }],[0m
 
 [2m// [suggestion] Require switch-case statements to be exhaustive[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowDefaultCaseForExhaustiveSwitch": true,[0m
+[2m// 		"considerDefaultExhaustiveForUnions": false,[0m
+[2m// 		"requireDefaultForNonUnion": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/switch-exhaustiveness-check": "error",[0m
 
 [2m// [suggestion] Disallow certain triple slash directives in favor of ES6-style import declarations[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"lib": "always",[0m
+[2m// 		"path": "never",[0m
+[2m// 		"types": "prefer-import"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/triple-slash-reference": "error",[0m
 
 [2m// [suggestion] Disallow two overloads that could be unified into one with a union or an optional/rest parameter[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreDifferentlyNamedParameters": false,[0m
+[2m// 		"ignoreOverloadsWithDifferentJSDoc": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/unified-signatures": "error",[0m
 
 [2m// [suggestion] Enforce typing arguments in Promise rejection callbacks as `unknown`[0m
+[2m// [][0m
 [32m"@typescript-eslint/use-unknown-in-catch-callback-variable": "error",[0m
 
 [2m// [problem] Disallow awaiting a value that is not a Thenable[0m
+[2m// [][0m
 [32m"@typescript-eslint/await-thenable": "error",[0m
 
 [2m// [problem] Disallow `@ts-<directive>` comments or require descriptions after directives[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"minimumDescriptionLength": 3,[0m
+[2m// 		"ts-check": false,[0m
+[2m// 		"ts-expect-error": "allow-with-description",[0m
+[2m// 		"ts-ignore": true,[0m
+[2m// 		"ts-nocheck": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/ban-ts-comment": "error",[0m
 
 [2m// [problem] Enforce that literals on classes are exposed in a consistent style[0m
+[2m// [[0m
+[2m// 	"fields"[0m
+[2m// ][0m
 [2m// "@typescript-eslint/class-literal-property-style": "off",[0m
 
 [2m// [problem] Require explicit return types on functions and class methods[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowConciseArrowFunctionExpressionsStartingWithVoid": false,[0m
+[2m// 		"allowDirectConstAssertionInArrowFunctions": true,[0m
+[2m// 		"allowedNames": [],[0m
+[2m// 		"allowExpressions": false,[0m
+[2m// 		"allowFunctionsWithoutTypeParameters": false,[0m
+[2m// 		"allowHigherOrderFunctions": true,[0m
+[2m// 		"allowIIFEs": false,[0m
+[2m// 		"allowTypedFunctionExpressions": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/explicit-function-return-type": "error",[0m
 
 [2m// [problem] Require explicit accessibility modifiers on class properties and methods[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"accessibility": "explicit"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/explicit-member-accessibility": ["error", {
 	"accessibility": "no-public",
 }],[0m
 
 [2m// [problem] Require explicit return and argument types on exported functions' and classes' public class methods[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowArgumentsExplicitlyTypedAsAny": false,[0m
+[2m// 		"allowDirectConstAssertionInArrowFunctions": true,[0m
+[2m// 		"allowedNames": [],[0m
+[2m// 		"allowHigherOrderFunctions": true,[0m
+[2m// 		"allowOverloadFunctions": false,[0m
+[2m// 		"allowTypedFunctionExpressions": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/explicit-module-boundary-types": "error",[0m
 
 [2m// [problem] Disallow using the `delete` operator on array values[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-array-delete": "error",[0m
 
 [2m// [problem] Disallow non-null assertion in locations that may be confusing[0m
+[2m// [][0m
 [2m// "@typescript-eslint/no-confusing-non-null-assertion": "off",[0m
 
 [2m// [problem] Require expressions of type void to appear in statement position[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreArrowShorthand": false,[0m
+[2m// 		"ignoreVoidOperator": false,[0m
+[2m// 		"ignoreVoidReturningFunctions": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-confusing-void-expression": "error",[0m
 
 [2m// [problem] Disallow using code marked as `@deprecated`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-deprecated": "error",[0m
 
 [2m// [problem] Disallow duplicate class members[0m
+[2m// [][0m
 [32m"no-dupe-class-members": "off",[0m
 [32m"@typescript-eslint/no-dupe-class-members": "error",[0m
 
 [2m// [problem] Disallow duplicate enum member values[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-duplicate-enum-values": "error",[0m
 
 [2m// [problem] Disallow extra non-null assertions[0m
+[2m// [][0m
 [2m// "@typescript-eslint/no-extra-non-null-assertion": "off",[0m
 
 [2m// [problem] Require Promise-like statements to be handled appropriately[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowForKnownSafeCalls": [],[0m
+[2m// 		"allowForKnownSafePromises": [],[0m
+[2m// 		"checkThenables": false,[0m
+[2m// 		"ignoreIIFE": false,[0m
+[2m// 		"ignoreVoid": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-floating-promises": "error",[0m
 
 [2m// [problem] Disallow iterating over an array with a for-in loop[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-for-in-array": "error",[0m
 
 [2m// [problem] Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-import-type-side-effects": "error",[0m
 
 [2m// [problem] Disallow `void` type outside of generic or return types[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowAsThisParameter": false,[0m
+[2m// 		"allowInGenericTypeArguments": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-invalid-void-type": "error",[0m
 
 [2m// [problem] Enforce valid definition of `new` and `constructor`[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-misused-new": "error",[0m
 
 [2m// [problem] Disallow Promises in places not designed to handle them[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"checksConditionals": true,[0m
+[2m// 		"checksSpreads": true,[0m
+[2m// 		"checksVoidReturn": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-misused-promises": "error",[0m
 
 [2m// [problem] Disallow using the spread operator when it might cause unexpected behavior[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-misused-spread": "error",[0m
 
 [2m// [problem] Disallow enums from having both number and string members[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-mixed-enums": "error",[0m
 
 [2m// [problem] Disallow non-null assertions in the left operand of a nullish coalescing operator[0m
+[2m// [][0m
 [2m// "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "off",[0m
 
 [2m// [problem] Disallow non-null assertions after an optional chain expression[0m
+[2m// [][0m
 [2m// "@typescript-eslint/no-non-null-asserted-optional-chain": "off",[0m
 
 [2m// [problem] Disallow non-null assertions using the `!` postfix operator[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-non-null-assertion": "error",[0m
 
 [2m// [problem] Disallow invocation of `require()`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"allowAsImport": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-require-imports": "error",[0m
 
 [2m// [problem] Disallow type parameters that aren't used multiple times[0m
+[2m// [][0m
 [2m// "@typescript-eslint/no-unnecessary-type-parameters": "off",[0m
 
 [2m// [problem] Disallow calling a function with a value with type `any`[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-argument": "error",[0m
 
 [2m// [problem] Disallow assigning a value with type `any` to variables and properties[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-assignment": "error",[0m
 
 [2m// [problem] Disallow calling a value with type `any`[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-call": "error",[0m
 
 [2m// [problem] Disallow unsafe declaration merging[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-declaration-merging": "error",[0m
 
 [2m// [problem] Disallow using the unsafe built-in Function type[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-function-type": "error",[0m
 
 [2m// [problem] Disallow member access on a value with type `any`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowOptionalChaining": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/no-unsafe-member-access": "error",[0m
 
 [2m// [problem] Disallow returning a value with type `any` from a function[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-return": "error",[0m
 
 [2m// [problem] Disallow type assertions that narrow a type[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-type-assertion": "error",[0m
 
 [2m// [problem] Require unary negation to take a number[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-unsafe-unary-minus": "error",[0m
 
 [2m// [problem] Disallow unused private class members[0m
+[2m// [][0m
 [32m"no-unused-private-class-members": "off",[0m
 [32m"@typescript-eslint/no-unused-private-class-members": "error",[0m
 
 [2m// [problem] Disallow unused variables[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"no-unused-vars": "off",[0m
 [32m"@typescript-eslint/no-unused-vars": ["error", {
 	"args": "none",
@@ -1002,210 +2157,549 @@
 }],[0m
 
 [2m// [problem] Disallow the use of variables before they are defined[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowNamedExports": false,[0m
+[2m// 		"classes": true,[0m
+[2m// 		"enums": true,[0m
+[2m// 		"functions": true,[0m
+[2m// 		"ignoreTypeReferences": true,[0m
+[2m// 		"typedefs": true,[0m
+[2m// 		"variables": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"no-use-before-define": "off",[0m
 [32m"@typescript-eslint/no-use-before-define": "error",[0m
 
 [2m// [problem] Disallow unnecessary constructors[0m
+[2m// [][0m
 [32m"no-useless-constructor": "off",[0m
 [32m"@typescript-eslint/no-useless-constructor": "error",[0m
 
 [2m// [problem] Disallow using confusing built-in primitive class wrappers[0m
+[2m// [][0m
 [32m"@typescript-eslint/no-wrapper-object-types": "error",[0m
 
 [2m// [problem] Disallow throwing non-`Error` values as exceptions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"allowRethrowing": true,[0m
+[2m// 		"allowThrowingAny": true,[0m
+[2m// 		"allowThrowingUnknown": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/only-throw-error": "error",[0m
 
 [2m// [problem] Require or disallow parameter properties in class constructors[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [],[0m
+[2m// 		"prefer": "class-property"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/parameter-properties": "error",[0m
 
 [2m// [problem] Enforce using type parameter when calling `Array#reduce` instead of using a type assertion[0m
+[2m// [][0m
 [32m"@typescript-eslint/prefer-reduce-type-parameter": "error",[0m
 
 [2m// [problem] Enforce that `get()` types should be assignable to their equivalent `set()` type[0m
+[2m// [][0m
 [32m"@typescript-eslint/related-getter-setter-pairs": "error",[0m
 
 [2m// [problem] Require `Array#sort` and `Array#toSorted` calls to always provide a `compareFunction`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreStringArrays": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/require-array-sort-compare": "error",[0m
 
 [2m// [problem] Require both operands of addition to be the same type and be `bigint`, `number`, or `string`[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowAny": true,[0m
+[2m// 		"allowBoolean": true,[0m
+[2m// 		"allowNullish": true,[0m
+[2m// 		"allowNumberAndString": true,[0m
+[2m// 		"allowRegExp": true,[0m
+[2m// 		"skipCompoundAssignments": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/restrict-plus-operands": "error",[0m
 
 [2m// [problem] Enforce template literal expressions to be of `string` type[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": [[0m
+[2m// 			{[0m
+[2m// 				"name": [[0m
+[2m// 					"Error",[0m
+[2m// 					"URL",[0m
+[2m// 					"URLSearchParams"[0m
+[2m// 				],[0m
+[2m// 				"from": "lib"[0m
+[2m// 			}[0m
+[2m// 		],[0m
+[2m// 		"allowAny": true,[0m
+[2m// 		"allowBoolean": true,[0m
+[2m// 		"allowNullish": true,[0m
+[2m// 		"allowNumber": true,[0m
+[2m// 		"allowRegExp": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/restrict-template-expressions": "error",[0m
 
 [2m// [problem] Enforce consistent awaiting of returned promises[0m
+[2m// [[0m
+[2m// 	"in-try-catch"[0m
+[2m// ][0m
 [32m"@typescript-eslint/return-await": "error",[0m
 
 [2m// [problem] Disallow passing a value-returning function in a position accepting a void function[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowReturnAny": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/strict-void-return": "error",[0m
 
 [2m// [problem] Enforce unbound methods are called with their expected scope[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreStatic": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@typescript-eslint/unbound-method": "error",[0m
 
 [0mRules from stylistic:
 
 [2m// [layout] Enforce linebreaks after opening and before closing array brackets[0m
-[32m"@stylistic/array-bracket-newline": ["error", "consistent"],[0m
+[2m// [][0m
+[32m"@stylistic/array-bracket-newline": "error",[0m
 
 [2m// [layout] Enforce consistent spacing inside array brackets[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/array-bracket-spacing": "error",[0m
 
 [2m// [layout] Enforce line breaks after each array element[0m
-[32m"@stylistic/array-element-newline": ["error", "consistent"],[0m
+[2m// [][0m
+[32m"@stylistic/array-element-newline": ["error", {
+	"multiline": true,
+	"consistent": true,
+}],[0m
 
 [2m// [layout] Require parentheses around arrow function arguments[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/arrow-parens": "error",[0m
 
 [2m// [layout] Enforce consistent spacing before and after the arrow in arrow functions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"before": true,[0m
+[2m// 		"after": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/arrow-spacing": "error",[0m
 
 [2m// [layout] Disallow or enforce spaces inside of blocks after opening block and before closing block[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/block-spacing": "error",[0m
 
 [2m// [layout] Enforce consistent brace style for blocks[0m
+[2m// [[0m
+[2m// 	"1tbs",[0m
+[2m// 	{[0m
+[2m// 		"allowSingleLine": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/brace-style": ["error", "1tbs", {
 	"allowSingleLine": true,
 }],[0m
 
 [2m// [layout] Require or disallow trailing commas[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/comma-dangle": ["error", "always-multiline"],[0m
 
 [2m// [layout] Enforce consistent spacing before and after commas[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"before": false,[0m
+[2m// 		"after": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/comma-spacing": "error",[0m
 
 [2m// [layout] Enforce consistent comma style[0m
+[2m// [[0m
+[2m// 	"last"[0m
+[2m// ][0m
 [32m"@stylistic/comma-style": "error",[0m
 
 [2m// [layout] Enforce consistent spacing inside computed property brackets[0m
+[2m// [[0m
+[2m// 	"never",[0m
+[2m// 	{[0m
+[2m// 		"enforceForClassMembers": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/computed-property-spacing": "error",[0m
 
 [2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
-[32m"@stylistic/curly-newline": "error",[0m
+[2m// [][0m
+[32m"@stylistic/curly-newline": ["error", {
+	"multiline": true,
+	"consistent": true,
+}],[0m
 
 [2m// [layout] Enforce consistent newlines before and after dots[0m
+[2m// [[0m
+[2m// 	"object"[0m
+[2m// ][0m
 [32m"@stylistic/dot-location": "error",[0m
 
 [2m// [layout] Require or disallow newline at the end of files[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/eol-last": "error",[0m
 
 [2m// [layout] Enforce line breaks between arguments of a function call[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/function-call-argument-newline": ["error", "consistent"],[0m
 
 [2m// [layout] Require or disallow spacing between function identifiers and their invocations[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/function-call-spacing": "error",[0m
 
 [2m// [layout] Enforce consistent line breaks inside function parentheses[0m
-[32m"@stylistic/function-paren-newline": "error",[0m
+[2m// [[0m
+[2m// 	"multiline"[0m
+[2m// ][0m
+[32m"@stylistic/function-paren-newline": ["error", "consistent"],[0m
 
 [2m// [layout] Enforce consistent spacing around `*` operators in generator functions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"before": true,[0m
+[2m// 		"after": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/generator-star-spacing": "error",[0m
 
 [2m// [layout] Enforce the location of arrow function bodies[0m
+[2m// [[0m
+[2m// 	"beside"[0m
+[2m// ][0m
 [32m"@stylistic/implicit-arrow-linebreak": "error",[0m
 
 [2m// [layout] Enforce consistent indentation[0m
+[2m// [[0m
+[2m// 	4,[0m
+[2m// 	{[0m
+[2m// 		"SwitchCase": 1,[0m
+[2m// 		"flatTernaryExpressions": false,[0m
+[2m// 		"ignoredNodes": [][0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/indent": ["error", "tab"],[0m
 
 [2m// [layout] Indentation for binary operators[0m
+[2m// [[0m
+[2m// 	2[0m
+[2m// ][0m
 [32m"@stylistic/indent-binary-ops": ["error", "tab"],[0m
 
 [2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
 [2m// "@stylistic/jsx-child-element-spacing": "off",[0m
 
 [2m// [layout] Enforce closing bracket location in JSX[0m
+[2m// [[0m
+[2m// 	"tag-aligned"[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-closing-bracket-location": "off",[0m
 
 [2m// [layout] Enforce closing tag location for multiline JSX[0m
+[2m// [[0m
+[2m// 	"tag-aligned"[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-closing-tag-location": "off",[0m
 
 [2m// [layout] Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"props": "never",[0m
+[2m// 		"children": "never",[0m
+[2m// 		"propElementValues": "ignore"[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-curly-brace-presence": "off",[0m
 
 [2m// [layout] Enforce consistent linebreaks in curly braces in JSX attributes and expressions[0m
+[2m// [[0m
+[2m// 	"consistent"[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-curly-newline": "off",[0m
 
 [2m// [layout] Enforce or disallow spaces inside of curly braces in JSX attributes and expressions[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"when": "never",[0m
+[2m// 		"allowMultiline": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-curly-spacing": "off",[0m
 
 [2m// [layout] Enforce or disallow spaces around equal signs in JSX attributes[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-equals-spacing": "off",[0m
 
 [2m// [layout] Enforce proper position of the first property in JSX[0m
+[2m// [[0m
+[2m// 	"multiline-multiprop"[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-first-prop-new-line": "off",[0m
 
 [2m// [layout] Enforce line breaks before and after JSX elements when they are used as arguments to a function.[0m
+[2m// [[0m
+[2m// 	"multiline"[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-function-call-newline": "off",[0m
 
 [2m// [layout] Enforce props indentation in JSX[0m
+[2m// [[0m
+[2m// 	4[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-indent-props": "off",[0m
 
 [2m// [layout] Enforce maximum of props on a single line in JSX[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"maximum": 1[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-max-props-per-line": "off",[0m
 
 [2m// [layout] Require or prevent a new line after jsx elements and expressions.[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"prevent": false,[0m
+[2m// 		"allowMultilines": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-newline": "off",[0m
 
 [2m// [layout] Require one JSX element per line[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allow": "none"[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-one-expression-per-line": "off",[0m
 
 [2m// [layout] Enforce consistent line break styles for JSX props[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"singleLine": {[0m
+[2m// 			"maxItems": null[0m
+[2m// 		},[0m
+[2m// 		"multiLine": {[0m
+[2m// 			"minItems": 0,[0m
+[2m// 			"maxItemsPerLine": 1[0m
+[2m// 		}[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/exp-jsx-props-style": "off",[0m
 
 [2m// [layout] Enforce the consistent use of either double or single quotes in JSX attributes[0m
+[2m// [[0m
+[2m// 	"prefer-double"[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-quotes": "off",[0m
 
 [2m// [layout] Disallow extra closing tags for components without children[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"component": true,[0m
+[2m// 		"html": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-self-closing-comp": "off",[0m
 
 [2m// [layout] Enforce whitespace in and around the JSX opening and closing brackets[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"closingSlash": "never",[0m
+[2m// 		"beforeSelfClosing": "always",[0m
+[2m// 		"afterOpening": "never",[0m
+[2m// 		"beforeClosing": "allow"[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-tag-spacing": "off",[0m
 
 [2m// [layout] Disallow missing parentheses around multiline JSX[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"declaration": "parens",[0m
+[2m// 		"assignment": "parens",[0m
+[2m// 		"return": "parens",[0m
+[2m// 		"arrow": "parens",[0m
+[2m// 		"condition": "ignore",[0m
+[2m// 		"logical": "ignore",[0m
+[2m// 		"prop": "ignore",[0m
+[2m// 		"propertyValue": "ignore"[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/jsx-wrap-multilines": "off",[0m
 
 [2m// [layout] Enforce consistent spacing between property names and type annotations in types and interfaces[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"@stylistic/key-spacing": "error",[0m
 
 [2m// [layout] Enforce consistent spacing before and after keywords[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"before": true,[0m
+[2m// 		"after": true,[0m
+[2m// 		"overrides": {}[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/keyword-spacing": "error",[0m
 
 [2m// [layout] Enforce position of line comments[0m
+[2m// [[0m
+[2m// 	"above"[0m
+[2m// ][0m
 [2m// "@stylistic/line-comment-position": "off",[0m
 
 [2m// [layout] Enforce consistent linebreak style[0m
+[2m// [[0m
+[2m// 	"unix"[0m
+[2m// ][0m
 [32m"@stylistic/linebreak-style": "error",[0m
 
 [2m// [layout] Require empty lines around comments[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"beforeBlockComment": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/lines-around-comment": "error",[0m
 
 [2m// [layout] Require or disallow an empty line between class members[0m
+[2m// [[0m
+[2m// 	"always",[0m
+[2m// 	{[0m
+[2m// 		"exceptAfterOverload": true,[0m
+[2m// 		"exceptAfterSingleLine": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/lines-between-class-members": "off",[0m
 
 [2m// [layout] Enforce consistent spacing and line break styles inside brackets.[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"singleLine": {[0m
+[2m// 			"spacing": "never",[0m
+[2m// 			"maxItems": null[0m
+[2m// 		},[0m
+[2m// 		"multiLine": {[0m
+[2m// 			"minItems": 0[0m
+[2m// 		},[0m
+[2m// 		"overrides": {[0m
+[2m// 			"{}": {[0m
+[2m// 				"singleLine": {[0m
+[2m// 					"spacing": "always"[0m
+[2m// 				}[0m
+[2m// 			}[0m
+[2m// 		}[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/exp-list-style": "off",[0m
 
 [2m// [layout] Enforce a maximum line length[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"code": 80,[0m
+[2m// 		"tabWidth": 4[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/max-len": "off",[0m
 
 [2m// [layout] Enforce a maximum number of statements allowed per line[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"max": 1[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/max-statements-per-line": "off",[0m
 
 [2m// [layout] Require a specific member delimiter style for interfaces and type literals[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"multiline": {[0m
+[2m// 			"delimiter": "semi",[0m
+[2m// 			"requireLast": true[0m
+[2m// 		},[0m
+[2m// 		"singleline": {[0m
+[2m// 			"delimiter": "semi",[0m
+[2m// 			"requireLast": false[0m
+[2m// 		},[0m
+[2m// 		"multilineDetection": "brackets"[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/member-delimiter-style": "error",[0m
 
 [2m// [layout] Enforce newlines between operands of ternary expressions[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [2m// "@stylistic/multiline-ternary": "off",[0m
 
 [2m// [layout] Enforce or disallow parentheses when invoking a constructor with no arguments[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/new-parens": "error",[0m
 
 [2m// [layout] Require a newline after each call in a method chain[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"ignoreChainWithDepth": 2[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/newline-per-chained-call": "off",[0m
 
 [2m// [layout] Disallow arrow functions where they could be confused with comparisons[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowParens": true,[0m
+[2m// 		"onlyOneSimpleParam": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [2m// "@stylistic/no-confusing-arrow": "off",[0m
 
 [2m// [layout] Disallow unnecessary parentheses[0m
+[2m// [[0m
+[2m// 	"all"[0m
+[2m// ][0m
 [2m// "@stylistic/no-extra-parens": "off",[0m
 
 [2m// [layout] Disallow unnecessary semicolons[0m
@@ -1215,15 +2709,75 @@
 [32m"@stylistic/no-floating-decimal": "error",[0m
 
 [2m// [layout] Disallow mixed binary operators[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"groups": [[0m
+[2m// 			[[0m
+[2m// 				"+",[0m
+[2m// 				"-",[0m
+[2m// 				"*",[0m
+[2m// 				"/",[0m
+[2m// 				"%",[0m
+[2m// 				"**"[0m
+[2m// 			],[0m
+[2m// 			[[0m
+[2m// 				"&",[0m
+[2m// 				"|",[0m
+[2m// 				"^",[0m
+[2m// 				"~",[0m
+[2m// 				"<<",[0m
+[2m// 				">>",[0m
+[2m// 				">>>"[0m
+[2m// 			],[0m
+[2m// 			[[0m
+[2m// 				"==",[0m
+[2m// 				"!=",[0m
+[2m// 				"===",[0m
+[2m// 				"!==",[0m
+[2m// 				">",[0m
+[2m// 				">=",[0m
+[2m// 				"<",[0m
+[2m// 				"<="[0m
+[2m// 			],[0m
+[2m// 			[[0m
+[2m// 				"&&",[0m
+[2m// 				"||"[0m
+[2m// 			],[0m
+[2m// 			[[0m
+[2m// 				"in",[0m
+[2m// 				"instanceof"[0m
+[2m// 			][0m
+[2m// 		],[0m
+[2m// 		"allowSamePrecedence": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/no-mixed-operators": "error",[0m
 
 [2m// [layout] Disallow mixed spaces and tabs for indentation[0m
+[2m// [[0m
+[2m// 	false[0m
+[2m// ][0m
 [32m"@stylistic/no-mixed-spaces-and-tabs": "error",[0m
 
 [2m// [layout] Disallow multiple spaces[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"exceptions": {[0m
+[2m// 			"Property": true,[0m
+[2m// 			"ImportAttribute": true[0m
+[2m// 		},[0m
+[2m// 		"ignoreEOLComments": false,[0m
+[2m// 		"includeTabs": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/no-multi-spaces": "error",[0m
 
 [2m// [layout] Disallow multiple empty lines[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"max": 2[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/no-multiple-empty-lines": ["error", {
 	"max": 1,
 	"maxEOF": 0,
@@ -1231,42 +2785,75 @@
 }],[0m
 
 [2m// [layout] Disallow all tabs[0m
-[32m"@stylistic/no-tabs": ["error", {
-	"allowIndentationTabs": true,
-}],[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowIndentationTabs": false[0m
+[2m// 	}[0m
+[2m// ][0m
+[2m// "@stylistic/no-tabs": "off",[0m
 
 [2m// [layout] Disallow trailing whitespace at the end of lines[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"skipBlankLines": false,[0m
+[2m// 		"ignoreComments": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/no-trailing-spaces": "error",[0m
 
 [2m// [layout] Disallow whitespace before properties[0m
 [32m"@stylistic/no-whitespace-before-property": "error",[0m
 
 [2m// [layout] Enforce the location of single-line statements[0m
+[2m// [[0m
+[2m// 	"beside"[0m
+[2m// ][0m
 [32m"@stylistic/nonblock-statement-body-position": "error",[0m
 
 [2m// [layout] Enforce consistent line breaks after opening and before closing braces[0m
+[2m// [][0m
 [32m"@stylistic/object-curly-newline": ["error", {
-	"ImportDeclaration": {"multiline": true, "minProperties": 2},
+	"multiline": true,
+	"consistent": true,
 }],[0m
 
 [2m// [layout] Enforce consistent spacing inside braces[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/object-curly-spacing": "error",[0m
 
 [2m// [layout] Enforce placing object properties on separate lines[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowAllPropertiesOnSameLine": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/object-property-newline": ["error", {
 	"allowAllPropertiesOnSameLine": true,
 }],[0m
 
 [2m// [layout] Require or disallow newlines around variable declarations[0m
+[2m// [[0m
+[2m// 	"initializations"[0m
+[2m// ][0m
 [32m"@stylistic/one-var-declaration-per-line": "error",[0m
 
 [2m// [layout] Enforce consistent linebreak style for operators[0m
+[2m// [][0m
 [32m"@stylistic/operator-linebreak": "error",[0m
 
 [2m// [layout] Require or disallow padding within blocks[0m
+[2m// [[0m
+[2m// 	"always",[0m
+[2m// 	{[0m
+[2m// 		"allowSingleLineBlocks": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/padded-blocks": ["error", "never"],[0m
 
 [2m// [layout] Require or disallow padding lines between statements[0m
+[2m// [][0m
 [32m"@stylistic/padding-line-between-statements": ["error", {
 	"blankLine": "always",
 	"prev": "*",
@@ -1282,53 +2869,118 @@
 }],[0m
 
 [2m// [layout] Require quotes around object literal, type literal, interfaces and enums property names[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/quote-props": ["error", "consistent"],[0m
 
 [2m// [layout] Enforce the consistent use of either backticks, double, or single quotes[0m
+[2m// [[0m
+[2m// 	"double",[0m
+[2m// 	{[0m
+[2m// 		"allowTemplateLiterals": "never",[0m
+[2m// 		"avoidEscape": false,[0m
+[2m// 		"ignoreStringLiterals": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/quotes": "error",[0m
 
 [2m// [layout] Enforce spacing between rest and spread operators and their expressions[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/rest-spread-spacing": "error",[0m
 
 [2m// [layout] Require or disallow semicolons instead of ASI[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/semi": "error",[0m
 
 [2m// [layout] Enforce consistent spacing before and after semicolons[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"before": false,[0m
+[2m// 		"after": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/semi-spacing": "error",[0m
 
 [2m// [layout] Enforce location of semicolons[0m
+[2m// [[0m
+[2m// 	"last"[0m
+[2m// ][0m
 [32m"@stylistic/semi-style": "error",[0m
 
 [2m// [layout] Enforce consistent spacing before blocks[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/space-before-blocks": "error",[0m
 
 [2m// [layout] Enforce consistent spacing before function parenthesis[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/space-before-function-paren": ["error", {
 	"named": "never",
 }],[0m
 
 [2m// [layout] Enforce consistent spacing inside parentheses[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/space-in-parens": "error",[0m
 
 [2m// [layout] Require spacing around infix operators[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"int32Hint": false,[0m
+[2m// 		"ignoreTypes": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/space-infix-ops": "error",[0m
 
 [2m// [layout] Enforce consistent spacing before or after unary operators[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"words": true,[0m
+[2m// 		"nonwords": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/space-unary-ops": "error",[0m
 
 [2m// [layout] Enforce consistent spacing after the `//` or `/*` in a comment[0m
+[2m// [[0m
+[2m// 	"always"[0m
+[2m// ][0m
 [32m"@stylistic/spaced-comment": "error",[0m
 
 [2m// [layout] Enforce spacing around colons of switch statements[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"before": false,[0m
+[2m// 		"after": true[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/switch-colon-spacing": "error",[0m
 
 [2m// [layout] Require or disallow spacing around embedded expressions of template strings[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/template-curly-spacing": "error",[0m
 
 [2m// [layout] Require or disallow spacing between template tags and their literals[0m
+[2m// [[0m
+[2m// 	"never"[0m
+[2m// ][0m
 [32m"@stylistic/template-tag-spacing": "error",[0m
 
 [2m// [layout] Require consistent spacing around type annotations[0m
+[2m// [[0m
+[2m// 	{}[0m
+[2m// ][0m
 [32m"@stylistic/type-annotation-spacing": "error",[0m
 
 [2m// [layout] Enforces consistent spacing inside TypeScript type generics[0m
@@ -1338,17 +2990,36 @@
 [32m"@stylistic/type-named-tuple-spacing": "error",[0m
 
 [2m// [layout] Require parentheses around immediate `function` invocations[0m
+[2m// [[0m
+[2m// 	"outside",[0m
+[2m// 	{[0m
+[2m// 		"functionPrototypeMethods": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/wrap-iife": ["error", "inside"],[0m
 
 [2m// [layout] Require parenthesis around regex literals[0m
 [2m// "@stylistic/wrap-regex": "off",[0m
 
 [2m// [layout] Require or disallow spacing around the `*` in `yield*` expressions[0m
+[2m// [[0m
+[2m// 	"after"[0m
+[2m// ][0m
 [32m"@stylistic/yield-star-spacing": "error",[0m
 
 [2m// [suggestion] Enforce PascalCase for user-defined JSX components[0m
+[2m// [[0m
+[2m// 	{[0m
+[2m// 		"allowAllCaps": false,[0m
+[2m// 		"allowLeadingUnderscore": false,[0m
+[2m// 		"allowNamespace": false[0m
+[2m// 	}[0m
+[2m// ][0m
 [32m"@stylistic/jsx-pascal-case": "error",[0m
 
 [2m// [suggestion] Enforce a particular style for multiline comments[0m
+[2m// [[0m
+[2m// 	"starred-block"[0m
+[2m// ][0m
 [2m// "@stylistic/multiline-comment-style": "off",[0m
 

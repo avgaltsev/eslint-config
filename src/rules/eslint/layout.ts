@@ -4,5 +4,8 @@ import type {ESLintRules} from "eslint/rules";
 
 export const rules: Partial<ESLintRules> = {
 	// [layout] Require or disallow Unicode byte order mark (BOM)
+	// [
+	// 	"never"
+	// ]
 	"unicode-bom": "error",
 };

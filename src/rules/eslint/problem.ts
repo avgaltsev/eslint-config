@@ -6,6 +6,13 @@ import type {ESLintRules} from "eslint/rules";
 
 export const rules: Partial<ESLintRules> = {
 	// [problem] Enforce `return` statements in callbacks of array methods
+	// [
+	// 	{
+	// 		"allowImplicit": false,
+	// 		"checkForEach": false,
+	// 		"allowVoid": false
+	// 	}
+	// ]
 	"array-callback-return": "error",
 
 	// [problem] Require `super()` calls in constructors
@@ -15,6 +22,11 @@ export const rules: Partial<ESLintRules> = {
 	"for-direction": "error",
 
 	// [problem] Enforce `return` statements in getters
+	// [
+	// 	{
+	// 		"allowImplicit": false
+	// 	}
+	// ]
 	"getter-return": "error",
 
 	// [problem] Disallow using an async function as a Promise executor
@@ -30,15 +42,28 @@ export const rules: Partial<ESLintRules> = {
 	"no-compare-neg-zero": "error",
 
 	// [problem] Disallow assignment operators in conditional expressions
+	// [
+	// 	"except-parens"
+	// ]
 	"no-cond-assign": "error",
 
 	// [problem] Disallow reassigning `const`, `using`, and `await using` variables
 	"no-const-assign": "error",
 
 	// [problem] Disallow expressions where the operation doesn't affect the value
+	// [
+	// 	{
+	// 		"checkRelationalComparisons": false
+	// 	}
+	// ]
 	"no-constant-binary-expression": "error",
 
 	// [problem] Disallow constant expressions in conditions
+	// [
+	// 	{
+	// 		"checkLoops": "allExceptWhileTrue"
+	// 	}
+	// ]
 	"no-constant-condition": "error",
 
 	// [problem] Disallow returning value from constructor
@@ -66,18 +91,35 @@ export const rules: Partial<ESLintRules> = {
 	"no-duplicate-case": "error",
 
 	// [problem] Disallow duplicate module imports
+	// [
+	// 	{
+	// 		"includeExports": false,
+	// 		"allowSeparateTypeImports": false
+	// 	}
+	// ]
 	"no-duplicate-imports": "error",
 
 	// [problem] Disallow empty character classes in regular expressions
 	"no-empty-character-class": "error",
 
 	// [problem] Disallow empty destructuring patterns
+	// [
+	// 	{
+	// 		"allowObjectPatternsAsParameters": false
+	// 	}
+	// ]
 	"no-empty-pattern": "error",
 
 	// [problem] Disallow reassigning exceptions in `catch` clauses
 	"no-ex-assign": "error",
 
 	// [problem] Disallow fallthrough of `case` statements
+	// [
+	// 	{
+	// 		"allowEmptyCase": false,
+	// 		"reportUnusedFallthroughComment": false
+	// 	}
+	// ]
 	"no-fallthrough": "error",
 
 	// [problem] Disallow reassigning `function` declarations
@@ -87,18 +129,41 @@ export const rules: Partial<ESLintRules> = {
 	"no-import-assign": "error",
 
 	// [problem] Disallow variable or `function` declarations in nested blocks
+	// [
+	// 	"functions",
+	// 	{
+	// 		"blockScopedFunctions": "allow"
+	// 	}
+	// ]
 	"no-inner-declarations": "error",
 
 	// [problem] Disallow invalid regular expression strings in `RegExp` constructors
+	// [
+	// 	{}
+	// ]
 	"no-invalid-regexp": "error",
 
 	// [problem] Disallow irregular whitespace
+	// [
+	// 	{
+	// 		"skipComments": false,
+	// 		"skipJSXText": false,
+	// 		"skipRegExps": false,
+	// 		"skipStrings": true,
+	// 		"skipTemplates": false
+	// 	}
+	// ]
 	"no-irregular-whitespace": "error",
 
 	// [problem] Disallow literal numbers that lose precision
 	"no-loss-of-precision": "error",
 
 	// [problem] Disallow characters which are made with multiple code points in character class syntax
+	// [
+	// 	{
+	// 		"allowEscape": false
+	// 	}
+	// ]
 	"no-misleading-character-class": "error",
 
 	// [problem] Disallow `new` operators with global non-constructor functions
@@ -108,12 +173,22 @@ export const rules: Partial<ESLintRules> = {
 	"no-obj-calls": "error",
 
 	// [problem] Disallow returning values from Promise executor functions
+	// [
+	// 	{
+	// 		"allowVoid": false
+	// 	}
+	// ]
 	"no-promise-executor-return": "error",
 
 	// [problem] Disallow calling some `Object.prototype` methods directly on objects
 	"no-prototype-builtins": "error",
 
 	// [problem] Disallow assignments where both sides are exactly the same
+	// [
+	// 	{
+	// 		"props": true
+	// 	}
+	// ]
 	"no-self-assign": "error",
 
 	// [problem] Disallow comparisons where both sides are exactly the same
@@ -135,6 +210,11 @@ export const rules: Partial<ESLintRules> = {
 	"no-unassigned-vars": "error",
 
 	// [problem] Disallow the use of undeclared variables unless mentioned in `/*global */` comments
+	// [
+	// 	{
+	// 		"typeof": false
+	// 	}
+	// ]
 	"no-undef": "error",
 
 	// [problem] Disallow confusing multiline expressions
@@ -147,21 +227,47 @@ export const rules: Partial<ESLintRules> = {
 	"no-unreachable": "error",
 
 	// [problem] Disallow loops with a body that allows only one iteration
+	// [
+	// 	{
+	// 		"ignore": []
+	// 	}
+	// ]
 	"no-unreachable-loop": "error",
 
 	// [problem] Disallow control flow statements in `finally` blocks
 	"no-unsafe-finally": "error",
 
 	// [problem] Disallow negating the left operand of relational operators
+	// [
+	// 	{
+	// 		"enforceForOrderingRelations": false
+	// 	}
+	// ]
 	"no-unsafe-negation": "error",
 
 	// [problem] Disallow use of optional chaining in contexts where the `undefined` value is not allowed
+	// [
+	// 	{
+	// 		"disallowArithmeticOperators": false
+	// 	}
+	// ]
 	"no-unsafe-optional-chaining": "error",
 
 	// [problem] Disallow unused private class members
 	"no-unused-private-class-members": "error",
 
 	// [problem] Disallow unused variables
+	// [
+	// 	{
+	// 		"vars": "all",
+	// 		"args": "after-used",
+	// 		"ignoreRestSiblings": false,
+	// 		"caughtErrors": "all",
+	// 		"ignoreClassWithStaticInitBlock": false,
+	// 		"ignoreUsingDeclarations": false,
+	// 		"reportUsedIgnorePattern": false
+	// 	}
+	// ]
 	"no-unused-vars": ["error", {
 		"args": "none",
 		"caughtErrors": "none",
@@ -169,6 +275,17 @@ export const rules: Partial<ESLintRules> = {
 	}],
 
 	// [problem] Disallow the use of variables before they are defined
+	// [
+	// 	{
+	// 		"classes": true,
+	// 		"functions": true,
+	// 		"variables": true,
+	// 		"allowNamedExports": false,
+	// 		"enums": true,
+	// 		"typedefs": true,
+	// 		"ignoreTypeReferences": true
+	// 	}
+	// ]
 	"no-use-before-define": "error",
 
 	// [problem] Disallow variable assignments when the value is not used
@@ -178,11 +295,27 @@ export const rules: Partial<ESLintRules> = {
 	"no-useless-backreference": "error",
 
 	// [problem] Disallow assignments that can lead to race conditions due to usage of `await` or `yield`
+	// [
+	// 	{
+	// 		"allowProperties": false
+	// 	}
+	// ]
 	"require-atomic-updates": "error",
 
 	// [problem] Require calls to `isNaN()` when checking for `NaN`
+	// [
+	// 	{
+	// 		"enforceForIndexOf": false,
+	// 		"enforceForSwitchCase": true
+	// 	}
+	// ]
 	"use-isnan": "error",
 
 	// [problem] Enforce comparing `typeof` expressions against valid strings
+	// [
+	// 	{
+	// 		"requireStringLiterals": false
+	// 	}
+	// ]
 	"valid-typeof": "error",
 };
