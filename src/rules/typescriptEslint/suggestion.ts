@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @stylistic/array-bracket-newline */
+/* eslint-disable @stylistic/array-element-newline */
 
 import type {FlatConfig} from "@typescript-eslint/utils/ts-eslint";
 

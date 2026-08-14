@@ -1,17 +1,22 @@
 /* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @stylistic/array-bracket-newline */
+/* eslint-disable @stylistic/array-element-newline */
 
 import type {Linter} from "eslint";
 import type {RuleOptions} from "@stylistic/eslint-plugin";
 
 export const rules: Partial<{[K in keyof RuleOptions]: Linter.RuleEntry<RuleOptions[K]>}> = {
 	// [layout] Enforce linebreaks after opening and before closing array brackets
-	"@stylistic/array-bracket-newline": ["error", "consistent"],
+	"@stylistic/array-bracket-newline": "error",
 
 	// [layout] Enforce consistent spacing inside array brackets
 	"@stylistic/array-bracket-spacing": "error",
 
 	// [layout] Enforce line breaks after each array element
-	"@stylistic/array-element-newline": ["error", "consistent"],
+	"@stylistic/array-element-newline": ["error", {
+		"multiline": true,
+		"consistent": true,
+	}],
 
 	// [layout] Require parentheses around arrow function arguments
 	"@stylistic/arrow-parens": "error",
@@ -40,7 +45,10 @@ export const rules: Partial<{[K in keyof RuleOptions]: Linter.RuleEntry<RuleOpti
 	"@stylistic/computed-property-spacing": "error",
 
 	// [layout] Enforce consistent line breaks after opening and before closing braces
-	"@stylistic/curly-newline": "error",
+	"@stylistic/curly-newline": ["error", {
+		"multiline": true,
+		"consistent": true,
+	}],
 
 	// [layout] Enforce consistent newlines before and after dots
 	"@stylistic/dot-location": "error",
@@ -55,7 +63,7 @@ export const rules: Partial<{[K in keyof RuleOptions]: Linter.RuleEntry<RuleOpti
 	"@stylistic/function-call-spacing": "error",
 
 	// [layout] Enforce consistent line breaks inside function parentheses
-	"@stylistic/function-paren-newline": "error",
+	"@stylistic/function-paren-newline": ["error", "consistent"],
 
 	// [layout] Enforce consistent spacing around `*` operators in generator functions
 	"@stylistic/generator-star-spacing": "error",
@@ -206,7 +214,8 @@ export const rules: Partial<{[K in keyof RuleOptions]: Linter.RuleEntry<RuleOpti
 
 	// [layout] Enforce consistent line breaks after opening and before closing braces
 	"@stylistic/object-curly-newline": ["error", {
-		"ImportDeclaration": {"multiline": true, "minProperties": 2},
+		"multiline": true,
+		"consistent": true,
 	}],
 
 	// [layout] Enforce consistent spacing inside braces
