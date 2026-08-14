@@ -27,7 +27,9 @@ export interface StrictRuleModule extends EslintRuleModule {
 			description: string;
 		};
 		deprecated?: boolean | object;
+		defaultOptions?: Array<unknown>;
 	};
+	defaultOptions?: Array<unknown>;
 }
 
 export function isStrictRuleModule(rule: RuleModule): rule is StrictRuleModule {

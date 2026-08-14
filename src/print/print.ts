@@ -18,6 +18,11 @@ enum Color {
 
 type RulesByType = Record<string, Map<string, StrictRuleModule>>;
 
+function isSameObject(a: unknown, b: unknown): boolean {
+	// TODO: Use a more robust way to compare objects.
+	return JSON.stringify(a) === JSON.stringify(b);
+}
+
 function printText(text: string, color: Color = Color.NONE, terminate = true): void {
 	const colorOpen = color;
 	const colorClose = color === Color.NONE || color === Color.RESET ? "" : Color.RESET;
@@ -43,6 +48,23 @@ function printRule(name: string, rule: StrictRuleModule, appliedRule: RuleEntry 
 	const {description} = rule.meta.docs;
 
 	printComment(`[${type}] ${description}`);
+
+	const defaultOptionsInRule = rule.defaultOptions;
+	const defaultOptionsInMeta = rule.meta.defaultOptions;
+
+	if (defaultOptionsInRule !== undefined && defaultOptionsInMeta !== undefined && !isSameObject(defaultOptionsInRule, defaultOptionsInMeta)) {
+		throw new Error(`Default options in rule and meta are not the same. Rule: ${name}, ${JSON.stringify(rule)}`);
+	}
+
+	const defaultOptions = defaultOptionsInMeta ?? defaultOptionsInRule;
+
+	if (defaultOptions !== undefined) {
+		const defaultOptionsJson = JSON.stringify(defaultOptions, null, "\t");
+
+		for (const line of defaultOptionsJson.split("\n")) {
+			printComment(line);
+		}
+	}
 
 	// Check for base rule overrides.
 	if (name.startsWith("@typescript-eslint/")) {
