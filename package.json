@@ -23,6 +23,16 @@
 			"default": "./lib/rules/index.js"
 		}
 	},
+	"dependencies": {
+		"@stylistic/eslint-plugin": "^5.10.0",
+		"eslint": "^10.8.0",
+		"typescript-eslint": "^8.65.0"
+	},
+	"devDependencies": {
+		"@types/node": "^26.1.2",
+		"globals": "^17.7.0",
+		"typescript": "^6.0.3"
+	},
 	"scripts": {
 		"build": "tsc",
 		"watch": "tsc --watch",
@@ -30,15 +40,5 @@
 		"prepare": "npm run build && npm run lint",
 		"postversion": "git push --tags origin HEAD",
 		"print": "./bin/print"
-	},
-	"devDependencies": {
-		"@types/node": "^26.1.2",
-		"globals": "^17.7.0",
-		"typescript": "^6.0.3"
-	},
-	"dependencies": {
-		"@stylistic/eslint-plugin": "^5.10.0",
-		"eslint": "^10.8.0",
-		"typescript-eslint": "^8.65.0"
 	}
 }
