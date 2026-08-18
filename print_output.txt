@@ -1095,8 +1095,10 @@
 [2m// 	}[0m
 [2m// ][0m
 [32m"no-unused-vars": ["error", {
-	"args": "none",
-	"caughtErrors": "none",
+	"args": "all",
+	"argsIgnorePattern": "^_",
+	"caughtErrorsIgnorePattern": "^_",
+	"destructuredArrayIgnorePattern": "^_",
 	"ignoreRestSiblings": true,
 }],[0m
 
@@ -1446,6 +1448,12 @@
 	"selector": "default",
 	"format": ["strictCamelCase"],
 	"leadingUnderscore": "forbid",
+	"trailingUnderscore": "forbid",
+}, {
+	"selector": "parameter",
+	"modifiers": ["unused"],
+	"format": ["strictCamelCase"],
+	"leadingUnderscore": "require",
 	"trailingUnderscore": "forbid",
 }, {
 	"selector": "typeLike",
@@ -2151,8 +2159,10 @@
 [2m// ][0m
 [32m"no-unused-vars": "off",[0m
 [32m"@typescript-eslint/no-unused-vars": ["error", {
-	"args": "none",
-	"caughtErrors": "none",
+	"args": "all",
+	"argsIgnorePattern": "^_",
+	"caughtErrorsIgnorePattern": "^_",
+	"destructuredArrayIgnorePattern": "^_",
 	"ignoreRestSiblings": true,
 }],[0m
 

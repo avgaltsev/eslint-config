@@ -300,6 +300,12 @@ export const rules: FlatConfig.Rules = {
 		"leadingUnderscore": "forbid",
 		"trailingUnderscore": "forbid",
 	}, {
+		"selector": "parameter",
+		"modifiers": ["unused"],
+		"format": ["strictCamelCase"],
+		"leadingUnderscore": "require",
+		"trailingUnderscore": "forbid",
+	}, {
 		"selector": "typeLike",
 		"format": ["StrictPascalCase"],
 		"leadingUnderscore": "forbid",

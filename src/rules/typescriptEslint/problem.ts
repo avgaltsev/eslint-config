@@ -235,8 +235,10 @@ export const rules: FlatConfig.Rules = {
 	// ]
 	"no-unused-vars": "off",
 	"@typescript-eslint/no-unused-vars": ["error", {
-		"args": "none",
-		"caughtErrors": "none",
+		"args": "all",
+		"argsIgnorePattern": "^_",
+		"caughtErrorsIgnorePattern": "^_",
+		"destructuredArrayIgnorePattern": "^_",
 		"ignoreRestSiblings": true,
 	}],
 

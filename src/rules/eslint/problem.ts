@@ -269,8 +269,10 @@ export const rules: Partial<ESLintRules> = {
 	// 	}
 	// ]
 	"no-unused-vars": ["error", {
-		"args": "none",
-		"caughtErrors": "none",
+		"args": "all",
+		"argsIgnorePattern": "^_",
+		"caughtErrorsIgnorePattern": "^_",
+		"destructuredArrayIgnorePattern": "^_",
 		"ignoreRestSiblings": true,
 	}],
 
