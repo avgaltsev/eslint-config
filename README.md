@@ -44,6 +44,10 @@ Every rule file (`src/rules/*/*.ts`) is a flat, hand-maintained map of rule name
 To audit the current rule set against what the underlying plugins actually ship (after bumping `eslint`, `typescript-eslint` or `@stylistic/eslint-plugin`), run:
 
 ```bash
+npm install eslint@latest typescript-eslint@latest @stylistic/eslint-plugin@latest
+```
+
+```bash
 npm run build
 npm run print
 ```
